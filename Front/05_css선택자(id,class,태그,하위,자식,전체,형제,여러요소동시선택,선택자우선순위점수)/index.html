@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>css선택자</title>
+    <link rel="stylesheet" href="common.css" />
+  </head>
+  <body>
+    <div id="wrap">
+      <!-- id는 동일한 이름을 사용할 수 없음 -->
+      <header id="header">
+        <!-- h태그에는 기본적으로 상하 마진이 들어가 있네 -->
+        <!-- 인라인 스타일:1000점 -->
+        <h1 class="logo" style="border: 20px solid yellowgreen">
+          <a href="index.html">
+            <img src="./images/logo_w.png" alt="subway" />
+          </a>
+        </h1>
+        <nav class="gnb_wrap">
+          <ul class="gnb">
+            <li>
+              <a href="#">주메뉴1</a>
+              <ul class="depth2">
+                <li><a href="#">서브메뉴</a></li>
+                <li><a href="#">서브메뉴</a></li>
+                <li><a href="#">서브메뉴</a></li>
+                <li><a href="#">서브메뉴</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">주메뉴1</a>
+              <ul class="depth2">
+                <li><a href="#">서브메뉴</a></li>
+                <li><a href="#">서브메뉴</a></li>
+                <li><a href="#">서브메뉴</a></li>
+                <li><a href="#">서브메뉴</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">주메뉴1</a>
+              <ul class="depth2">
+                <li><a href="#">서브메뉴</a></li>
+                <li><a href="#">서브메뉴</a></li>
+                <li><a href="#">서브메뉴</a></li>
+                <li><a href="#">서브메뉴</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <h2>작은제목</h2>
+        <h3>작은제목</h3>
+        <h4>작은제목</h4>
+        <h5>작은제목</h5>
+
+        <input type="checkbox" />
+        <label>min_chan</label>
+      </header>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,57 @@
+/* *: 전체 선택자 */
+* {
+  /* 바깥 여백 */
+  margin: 0;
+  /* 안쪽 여백 */
+  padding: 0;
+}
+
+/* 동시 선택자 */
+h2,
+h3,
+h4,
+h5 {
+  font-size: 30px;
+  color: red;
+}
+
+/* 아이디 선택자: 100점 */
+#header {
+  width: 1200px;
+  height: 150px;
+  border: 5px solid red;
+}
+
+/* 하위 선택자 */
+/* 110점이므로 위에 있더라도 우선순위가 높아진다. */
+/* !important키워드를 붙이면 10000점, 인라인 스타일을 덮어 씌울때만 사용 */
+#header .logo {
+  border: 3px solid black !important;
+}
+
+/* 클래스 선택자 10점 */
+/* .logo {
+  border: 3px solid yellowgreen;
+} */
+
+/* 자식 선택자: 부모의 직계 자식만 선택가능(>) */
+/* 이중 리스트 구조에서 바깥쪽 li와 a는 반드시 자식 선택자 사용해야함 */
+#header .gnb > li {
+  border: 1px solid red;
+}
+
+/* li의 자식인 a 사용 */
+#header .gnb > li > a {
+  background: yellowgreen;
+}
+
+#header .gnb .depth2 li {
+  border: 2px solid black;
+}
+
+/* 태그 선택자 1점, 속성 선택자: 폼 요소 선택 시 사용 */
+/* +: 인접형제 선택자 */
+/* input[type='checkbox']에 이어져 나오는 label을 선택 */
+input[type='checkbox'] + label {
+  color: red;
+}
