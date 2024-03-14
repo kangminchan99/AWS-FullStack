@@ -1,0 +1,6 @@
+# ignore all html files:
+\**/**.html
+
+
+# ignore all css files:
+\**/**.css
