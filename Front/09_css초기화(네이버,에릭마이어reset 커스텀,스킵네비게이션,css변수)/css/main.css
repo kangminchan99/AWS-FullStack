@@ -1,0 +1,23 @@
+/* 컬러 변수 */
+:root {
+  --point-color1: #ffb300;
+  --point-color2: #32a13c;
+  --txt-color-400: #999;
+  --txt-color-500: #666;
+  --txt-color-600: #292929;
+}
+
+.main_etc h2 {
+  color: var();
+  font-weight: 700;
+  font-size: 40px;
+  text-align: center;
+}
+
+.main_etc p strong {
+  color: var(--txt-color-600);
+}
+
+.main_news {
+  height: 300px;
+}

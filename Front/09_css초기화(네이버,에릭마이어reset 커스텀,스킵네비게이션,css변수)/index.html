@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>text</title>
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <div id="wrap">
+      <header id="header"></header>
+      <main id="container">
+        <section class="main_etc">
+          <h2>섹션 제목</h2>
+          <button type="button">btn</button>
+
+          <p>
+            h1 태그는 기본적으로 브라우저에 의해 일부 스타일이 적용될 수
+            있습니다. <strong>이 스타일에는 여백 (마진)과 글꼴</strong> 크기
+            등이 포함될 수 있습니다. 만약 이미지에 패딩이 추가되었다면, 이는
+            브라우저의 기본 스타일이나 사용 중인 스타일 시트 (common.css)에서
+            해당 요소에 대한
+            <strong>
+              원인과 해결책은 다음과 같습니다: 브라우저의 기본 스타일:
+              일부</strong
+            >스타일이 지정되었을 가능성이 있습니다. 가능한 브라우저는 기본적으로
+            h1 태그에 패딩을 제공할 수 있습니다. 이 경우, CSS를 사용하여 해당
+            패딩을 재정의할 수 있습니다. 외부 스타일 시트 (common.css):
+            common.css 파일에서 h1 태그에 대한 스타일이 정의되어 있을 수
+            있습니다. 이 경우, 해당 스타일을 수정하거나 재정의하여 패딩을 제거할
+            수 있습니다. 상위 요소 스타일: h1 태그가 포함된 상위 요소에 패딩이나
+            여백이 지정되어 있는 경우, 이로 인해 h1 태그의 내용에도 영향을 줄 수
+            있습니다. 상위 요소의 스타일을 확인하고 필요에 따라 수정하세요.
+            일반적으로 CSS의 "padding" 속성을 사용하여 해당 요소의 패딩을 조정할
+            수 있습니다. 예를 들어, 다음과 같이 h1 태그에 대한 패딩을 0으로
+            설정할 수 있습니다:
+          </p>
+        </section>
+        <section class="main_news">
+          <h2 class="blind">news</h2>
+          <div class="search">
+            <!-- 폼필레 -->
+            <form>
+              <fieldset>
+                <legend>search</legend>
+                <input type="text" />
+              </fieldset>
+            </form>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
