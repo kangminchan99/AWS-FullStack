@@ -1,0 +1,44 @@
+<!-- 현재 html 문서의 버전이 html5임을 브라우저에게 알려줌 -->
+<!DOCTYPE html>
+<!-- 현재 문서의 주 언어 명시 -->
+<html lang="ko">
+  <head>
+    <!-- 현재 파일의 형식이 유니코드(다국어)임을 나타냄 -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>03</title>
+  </head>
+  <body>
+    <!-- id는 바깥 부분(header, main, footer), class는 내부 부분 -->
+    <div id="wrap">
+      <header id="header">
+        <h1 class="logo">
+          <a href="index.html">
+            <img src="./images/logo_w.png" alt="subway" />
+          </a>
+          <!-- 같은 화면에서 id가 있는곳으로 전환 -->
+        </h1>
+        <nav class="gnb_wrap">
+          <ul class="gnb">
+            <li><a href="index2.html">go sub page</a></li>
+          </ul>
+        </nav>
+        <!-- 절대 주소: 다른 사이트를 새창으로 띄울 때 : target="_blank"-->
+        <!-- title: 툴팁 메시지 보여줌(설명 차원, 접근성) -->
+        <!-- 새창 띄울 시 아래 형식 고정 -->
+        <a href="http://naver.com" target="_blank" title="새창 열림">naver</a>
+        <br />
+        <a href="#container">메인컨텐츠로 이동</a>
+        <br />
+        <a href="#footer">footer이동</a>
+      </header>
+      <main id="container" style="height: 1500px; border: 10px solid red">
+        <!-- &amp; : &기호 오류 방지 -->
+        메인&amp; 컨텐츠
+      </main>
+      <!-- &nbsp: 띄어쓰기 -->
+      <!-- &lt ~ &gt : < > -->
+      <footer id="footer">foo&nbsp;&nbsp;&nbsp;&nbsp;ter&lt;asd&gt;</footer>
+    </div>
+  </body>
+</html>
