@@ -1,0 +1,27 @@
+#header {
+  width: 1000px;
+  /* %단위는 부모의 크기가 기준 */
+  width: 50%;
+  height: 700px;
+}
+
+/* 클릭 요소에 탭키로 포커스 이동 시 외곽선이 생기며(키보드 접근성) 끌 수 있음 */
+#header .logo a {
+  outline: none;
+}
+
+#header .txt {
+  font-size: 50px;
+  /* 축약형 */
+  /* border: 5px solid red; */
+  /* 개별 속성 */
+  /* border-top: none; */
+  /* border-bottom: 10px dashed blue; */
+
+  /* 값을 생략할 수 있지만 안되는 경우도 있으므로 생략하지말기 */
+  /* 색은 16진수 헥사코드 사용 */
+  /* 두자리가 같을 경우 한자리로 표현 가능 */
+  border-bottom: 10px solid #00f;
+  /* %를 의미하는 경우 소수 두자리 가능 */
+  border-top: 10px solid rgba(0, 0, 0, 0.55);
+}

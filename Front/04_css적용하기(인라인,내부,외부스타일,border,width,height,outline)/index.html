@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>스타일 적용하기</title>
+    <link rel="stylesheet" href="common.css" />
+    <style>
+      /* #: id선택자 */
+      /* .: class선택자  */
+      /* #header .logo -> id 헤더안의 클래스인 로고 */
+      /* 내부 스타일: 한페이지에만 빠르게 적용가능 */
+      #header .logo {
+        border: 5px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <!-- 인라인 스타일: 이메일 코딩처럼 파일연결이 불가능한 경우 사용 -->
+      <header id="header" style="border: 5px solid red">
+        <h1 class="logo">
+          <a href="index.html">
+            <img src="./images/logo_w.png" alt="subway" />
+          </a>
+        </h1>
+        <p class="txt">외부 스타일 적용하기</p>
+      </header>
+    </div>
+  </body>
+</html>
