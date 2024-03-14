@@ -1,0 +1,87 @@
+<!-- 현재 html 문서의 버전이 html5임을 브라우저에게 알려줌 -->
+<!DOCTYPE html>
+<!-- 현재 문서의 주 언어 명시 -->
+<html lang="ko">
+  <head>
+    <!-- 현재 파일의 형식이 유니코드(다국어)임을 나타냄 -->
+    <meta charset="UTF-8" />
+    <!-- viewport: 브라우저 크기 -->
+    <!-- content="width=device-width: 모바일 디바이스의 크기만큼 브라우저 크기를 설정 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- title: 사이트명 -->
+    <title>Document</title>
+  </head>
+  <!--  -->
+  <body>
+    <!-- 의미는 없지만 감싸야 될 때 쓰는 태그 -->
+    <!-- id는 바깥 부분(header, main, footer), class는 내부 부분 -->
+    <div id="wrap">
+      <!-- 헤더 -->
+      <header id="header">
+        <!-- logo: h1 -->
+        <h1 class="logo">logo h1</h1>
+        <!-- 섹션 제목에 주로 사용 -->
+        <h2>작은 제목</h2>
+        <!-- 컬럼 제목에 주로 사용 -->
+        <h3>컬럼 제목</h3>
+        <!-- 네비게이션: 주메뉴 감쌀 때만 사용 -->
+        <nav class="gnb_wrap">
+          <!-- ul: 순서가 중요하지 않은 일반적인 리스트 -->
+          <ul class="gnb">
+            <!-- 스타일이 같으면 리스트다 -->
+            <li>menu1</li>
+            <li>menu1</li>
+            <li>menu1</li>
+            <li>menu1</li>
+            <li>menu1</li>
+          </ul>
+        </nav>
+      </header>
+      <!-- main -->
+      <main id="container">
+        <section class="main_etc">
+          <h2>섹션에는 반드시 하나이상의 제목 태그가 필요</h2>
+          <!-- ol: 순서가 필요한 목록 -->
+          <ol>
+            <li>facebook link</li>
+            <li>google link</li>
+            <li>naver link</li>
+          </ol>
+          <!-- 제목이 포함된 리스트 구조에 주로 사용 -->
+          <dl>
+            <dt>카테고리 제목</dt>
+            <dd>카테고리1</dd>
+            <dd>카테고리2</dd>
+            <dd>카테고리3</dd>
+          </dl>
+        </section>
+      </main>
+      <!-- footer -->
+      <footer id="footer">
+        <!-- p: 문단 -->
+        <p>
+          <!-- br태그는 self closing 태그 -->
+          <!-- strong태그: 강조, em태그 italic체 -->
+          <!-- span태그는 인라인 요소(<span>, <a>, <img>, <em>, <strong> 등)를 그룹시킬 때 쓸 수 있으며 글자를 감을때도 사용 -->
+          <strong>"ignore"</strong>가 적용되지 않는 이유는 .gitignore 파일에서
+          사용하는 패턴이 올바르지 않기 때문일 수 있습니다.<br />
+          .gitignore 파일은 특정 파일이나 디렉토리를 Git에서 추적하지 않도록
+          지정하는 데 사용됩니다.<br />
+          예를 들어, <em>.html</em>과 <span>.css</span>와 같은 패턴은 확장자가
+          .html 또는 .css인 모든 파일을 무시하도록 지정합니다. 하지만 특정
+          파일이나 디렉토리가 제대로 무시되지 않는다면, .gitignore 파일에서
+          사용하는 패턴을 확인해 보십시오. 올바른 패턴을 사용하는지 확인하여
+          무시되지 않는 파일이 있는지 확인할 수 있습니다.
+        </p>
+        <p>
+          <!-- b태그 bold체 -->
+          <!-- u태그 언더라인 -->
+          <!-- i태그 이탤릭 -->
+          <b>para</b
+          >paraparaparaparaaraparaparaparap<br />araparaparapara<u>paraparap</u>paraparaparaparaparaparapara<i>paraparap</i>ara
+        </p>
+        <address>my address kkamsd-122kmkl</address>
+      </footer>
+    </div>
+  </body>
+</html>
