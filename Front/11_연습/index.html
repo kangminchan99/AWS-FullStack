@@ -2,20 +2,18 @@
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
-    <!-- 반응형 세팅이 아닐경우 (데스크탑) 뷰 포트 크기 고정해야함 기본 그리드 + 80정도-->
     <meta name="viewport" content="width=1280" />
-    <title>CJ도너스캠프</title>
-    <link rel="stylesheet" href="./main.css" />
-    <!-- main.css가 덮어씀 그래서 큰걸 아래에 배치 해야함-->
-
-    <link rel="stylesheet" href="./common.css" />
+    <title>prac</title>
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="common.css" />
   </head>
   <body>
+    <!-- 헤더 -->
+
+    <!-- 메인 -->
     <div id="wrap">
       <main id="container">
-        <section class="main_visual">
-          <h2 class="blind">main visual</h2>
-        </section>
+        <section class="main_visual"></section>
         <section class="main_intro">
           <div class="inner">
             <div class="txt_wrap">
@@ -26,10 +24,8 @@
               </p>
             </div>
             <ul class="intro">
-              <li class="active">
-                <!-- a태그는 인라인이지만 모든 태그를 다 넣을 수 있다. -->
-                <a href="#">
-                  <!-- 각각의 페이지가 연결이 되어있으므로 제목으로 본다. -->
+              <li>
+                <a href="">
                   <h3 class="tit">꿈 키움 지원사업</h3>
                   <p class="txt">
                     아동·청소년·청년의 교육과<br />
@@ -37,7 +33,7 @@
                   </p>
                 </a>
               </li>
-              <li>
+              <li class="active">
                 <a href="#">
                   <!-- 각각의 페이지가 연결이 되어있으므로 제목으로 본다. -->
                   <h3 class="tit">청소년 문화동아리</h3>

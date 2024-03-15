@@ -1,0 +1,128 @@
+/* 컬러 변수 */
+:root {
+  --point-color1: #ff601e;
+  --point-color2: #feb12d;
+  --txt-color-400: #888;
+  --txt-color-500: #666;
+  --txt-color-600: #000;
+}
+
+#wrap {
+  min-width: 1200px;
+  height: 1500px;
+}
+
+/* 메인 이미지 */
+.main_visual {
+  height: 560px;
+  background: url(./images/visual_01.jpeg);
+  border: 3px solid red;
+}
+
+/* 음수로 스택처럼 사용  */
+.main_intro {
+  margin-top: -58px;
+  border: 3px solid blue;
+}
+
+.main_intro .inner {
+  height: 400px;
+  width: 1200px;
+  border: 3px solid pink;
+  background: #fff;
+  /* 가운데 정렬 */
+  margin: 0 auto;
+}
+
+.main_intro .inner .txt_wrap {
+  border: 3px solid purple;
+  padding: 45px 0;
+}
+
+/* 일반 텍스트 */
+.main_intro .inner .txt_wrap p {
+  text-align: center;
+  font-size: 24px;
+  color: var(--txt-color-600);
+}
+
+/* 강조 텍스트 */
+.main_intro .inner .txt_wrap p strong {
+  color: var(--point-color1);
+  font-weight: 700;
+}
+
+/* 가로로 정렬하기 */
+.main_intro .inner .intro {
+  display: flex;
+  gap: 0 6px;
+  align-items: flex-start;
+}
+
+/* 너비는 안에서 3개의 리스트를 calc로 분배*/
+.main_intro .inner .intro li {
+  width: calc(100% / 3);
+  background: #f7f7f7;
+}
+
+.main_intro .inner .intro li a {
+  height: 178px;
+  /* 상자로 바꾸기 */
+  display: block;
+  padding: 43px 15px 0 130px;
+  position: relative;
+}
+
+.main_intro .inner .intro li a::before {
+  content: '';
+  position: absolute;
+  left: 40px;
+  top: 40px;
+  width: 45px;
+  height: 43px;
+  background: url(./images/ico-home-type.png) no-repeat 0 4px;
+}
+
+/* 리스트2번째의 위치는 png이미지의 위치와 같게 변경 */
+.main_intro .inner li:nth-child(2) a:before {
+  background-position: 0 -40px;
+}
+
+/* 리스트3번째의 위치는 png이미지의 위치와 같게 변경 */
+.main_intro .inner li:nth-child(3) a:before {
+  background-position: 0 -83px;
+}
+
+.main_intro .inner .intro li.active {
+  background: url(./images/bg-home-type.png) no-repeat;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.main_intro .intro li.active a::before {
+  /* x값만 변경 */
+  background-position-x: -55px;
+}
+
+/* 선택 시 색상 및 글자 변경 */
+.main_intro .intro li.active .tit {
+  color: #fff;
+  /* 그림자 설정 */
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+.main_intro .intro li.active .txt {
+  color: #fff;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+/* 가로로 정렬하기 */
+.main_intro .inner .intro .tit {
+  font-size: 24px;
+  color: var(--txt-color-600);
+  /* 칸을 늘릴 필요가 없으면 마진 사용 */
+  margin-bottom: 15px;
+}
+
+/* 가로로 정렬하기 */
+.main_intro .inner .intro .txt {
+  font-size: 15px;
+}

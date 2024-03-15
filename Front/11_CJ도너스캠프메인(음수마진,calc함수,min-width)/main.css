@@ -1,76 +1,119 @@
 /* 컬러 변수 */
 :root {
-  --point-color1: #ffb300;
-  --point-color2: #32a13c;
-  --txt-color-400: #999;
+  --point-color1: #ff601e;
+  --point-color2: #feb12d;
+  --txt-color-400: #888;
   --txt-color-500: #666;
-  --txt-color-600: #292929;
+  --txt-color-600: #000;
 }
 
 #wrap {
-  height: 2000px;
+  /* min-width: 최소 너비를 지정하여 화면이 작아지더라도 짤림 방지  */
+  min-width: 1280px;
+  height: 1500px;
 }
 
-/* margin 
-- 바깥 여백이며 요소를 이동할 때 사용 간격 줄 때 사용
-- 음수 가능
-- margin: 0 auto; 크기가 정해져있는 블럭요소를 가운데 정렬 
-- margin: 위 오른쪽 아래 왼쪽
-- margin: 위 좌우 아래 
-- margin: 위아래 좌우
-- margin: 모두(거의 사용 x) */
+.main_visual {
+  height: 560px;
+  background: url(./images/visual_01.jpeg) /* 이미지 반복 금지 */ no-repeat
+    center top;
+}
 
-/* 마진 병합 
- - 부모와 자식요소가 수직방향으로 인접할 경우 부모 또는 자식의 margin-top중 큰값으로 병합되어 가장 바깥 조상요소에 적용됨
- - 띄우는 속성(flex, position)이 적용되면 떠있으므로 인접이 아니며 마진병합이 없음 */
-#header {
+/* 요소 이동 시 부모를 이동하면 안쪽 요소도 같이 이동되므로 부모로 이동 */
+.main_intro {
+  margin-top: -58px;
+}
+
+/* 바깥쪽 100% 항상 놔두고 안쪽 inner에서 가로길이 지정하기 */
+/* 100% 디자인이 추가되는 경우가 매우매우 많음 */
+.main_intro .inner {
   width: 1200px;
-  height: 150px;
-  background: yellowgreen;
-  /* margin-left: -500px;
-  margin-top: 100px; */
   margin: 0 auto;
-  /* 마진 병합일 경우 바깥쪽에서 패딩으로 요소를 밀어줌 */
-  padding-top: 40px;
+}
+
+.main_intro .txt_wrap {
+  padding: 45px 0;
+  background: #fff;
+}
+
+.main_intro .txt_wrap p {
+  font-size: 24px;
+  text-align: center;
+  color: var(--txt-color-600);
+}
+
+.main_intro .txt_wrap p strong {
+  color: var(--point-color1);
+  font-weight: 700;
+}
+
+.main_intro .intro {
+  display: flex;
+  gap: 0 6px;
+  align-items: flex-start;
+}
+
+/* 가로는 밖에서 높이는 안에서 잡아줘야 한다 */
+.main_intro .intro li {
+  width: calc(100% / 3);
+  background: #f7f7f7;
+}
+
+.main_intro .intro li.active {
+  background: url(./images/bg-home-type.png) no-repeat;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* 아래쪽에 선언한 선택자보다 점수를 올리기 위해 #container사용 */
+/* a::before -> 가상요소 선택자 */
+#container .main_intro .intro li.active a::before {
+  /* x값만 변경 */
+  background-position-x: -55px;
+}
+
+.main_intro .intro li.active .tit {
+  color: #fff;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+.main_intro .intro li.active .txt {
+  color: #fff;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+/* a태그는 상자가 아니니 display block으로 설정 */
+
+.main_intro .intro li a {
+  height: 178px;
+  display: block;
+  padding: 43px 15px 0 130px;
   position: relative;
 }
 
-#header .logo {
-  margin-top: 30px;
+.main_intro .intro a::before {
+  content: '';
+  /*  position: absolute; 바깥부모의 기준을 잡아줘야한다. */
   position: absolute;
-  left: 0;
-  top: 0;
-  font-size: 70px;
-  border: 2px solid red;
+  left: 40px;
+  top: 40px;
+  width: 45px;
+  height: 43px;
+  background: url(./images/ico-home-type.png) no-repeat 0 4px;
 }
 
-.main_etc {
-  width: 1200px;
-  height: 400px;
-  border: 5px solid red;
-  margin: 0 auto 100px;
+.main_intro li:nth-child(2) a:before {
+  background-position: 0 -40px;
 }
 
-.main_etc2 {
-  width: 1200px;
-  height: 400px;
-  border: 5px solid black;
-  margin: 100px auto 0;
+.main_intro li:nth-child(3) a:before {
+  background-position: 0 -83px;
+}
+.main_intro .intro li .tit {
+  font-size: 24px;
+  color: var(--txt-color-600);
+  /* 칸을 늘릴 필요가 없으면 마진 사용 */
+  margin-bottom: 15px;
 }
 
-.main_etc2 .list {
-  display: flex;
-}
-
-/* 패딩: 안쪽 여백이며 내용을 안으로 밀어넣을 때 사용
-- 병합 개념이 없으며 마진 순서와 동일하다 */
-.main_etc2 .list li {
-  border: 2px solid black;
-  width: 25%;
-  padding: 20px 40px 0;
-}
-
-/* li + li -> 첫번째 형제 요소를 제외한 나머지 형제 선택 */
-.main_etc2 .list li + li {
-  margin-left: 30px;
+.main_intro .intro li .txt {
+  font-size: 15px;
 }
