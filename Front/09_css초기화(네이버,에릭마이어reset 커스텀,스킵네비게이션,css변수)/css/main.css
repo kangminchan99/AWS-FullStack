@@ -21,3 +21,10 @@
 .main_news {
   height: 300px;
 }
+
+/* a태그를 변경하려면 반드시 a로 적어줘야함 */
+/* 안그러면 브라우저에서 바꾼 값으로 들어감 */
+.main_news a {
+  border: 2px solid red;
+  color: red;
+}
