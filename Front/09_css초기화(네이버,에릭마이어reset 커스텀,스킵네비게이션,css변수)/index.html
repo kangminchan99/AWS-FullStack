@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="./css/main.css" />
   </head>
   <body>
+    <!-- 스킵네비게이션: 탭키로 주요영역으로 바로가기 위한 메뉴(키보드 접근성) -->
+    <div id="skip_navi">
+      <a href="#container">본문 바로가기</a>
+    </div>
     <div id="wrap">
       <header id="header"></header>
       <main id="container">
@@ -66,9 +70,17 @@
           <!-- iframe 외부 페이지 연결 -->
           <iframe src="http://ossamuiux.com"></iframe>
           <div class="checkbox_wrap">
-            <input type="check1" name="" id="" />
-            <label for="text1">오늘하루 열지않음</label>
+            <input type="checkbox" id="check1" />
+            <label for="check1">오늘하루 열지않음</label>
           </div>
+          <div class="checkbox_wrap">
+            <input type="checkbox" id="check2" />
+            <label for="check2">오늘하루 열지않음</label>
+          </div>
+          <!-- 폰트에 상관없이 rows에 맞게 자동으로 높이 설정 따라서 height로 바꿀 필요 X -->
+          <textarea rows="5"></textarea>
+          <input type="text" placeholder="검색어를 입력하세요" />
+          <input type="search" />
         </section>
       </main>
     </div>

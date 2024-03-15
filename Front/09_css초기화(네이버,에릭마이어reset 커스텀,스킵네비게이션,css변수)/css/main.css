@@ -28,3 +28,8 @@
   border: 2px solid red;
   color: red;
 }
+
+.main_news textarea {
+  width: 300px;
+  font-size: 20px;
+}
