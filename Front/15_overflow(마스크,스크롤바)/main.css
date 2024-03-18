@@ -1,0 +1,43 @@
+/* 컬러 변수 */
+:root {
+  --point-color1: #ff7200;
+  --point-color2: #feb12d;
+  --txt-color-400: #888;
+  --txt-color-500: #222;
+  --txt-color-600: #000;
+}
+
+#wrap {
+  /* min-width: 최소 너비를 지정하여 화면이 작아지더라도 짤림 방지  */
+  /* min-width: 1280px; */
+  height: 1500px;
+}
+
+.main_etc {
+  background: #f0f0f0;
+  /* 패딩은 바깥요소에서 잡고 가기 */
+  padding: 70px 0;
+}
+
+.main_etc .inner {
+  /* 반응형으로 창이 줄어들 때 줄어들어야 하므로 max-width 사용 */
+  /* 기본 그리드 + 좌우 패딩 */
+  max-width: 1230px;
+  margin: 0 auto;
+  /* 창이 줄어들경우 좌우가 붙지 않도록 테블릿 여백을 미리 준다*/
+  padding: 0 15px;
+  border: 4px solid red;
+  height: 100px;
+  /* overflow: visible; -> 기본값 넘친 내용을 그대로 보여준다 */
+  overflow: visible;
+  /* overflow: auto; -> 스크롤로 보여줌 */
+  overflow: auto;
+
+  /* overflow: hidden; -> 넘친 내용을 가려줌 */
+  overflow: hidden;
+
+  /* overflow: scroll; -> 가로 스크롤도 가능 */
+  overflow: scroll;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
