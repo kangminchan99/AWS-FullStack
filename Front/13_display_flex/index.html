@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- 반응형 세팅이 아닐경우 (데스크탑) 뷰 포트 크기 고정해야함 기본 그리드 + 80정도-->
+    <meta name="viewport" content="width=1280" />
+    <title>display</title>
+
+    <link rel="stylesheet" href="./common.css" />
+    <link rel="stylesheet" href="./main.css" />
+    <!-- main.css가 덮어씀 그래서 큰걸 아래에 배치 해야함-->
+  </head>
+  <body>
+    <div id="wrap">
+      <header id="header">
+        <h1 class="logo">logo</h1>
+        <!-- 블럭은 위아래로 배치가 되는걸 볼 수 있다. -->
+        <p>블럭은 위아래로 배치됨</p>
+
+        <!-- 인라인이기 때문에 글자취급으로 좌우로 배치가 되는걸 볼 수 있다. -->
+        <div>
+          <a href="#">인라인요소</a>
+          <a href="#">인라인요소</a>
+          <a href="#">인라인요소</a>
+        </div>
+        <input type="text" name="" id="" />
+        <button type="button">close button</button>
+      </header>
+    </div>
+  </body>
+</html>
