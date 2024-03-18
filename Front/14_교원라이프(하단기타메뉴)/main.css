@@ -1,0 +1,115 @@
+/* 컬러 변수 */
+:root {
+  --point-color1: #ff7200;
+  --point-color2: #feb12d;
+  --txt-color-400: #888;
+  --txt-color-500: #222;
+  --txt-color-600: #000;
+}
+
+#wrap {
+  /* min-width: 최소 너비를 지정하여 화면이 작아지더라도 짤림 방지  */
+  /* min-width: 1280px; */
+  height: 1500px;
+}
+
+.main_etc {
+  background: #f0f0f0;
+  /* 패딩은 바깥요소에서 잡고 가기 */
+  padding: 70px 0;
+}
+
+.main_etc .inner {
+  /* 반응형으로 창이 줄어들 때 줄어들어야 하므로 max-width 사용 */
+  /* 기본 그리드 + 좌우 패딩 */
+  max-width: 1230px;
+  margin: 0 auto;
+  /* 창이 줄어들경우 좌우가 붙지 않도록 테블릿 여백을 미리 준다*/
+  padding: 0 15px;
+}
+
+.main_etc .etc {
+  display: flex;
+  /* 좌우 여백 */
+  gap: 0 15px;
+}
+
+.main_etc .etc li {
+  width: 25%;
+  box-shadow: 2px 2px 4px rgba(220, 220, 220, 1);
+}
+
+/* hover: 마우스 올려뒀을 때의 상태 */
+.main_etc .etc li:hover h3 {
+  color: var(--point-color2);
+}
+
+.main_etc .etc a {
+  display: block;
+  /* 높이는 안에서 잡고 너비는 밖에서 */
+  height: 250px;
+  padding: 40px 25px 0;
+  /* background: 색 url() 반복옵션 x xoffset y위치 yoffset / 가로크기 세로크기 */
+  background: #fff url(./images/company.svg) no-repeat right 25px bottom 25px /
+    auto 55px;
+}
+
+.main_etc .etc li:nth-child(2) a {
+  background-image: url(images/mic.svg);
+}
+
+.main_etc .etc li:nth-child(3) a {
+  background-image: url(images/chrysanthemum.svg);
+}
+
+.main_etc .etc li:nth-child(4) a {
+  background-image: url(images/qna.svg);
+}
+
+.main_etc .etc h3 {
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.main_etc .etc p {
+  font-size: 16px;
+  color: var(--txt-color-400);
+  /* 이동은 항상 마진 */
+  margin-top: 12px;
+}
+
+/* 태블릿 분기점 */
+@media (max-width: 1200px) {
+  .main_etc .etc p br {
+    display: none;
+  }
+}
+
+/* 모바일 분기점 */
+@media (max-width: 767px) {
+  .main_etc {
+    padding: 35px 0;
+  }
+  .main_etc .etc {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .main_etc .etc li {
+    /* 필셀은 소수점 불가 */
+    width: calc(50% - 15px / 2);
+  }
+  .main_etc .etc a {
+    padding: 25px 15px 0;
+    height: 200px;
+    background-size: auto 45px;
+    background-position: right 15px bottom 15px;
+  }
+  .main_etc .etc h3 {
+    font-size: 18px;
+  }
+
+  .main_etc .etc p {
+    font-size: 14px;
+  }
+}
