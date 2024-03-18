@@ -1,0 +1,44 @@
+/* 컬러 변수 */
+:root {
+  --point-color1: #ff601e;
+  --point-color2: #feb12d;
+  --txt-color-400: #888;
+  --txt-color-500: #666;
+  --txt-color-600: #000;
+}
+
+#wrap {
+  /* min-width: 최소 너비를 지정하여 화면이 작아지더라도 짤림 방지  */
+  min-width: 1280px;
+  height: 1500px;
+}
+
+/* width는 자동으로 100% height는 내용만큼 매치*/
+#header {
+  border: 5px solid red;
+  width: 1200px;
+  margin-top: 50px;
+  padding-top: 50px;
+}
+
+#header a {
+  border: 1px solid black;
+  height: 40px;
+  margin-right: 30px;
+  padding-right: 30px;
+  /* 인라인 요소에 마진,패딩 상하 불가 */
+  margin-top: 20px;
+  padding-top: 20px;
+  /* display 변경가능 */
+  /* block으로 바꿀 시 인라인에서 block으로 바뀐다. */
+  display: inline-block;
+  /* display: block; */
+}
+
+#header button {
+  height: 50px;
+  margin-top: 50px;
+  padding-top: 30px;
+  /* 요소를 안보이게 */
+  display: none;
+}
