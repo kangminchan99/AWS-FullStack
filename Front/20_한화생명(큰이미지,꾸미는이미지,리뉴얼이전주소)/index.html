@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- 반응형 세팅이 아닐경우 (데스크탑) 뷰 포트 크기 고정해야함 기본 그리드 + 80정도-->
+    <meta name="viewport" content="width = 1140" />
+    <!-- ios 사파리 전화번호 링크 컬러 변경못하게  -->
+    <!-- <meta name="format-detection" content="telephone=no" /> -->
+    <meta name="desciption" content="OUTBACK STEAKHOUSE" />
+    <title>한화 생명</title>
+    <!-- 웹 폰트 코드 먼저 연결해야함 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- 노토 산스 폰트 연결 -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- 아이콘 폰트 연결 -->
+    <!-- self closing규칙: </> : html5는 둘 다 적용 가능 -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,300,0,0"
+    />
+
+    <link rel="stylesheet" href="./common.css" />
+    <link rel="stylesheet" href="./main.css" />
+    <!-- main.css가 덮어씀 그래서 큰걸 아래에 배치 해야함-->
+  </head>
+  <body>
+    <div id="skip_navi">
+      <a href="#container">본문 바로가기</a>
+    </div>
+    <div id="wrap">
+      <main id="container">
+        <section class="main_recommand">
+          <div class="inner">
+            <div class="tit_wrap">
+              <h2>01월의 추천상품</h2>
+              <p>한화생명 온슈어가 드리는 추천상품입니다.</p>
+            </div>
+            <ul class="recommand">
+              <li>
+                <a href="#">
+                  <em>저축보험</em>
+                  <p>저축보험 vs 은행적금 어떤걸 가입할까?</p>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <em>내게 맞는 보험 찾기</em>
+                  <p>
+                    보험 가입이<br />고민 되시는 분께<br /><strong
+                      >꼭 맞는 보험</strong
+                    >을<br />찾아드립니다
+                  </p>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

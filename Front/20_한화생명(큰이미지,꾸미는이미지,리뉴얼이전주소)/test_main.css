@@ -1,0 +1,115 @@
+/* 컬러 변수 */
+:root {
+  --point-color1: #be161e;
+  --point-color2: #c7b19b;
+  --txt-color-400: #999;
+  --txt-color-500: #666;
+  --txt-color-600: #222;
+}
+
+#wrap {
+  min-width: 1260px;
+  height: 1500px;
+}
+
+#header {
+  min-width: 1260px;
+  background: rgba(52, 52, 54, 1);
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 9999;
+}
+
+#header .inner {
+  width: 1180px;
+  height: 100px;
+
+  border: 3px solid red;
+  /* 위아래는 값을 주지 않고 양옆에 값을 동일하게 주어 중앙에 배치 */
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+#header .gnb {
+  display: flex;
+}
+
+#header .gnb > li {
+  padding: 0 15px;
+}
+
+#header .gnb_wrap {
+  margin-left: 80px;
+}
+
+#header .gnb > li > a::after {
+  content: '';
+  /* ::after는 인라인이지만 앱솔걸면 블럭이됨 */
+  position: absolute;
+  left: 0;
+  /* 양수면 기준안으로 들어가고 음수면 기준 밖으로 나감 */
+  bottom: 20px;
+  /* 앱솔걸면 크기가 내용만큼 줄어드므로 100%로 늘려줌 */
+  display: block;
+  height: 3px;
+  background: var(--point-color1);
+  display: none;
+}
+
+/* 자식 선택자 */
+#header .gnb > li > a {
+  display: block;
+  color: #fff;
+  font-size: 19px;
+  font-family: 'Akrobat', sans-serif;
+  /* 메뉴에서 글자를 수직 정렬하며 높이 지정 시 px사용 */
+  line-height: 100px;
+  letter-spacing: 0.12em;
+  position: relative;
+}
+
+#header .gnb > li:hover > a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 20px;
+  width: 100%;
+  display: block;
+  height: 3px;
+  background: var(--point-color1);
+  display: none;
+}
+
+#header .gnb > li:hover > a::after {
+  display: block;
+}
+
+#container {
+  padding-top: 100px;
+}
+
+.main_slider {
+  /* 스크롤 바 가리기 */
+  overflow: hidden;
+
+  /* 포지션 앱솔의 기준 */
+  position: relative;
+
+  /* 안쪽요소가 모두 포지션 앱솔이면 높이가 0이 되며 높이를 지정해야함 */
+  height: 900px;
+}
+
+/* 크기 맞추기 */
+.main_slider a {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%);
+}
+
+.main_slider img {
+  max-width: none;
+}

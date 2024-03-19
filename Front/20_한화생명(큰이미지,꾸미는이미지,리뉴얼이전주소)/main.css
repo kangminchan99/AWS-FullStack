@@ -1,0 +1,109 @@
+/* 컬러 변수 */
+:root {
+  --point-color1: #eb6242;
+  --point-color2: #c7b19b;
+  --txt-color-400: #999;
+  --txt-color-500: #333;
+  --txt-color-600: #222;
+}
+
+#wrap {
+  /* min-width: 최소 너비를 지정하여 화면이 작아지더라도 짤림 방지  */
+  /* 반응형이거나 아니거나의 차이는 min-width를 거냐 안거냐 */
+  min-width: 1140px;
+  height: 1500px;
+}
+
+.main_recommand {
+  height: 610px;
+  background: url(./images/mainBanner01.jpg) no-repeat center top / cover;
+  /* 100%는 이미지 크기가 줄어드므로 cover사용 */
+  /* background-size: cover; */
+  border: 1px solid red;
+  padding-top: 61px;
+}
+
+.main_recommand .inner {
+  width: 1060px;
+  border: 1px solid blue;
+  /* 가운데 정렬 */
+  margin: 0 auto;
+}
+
+.main_recommand .tit_wrap {
+  color: #fff;
+  border: 1px solid pink;
+  text-align: center;
+}
+
+.main_recommand .tit_wrap h2 {
+  font-size: 40px;
+}
+
+.main_recommand .tit_wrap p {
+  font-size: 18px;
+}
+
+.main_recommand .recommand {
+  display: flex;
+
+  /* 좌우는 justify 위 아래는 align */
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.main_recommand .recommand li {
+  background: #fff;
+  width: 300px;
+  border-radius: 5px;
+
+  /* 안쪽 내용인 a는 네모 형태이므로 모서리를 가려줌 */
+  overflow: hidden;
+}
+
+.main_recommand .recommand li + li {
+  margin-left: 40px;
+}
+
+.main_recommand .recommand li:nth-child(1) {
+  background: #f0f0f0 url(./images/icon-top0102.png) no-repeat bottom right;
+}
+
+.main_recommand .recommand li:nth-child(2) {
+  background: #f0f0f0 url(./images/icon_searchResult.png) no-repeat bottom right;
+}
+
+.main_recommand .recommand a {
+  display: block;
+  height: 310px;
+  padding: 30px 25px;
+}
+
+.main_recommand .recommand em {
+  font-size: 16px;
+  position: relative;
+  padding-bottom: 20px;
+  /* em은 인라인이므로 위아래 패딩이 제대로 작동하지 않음 */
+  display: block;
+}
+
+.main_recommand .recommand em::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 16px;
+  height: 3px;
+  background: var(--point-color1);
+}
+
+.main_recommand .recommand p {
+  font-size: 27px;
+  color: var(--txt-color-600);
+  margin-top: 10px;
+  line-height: 1.2;
+}
+
+.main_recommand .recommand strong {
+  color: var(--point-color1);
+}
