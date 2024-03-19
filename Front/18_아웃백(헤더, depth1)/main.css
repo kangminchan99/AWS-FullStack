@@ -1,0 +1,119 @@
+/* 컬러 변수 */
+:root {
+  --point-color1: #be161e;
+  --point-color2: #c7b19b;
+  --txt-color-400: #999;
+  --txt-color-500: #666;
+  --txt-color-600: #222;
+}
+
+#wrap {
+  /* min-width: 최소 너비를 지정하여 화면이 작아지더라도 짤림 방지  */
+  /* 반응형이거나 아니거나의 차이는 min-width를 거냐 안거냐 */
+  min-width: 1260px;
+  height: 1500px;
+}
+
+/* 요소에 띄우는 속성이 적용되면 내용만큼 줄어든다. */
+/* 그렇기 때문에 width 100% 적용 */
+#header {
+  /* fixed레이어는 창기준이므로 #wrap의 min-width가 작동하지 않으므로 직접 지정 */
+  min-width: 1260px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: rgba(52, 52, 54, 1);
+  width: 100%;
+  /* z-index는 단위 없음 */
+  /* 다른 레이어 보다 무조건 위에 있도록 9999로 설정*/
+  z-index: 9999;
+}
+
+#header .inner {
+  width: 1180px;
+  height: 100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+/* flex를 걸면 자식이 flex가 된다. 그래서 부모한테 걸어야됨*/
+#header .gnb_wrap {
+  margin-left: 80px;
+}
+
+#header .gnb {
+  display: flex;
+}
+
+#header .gnb > li {
+  /* 메뉴 구조에서 여백은 li에서 처리하여 클릭 영역을 구분해주는 것이 좋음 */
+  padding: 0 15px;
+}
+
+/* 자식 선택자 */
+#header .gnb > li > a {
+  display: block;
+  color: #fff;
+  font-size: 19px;
+  font-family: 'Akrobat', sans-serif;
+  /* 메뉴에서 글자를 수직 정렬하며 높이 지정 시 px사용 */
+  line-height: 100px;
+  letter-spacing: 0.12em;
+  position: relative;
+}
+
+#header .gnb > li > a::after {
+  content: '';
+  /* ::after는 인라인이지만 앱솔걸면 블럭이됨 */
+  position: absolute;
+  left: 0;
+  /* 양수면 기준안으로 들어가고 음수면 기준 밖으로 나감 */
+  bottom: 20px;
+  /* 앱솔걸면 크기가 내용만큼 줄어드므로 100%로 늘려줌 */
+  width: 100%;
+  display: block;
+  height: 3px;
+  background: var(--point-color1);
+  display: none;
+}
+
+/* 이중 리스트 구조에서 :hover는 li에서 해야 서브 메뉴를 같이 조작할 수 있으며 서브메뉴로 마우스가 이동해도 hover가 풀리지 않음 */
+#header .gnb > li:hover > a::after {
+  display: block;
+}
+
+/* 패딩은 밖에서 준다. */
+#container {
+  padding-top: 100px;
+}
+
+.main_slider {
+  /* 헤더가 떠있으므로 인접이 아니며 main_slider에서 밖에 있는 메인 컨테이너까지 내려가므로 마진 병합임  */
+  /* 그러므로 사용 불가 */
+  /* margin-top: 100px; */
+
+  /* 스크롤 바 가리기 */
+  overflow: hidden;
+
+  /* 포지션 앱솔의 기준 */
+  position: relative;
+
+  /* 안쪽요소가 모두 포지션 앱솔이면 높이가 0이 되며 높이를 지정해야함 */
+  height: 900px;
+}
+
+/* 일반적으로 absolute를 쓸 경우, 기준이 될 부모에게 position: relative; 를 부여하고 원하는 위치를 지정 */
+.main_slider a {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  /* margin-left: -960px; */
+  /* translate에 %는 요소 자신의 크기가 기준 */
+  transform: translate(-50%);
+}
+
+.main_slider img {
+  /* none으로 껐기 때문에 이미지가 줄지 않는다. */
+  max-width: none;
+}
