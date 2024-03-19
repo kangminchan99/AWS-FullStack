@@ -1,0 +1,42 @@
+/* 컬러 변수 */
+:root {
+  --point-color1: #ff7200;
+  --point-color2: #feb12d;
+  --txt-color-400: #888;
+  --txt-color-500: #222;
+  --txt-color-600: #000;
+}
+
+/* 400 regular */
+/* 800 extra bold */
+
+#wrap {
+  /* min-width: 최소 너비를 지정하여 화면이 작아지더라도 짤림 방지  */
+  /* min-width: 1280px; */
+  height: 1500px;
+}
+
+.main_etc h2 {
+  font-size: 50px;
+}
+
+/* 버튼은 아이콘이 포함된 경우가 많으므로 inline-flex로 구조를 만들며 */
+/* inline-flex는 글자처럼 취급하므로 자간이 생긴다(4px). */
+/* 간격을 감안하여 여백 처리 */
+
+.main_etc .close_btn {
+  height: 40px;
+
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid red;
+  padding: 0 10px 0 15px;
+  margin-right: 6px;
+}
+
+.main_etc .close_btn i {
+  /* vertical-align: -6px; */
+  color: red;
+  font-size: 30px;
+  margin-top: 2px;
+}
