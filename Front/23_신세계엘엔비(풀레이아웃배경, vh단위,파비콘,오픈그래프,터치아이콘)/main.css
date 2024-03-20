@@ -1,0 +1,32 @@
+/* 컬러 변수 */
+:root {
+  --point-color1: #502e82;
+  --point-color2: #c7b19b;
+  --txt-color-400: #999;
+  --txt-color-500: #808080;
+  --txt-color-600: #333;
+}
+
+#wrap {
+  /* min-width: 최소 너비를 지정하여 화면이 작아지더라도 짤림 방지  */
+  /* 반응형이거나 아니거나의 차이는 min-width를 거냐 안거냐 */
+  /* 반응형일 때는 안검 */
+  /* min-width: 1320px; */
+  height: 1500px;
+}
+
+.main_slider {
+  border: 3px solid red;
+  /* height: 100%는 부모의 높이가 있어야 적용 가능 너비는 기본 100%*/
+  /* vh는 viewport height의 약자, 브라우저 높이를 의미*/
+  height: 100vh;
+  background: url(images/202303152224573G78B6.png) no-repeat center center /
+    cover;
+}
+
+/* 모바일 분기점 */
+@media (max-width: 767px) {
+  .main_slider {
+    height: 650px;
+  }
+}
