@@ -1,0 +1,75 @@
+/* 컬러 변수 */
+:root {
+  --point-color1: #03c75a;
+  --point-color2: #9858f5;
+  --txt-color-400: #404040;
+  --txt-color-500: #101010;
+  --txt-color-600: #080808;
+}
+
+#wrap {
+  /* min-width: 최소 너비를 지정하여 화면이 작아지더라도 짤림 방지  */
+  /* 반응형이거나 아니거나의 차이는 min-width를 거냐 안거냐 */
+  /* 반응형일 때는 안검 */
+  /* min-width: 1320px; */
+  height: 1500px;
+}
+
+#header .inner {
+  max-width: 1340px;
+  height: 267px;
+  border: 1px solid red;
+  margin: 0 auto;
+  padding: 0 30px;
+  display: flex;
+  /* 좌우 정렬 */
+  justify-content: center;
+  /* 수직 정렬 */
+  align-items: center;
+}
+
+#header .search_area {
+  /* 반응형이면 맥스 위드 사용 */
+  max-width: 706px;
+  /* flex아이템이라 위드 100으로 해줘야 맥스 위드까지 다참  */
+  width: 100%;
+  border: 1px solid var(--point-color1);
+  /* 높이가 60이므로 절반주면 반원 */
+  border-radius: 30px;
+}
+
+#header .search_area .search_wrap {
+  padding-left: 28px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* input은 속성 선택자를 통해 선택하기(type별로 디자인이 동일하므로) */
+#header .search_area input[type='search'] {
+  height: 58px;
+  font-size: 21px;
+  font-weight: 700;
+  color: #000;
+  max-width: 480px;
+  width: 100%;
+  border: none;
+}
+
+#header .search_area .search_wrap .search_btn {
+  height: 58px;
+  padding: 0 27px 0 10px;
+  border: none;
+  background: none;
+  display: flex;
+  align-items: center;
+}
+
+#header .search_area .search_wrap .search_btn::after {
+  content: '';
+  width: 25px;
+  height: 25px;
+  /* svg배경 컬러 변경하기 : -webkit-mask */
+  -webkit-mask: url(../assets/images/svgexport-1.svg) no-repeat 0 0 /25px;
+  mask: url(../assets/images/svgexport-1.svg) no-repeat 0 0 /25px;
+  background: var(--point-color1);
+}
