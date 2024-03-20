@@ -11,12 +11,13 @@
   /* min-width: 최소 너비를 지정하여 화면이 작아지더라도 짤림 방지  */
   /* 반응형이거나 아니거나의 차이는 min-width를 거냐 안거냐 */
   min-width: 1140px;
-  height: 1500px;
+  height: 6000px;
 }
 
 .main_recommand {
   height: 610px;
-  background: url(./images/mainBanner01.jpg) no-repeat center top / cover;
+  /* fixed는 ios 사파리에서 안되며 (성능 이슈 때문에 막아놨음) */
+  background: url(./images/mainBanner01.jpg) no-repeat center top / cover fixed;
   /* 100%는 이미지 크기가 줄어드므로 cover사용 */
   /* background-size: cover; */
   border: 1px solid red;
