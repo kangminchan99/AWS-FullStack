@@ -9,7 +9,7 @@
     <meta name="format-detection" content="telephone=no" />
     <meta
       name="description"
-      content="주류유통전문기업 신세계엘앤비가 선보이는 전 세계의 유명 와인, 크래프트 맥주, 다양한 위스키와 스피릿을 만나보세요"
+      content="네이버 메인에서 다양한 정보와 유용한 컨텐츠를 만나 보세요"
     />
     <title>네이버</title>
     <!-- 웹 폰트 코드 먼저 연결해야함 -->
@@ -54,6 +54,7 @@
     <div id="wrap">
       <header id="header">
         <div class="inner">
+          <!-- 폼은 무조건 div로 감아야됨 -->
           <div class="search_area">
             <!-- 검색 영역 - 폼 필 레 -->
             <form action="">
@@ -67,6 +68,7 @@
                     type="search"
                     title="검색어를 입력해주세요"
                     placeholder="검색어를 입력해주세요"
+                    id="query"
                   />
                   <!-- 입력 필드의 데이터를 서버로 전송 -->
                   <button type="submit" class="search_btn">
