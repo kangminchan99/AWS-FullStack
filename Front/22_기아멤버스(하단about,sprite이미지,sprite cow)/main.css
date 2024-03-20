@@ -1,0 +1,107 @@
+/* 컬러 변수 */
+:root {
+  --point-color1: #5d7d2b;
+  --point-color2: #c7b19b;
+  --txt-color-400: #999;
+  --txt-color-500: #6b7376;
+  --txt-color-600: #05141f;
+}
+
+#wrap {
+  /* min-width: 최소 너비를 지정하여 화면이 작아지더라도 짤림 방지  */
+  /* 반응형이거나 아니거나의 차이는 min-width를 거냐 안거냐 */
+  min-width: 1320px;
+  height: 1500px;
+}
+
+#container .main_channel {
+  height: 600px;
+  background: url(images/img_main_channer.jpg) no-repeat center top / cover;
+  padding-top: 85px;
+}
+
+#container .tit_wrap {
+  text-align: center;
+}
+
+.main_channel .tit_wrap h2 {
+  font-size: 38px;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.tit_wrap p {
+  font-size: 14px;
+
+  color: #fff;
+}
+
+.main_channel .channel {
+  margin-top: 60px;
+  justify-content: space-around;
+
+  display: flex;
+}
+
+.main_channel .channel li a {
+  display: block;
+
+  width: 84px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+}
+
+/* 스플릿 카우 사용해서 위치 구할 수 있음!! */
+.main_channel .channel a::after {
+  content: '';
+
+  width: 100%;
+  height: 28px;
+  background: url(images/icon_channer_sns.png) no-repeat 0 -64px;
+}
+
+.main_channel .channel li:nth-child(2) a {
+  width: 80px;
+}
+
+.main_channel .channel li:nth-child(2) a::after {
+  height: 20px;
+  background-position: -82px 0;
+}
+
+.main_channel .channel li:nth-child(3) a {
+  width: 70px;
+}
+
+.main_channel .channel li:nth-child(3) a::after {
+  height: 64px;
+  background-position: -254px 0;
+}
+
+.main_channel .channel li:nth-child(4) a {
+  width: 57px;
+}
+
+.main_channel .channel li:nth-child(4) a::after {
+  height: 52px;
+  background-position: -334px 0;
+}
+
+.main_channel .channel li:nth-child(5) a {
+  width: 54px;
+}
+
+.main_channel .channel li:nth-child(5) a::after {
+  height: 54px;
+  background-position: -402px 0;
+}
+
+.main_channel .channel li:nth-child(6) a {
+  width: 54px;
+}
+
+.main_channel .channel li:nth-child(6) a::after {
+  height: 54px;
+  background-position: -466px 0;
+}
