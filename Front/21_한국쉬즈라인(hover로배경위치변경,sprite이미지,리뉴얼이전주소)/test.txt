@@ -1,0 +1,24 @@
+.main_slider
+position:relative(기준)
+높이지정
+overflow:hidden으로 a가려주기
+
+
+클릭 이미지 이므로 a넣기
+position absolute
+left 50$
+top 0
+transform: translateX(-50%)
+
+ima안 줄어들게 max-width:none
+
+
+1. 블럭안에 블럭, 인라인 블럭, 인라인 포함 가능
+
+2. 인라인 블럭안에 인라인 블럭, 인라인 포함 가능
+- 버튼안에 img가능하지만 브라우저별 간격 이슈, 효과가 있으므로 사용불가 
+
+3. 인라인안에 글자(인라인)만 포함가능
+
+- span은 인라인요소 그룹기능이 있지만 그런 디자인이 없으므로 주로 의미없이 글자만 감쌀 때 사용
+-a 는 인라인이지만 모두 포함 가능

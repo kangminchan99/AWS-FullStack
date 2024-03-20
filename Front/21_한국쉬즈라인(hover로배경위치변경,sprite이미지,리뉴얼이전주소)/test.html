@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1280" />
+    <title>한국 쉬즈 라인</title>
+    <!-- 노토 산스 폰트 연결 -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="common.css" />
+    <link rel="stylesheet" href="test.css" />
+  </head>
+  <body>
+    <div id="skip_navi">
+      <a href="#container">본문 바로 가기</a>
+    </div>
+    <div id="wrap">
+      <main id="container">
+        <section class="main_slider">
+          <h2 class="blind" main banner></h2>
+          <a href="#">
+            <img src="images/20180822155632_main.jpeg" alt="" />
+          </a>
+          <div class="inner">
+            <!-- 이동이 아닌 자바 스크립트 함수를 실행하여 슬라이드 기능이 동작하므로 버튼으로 보는게 맞다 -->
+            <button class="arrow_btn preview_btn" type="button">
+              <span class="blind">이전 슬라이드</span>
+            </button>
+            <button class="arrow_btn next_btn" type="button">
+              <span class="blind">다음 슬라이드</span>
+            </button>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
