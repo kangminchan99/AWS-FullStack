@@ -11,7 +11,7 @@
       name="description"
       content="네이버 메인에서 다양한 정보와 유용한 컨텐츠를 만나 보세요"
     />
-    <title>네이버</title>
+    <title>유진그룹</title>
     <!-- 웹 폰트 코드 먼저 연결해야함 -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -20,6 +20,14 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap"
       rel="stylesheet"
     /> -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
     <!-- 아이콘 폰트 연결 -->
     <!-- self closing규칙: </> : html5는 둘 다 적용 가능 -->
     <link
@@ -38,8 +46,10 @@
       content="http://test123123.dothome.co.kr/images/20230315195155CAKTKJ.jpeg"
     />
 
-    <link rel="stylesheet" href="../css/common.css" />
-    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/sub.css" />
+
     <!-- main.css가 덮어씀 그래서 큰걸 아래에 배치 해야함-->
 
     <!-- 파비콘 연결 -->
@@ -52,36 +62,56 @@
       <a href="#container">본문 바로가기</a>
     </div>
     <div id="wrap">
-      <header id="header">
-        <div class="inner">
-          <!-- 폼은 무조건 div로 감아야됨 -->
-          <div class="search_area">
-            <!-- 검색 영역 - 폼 필 레 -->
-            <form action="">
-              <fieldset>
-                <legend>검색</legend>
-                <!-- flex 구조는 자식 요소에 적용됨 -->
-                <div class="search_wrap">
-                  <!-- 모바일 자판의 아이콘이 돋보기로 변경됨 -->
-                  <!-- 입력필드는 <label>이 들어가지 않으므로 title로 설명 넣어야함 -->
-                  <!--  autocomplete="off" : 자동 완성 off -->
-                  <input
-                    type="search"
-                    title="검색어를 입력해주세요"
-                    placeholder="검색어를 입력해주세요"
-                    autocomplete="off"
-                    id="query"
-                  />
-                  <!-- 입력 필드의 데이터를 서버로 전송 -->
-                  <button type="submit" class="search_btn">
-                    <span class="blind">search button</span>
-                  </button>
-                </div>
-              </fieldset>
-            </form>
+      <main id="container" class="network">
+        <div class="sub_visual">
+          <h2>Business network</h2>
+        </div>
+        <div class="lnb_wrap">
+          <ul class="lnb">
+            <li>
+              <a href="#">History</a>
+            </li>
+            <li>
+              <a href="#">Vision </a>
+            </li>
+            <li>
+              <a href="#">PR</a>
+            </li>
+            <li>
+              <a href="#">IR</a>
+            </li>
+            <li class="active">
+              <a href="#">Network</a>
+            </li>
+          </ul>
+        </div>
+        <div class="contents">
+          <div class="inner">
+            <div class="sub_tit">
+              <h3>건자재 유통</h3>
+              <p>평범한 일상을 새롭게! 유진의 다양한 이야기를 만나보세요.</p>
+            </div>
+            <ul class="sub_tab">
+              <li class="active">
+                <!-- 페이지 이동 시 a태그 아니면 버튼 -->
+                <a href="#">유진기업(주)</a>
+              </li>
+              <li>
+                <a href="#">(주)동양</a>
+              </li>
+              <li>
+                <a href="#">(주)유진홈센터</a>
+              </li>
+              <li>
+                <a href="#">유진한일합섬(주)</a>
+              </li>
+              <li>
+                <a href="#">(주)유진디랩</a>
+              </li>
+            </ul>
           </div>
         </div>
-      </header>
+      </main>
     </div>
   </body>
 </html>

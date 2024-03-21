@@ -1,0 +1,6 @@
+
+position-sticky적용 안되는 경우
+
+1. position-sticky요소 바깥 쪽에 overflow를 사용하면 sticky가 적용이 안된다!!
+2. flex 아이템인 경우 align-items: flex-start;로 높이가 줄어야한다!!
+

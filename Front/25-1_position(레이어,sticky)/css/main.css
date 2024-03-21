@@ -1,0 +1,16 @@
+/* 컬러 변수 */
+:root {
+  --point-color1: #0042bf;
+  --point-color2: #9858f5;
+  --txt-color-400: #ccc;
+  --txt-color-500: #111;
+  --txt-color-600: #000;
+}
+
+#wrap {
+  /* min-width: 최소 너비를 지정하여 화면이 작아지더라도 짤림 방지  */
+  /* 반응형이거나 아니거나의 차이는 min-width를 거냐 안거냐 */
+  /* 반응형일 때는 안검 */
+  /* min-width: 1280px; */
+  /* height: 1500px; */
+}
