@@ -1,0 +1,5 @@
+단위 없는 csss
+1. z-index: 9999
+2. line-height: 1.5
+3. font-weight: 700
+4. 숫자 0일 경우

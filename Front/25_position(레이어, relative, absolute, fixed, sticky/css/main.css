@@ -1,0 +1,131 @@
+/* 컬러 변수 */
+:root {
+  --point-color1: #03c75a;
+  --point-color2: #9858f5;
+  --txt-color-400: #404040;
+  --txt-color-500: #101010;
+  --txt-color-600: #080808;
+}
+
+#wrap {
+  /* min-width: 최소 너비를 지정하여 화면이 작아지더라도 짤림 방지  */
+  /* 반응형이거나 아니거나의 차이는 min-width를 거냐 안거냐 */
+  /* 반응형일 때는 안검 */
+  min-width: 1280px;
+  height: 1500px;
+}
+
+/* position: fixed; 창고정 레이어 */
+/* 크기는 내용만큼 줄어듬 */
+/* position: fixed;사용 시 위치속성을 안적으면 위치가 달라질 수 있음 */
+/* fixed레이어는 창기준이므로 #wrap의 min-width 적용되지 않으며 직접 적어야함 */
+#header {
+  background: #ddd;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+  min-width: 1280px;
+}
+
+#header .inner {
+  width: 1200px;
+  height: 150px;
+  border: 1px solid red;
+  margin: 0 auto;
+  /* 앱솔 요소의 기준 */
+  position: relative;
+  z-index: 0;
+}
+
+/* position: absolute; 걸면 제자리에서 공중에 뜸 */
+/* 크기가 내용만큼 줄어듬 */
+/* 인라인 요소에 앱솔, fixed 사용 시 블럭으로 변경됨 */
+/* 포지션으로 떠있는 요소는 수직 방향 인접이 아니므로 마진 병합 없음 */
+/* left top right bottom 위치 속성을 적으면 기준 요소를 따라 이동 됨 */
+/* 앱솔 요소의 바깥에 기준이 없으면 창 기준 */
+/* 앱솔 요소를 감싸고 있는 바깥 요소에 기준줄 수 있음 */
+/* 앱솔 요소의 기준은 먼저 감싸고 있는 요소에 position속성이 있으면 기준이 됨 */
+/* right bottom 사용 시 요소 기준점이 우하단으로 변경되며 margin방향도 맞춰야함 */
+/* 포지션 요소 가운데 정렬: left: 50% top:50% transform: translate(-50%, -50%); */
+/* 포지션 앱솔 요소는 기준요소에 height이 없어도 기준 요소 높이만큼 height:100%가능 */
+/* 포지션 요소는 기준 요소의 패딩이 안먹음(공중에 떠있으므로) */
+/* 포지션 앱솔 요소의 크기를 width,height없이 left, right, top, bottom으로 잡을 수 있음 */
+/* 포지션 요소의 순서는 z-index:auto(기본 값)이므로 나중에 나온 레이어가 위로 쌓임 */
+/* z-index: 의 크기가 클 수록 가장 위에 쌓인다. */
+/* 스크롤 시 컨텐츠보다 무조건 위에 떠있어야되는 레이어는 z-index:9999, 1000등 매우 큰값으로 세팅하자 음수로 세팅할 경우 가장 뒤로 쌓인다*/
+/* z-index 음수 사용 시 body(바닥)까지 내려가며 클릭 안됨. */
+/* 기준 안에서 z-index 음수로 하나의 요소를 가장 아래로 배치할 경우 
+- 기준 요소에 z-index있어야 하며 아래로 배치할 요소에 z-index:-1사용
+- 기준 요소에 z-index가 없으면 body까지 내려간다. */
+#header .logo {
+  border: 3px solid red;
+  position: absolute;
+  /* margin-top: 40px; */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  /* margin-right: 100px;
+  margin-bottom: 50px; */
+}
+
+#header .logo img {
+  max-width: none;
+}
+
+#header .inner::after {
+  content: '';
+  position: absolute;
+  left: 30px;
+  right: 30px;
+  top: 30px;
+  bottom: 30px;
+  border: 3px solid black;
+}
+
+#header p {
+  font-size: 30px;
+  background: greenyellow;
+  position: absolute;
+  left: 0;
+  top: 50%;
+}
+
+/* 헤더가 flex구조인 경우 컨테이너에서 패딩으로 밀어줌 */
+#container {
+  padding-top: 150px;
+}
+
+/* position:relative는 자신의 원래 위치를 기억하는 특수 레이어 */
+/* 앱솔 요소의 기준이 필요할 경우 사용 */
+/* position:relative 적으러 갔을 때 position속성이 있는경우 그냥 놔두면 기준이 됨*/
+.main_etc .inner {
+  position: relative;
+  width: 1200px;
+  height: 500px;
+  border: 1px solid red;
+  margin: 0 auto;
+}
+
+.main_etc .inner p {
+  font-size: 24px;
+}
+
+.main_etc .inner .cover {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 300px;
+  height: 300px;
+  background: yellowgreen;
+}
+
+.main_test {
+  border: 10px solid red;
+}
+
+.main_test p {
+  font-size: 30px;
+}
