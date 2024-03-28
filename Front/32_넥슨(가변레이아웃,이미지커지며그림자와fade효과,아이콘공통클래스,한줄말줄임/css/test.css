@@ -1,0 +1,97 @@
+/* 컬러 변수 */
+:root {
+  --point-color1: #07f;
+  --point-color2: #2be283;
+  --txt-color-400: #9fa1a7;
+  --txt-color-500: #4a4e57;
+  --txt-color-600: #17191d;
+}
+
+#wrap {
+  min-width: 1004;
+  height: 2000px;
+  background: #f8f9fa;
+}
+
+.main_game .inner {
+  width: 1280px;
+  height: 800px;
+  border: 1px solid red;
+  margin: 0 auto;
+}
+
+/* 일렬로 정렬 */
+.main_game .game_top {
+  display: flex;
+  align-items: center;
+}
+
+.main_game .game_top h2 {
+  font-family: 'NEXONLv1Gothic', sans-serif;
+  font-size: 24px;
+  color: var(--txt-color-600);
+  margin-right: 15px;
+}
+
+.main_game .game_top .link_btn {
+  font-family: 'NEXONLv1Gothic', sans-serif;
+  color: #4a4e57;
+  display: flex;
+  align-items: center;
+}
+
+.main_game .game_top .link_btn:hover {
+  color: var(--point-color1);
+}
+
+.main_game .game_top .link_btn:hover i {
+  background-position-x: -50px;
+}
+
+.main_game .game_top .link_btn::after {
+  content: '';
+  width: 18px;
+  height: 18px;
+  background: url(../images/set_newpage.svg);
+  margin-left: 5px;
+}
+
+.main_game .game_top .link_btn:hover::after {
+  background-position-x: -50px;
+}
+
+.main_game .game_top .search {
+  /* flex아이템에 마진 auto 사용 시 반대방향 끝까지 밀림 */
+  margin-left: auto;
+  position: relative;
+}
+
+/* 서버로 전송할 데이터가 없으므로 <input type='search'>
+<button type = 'button'> */
+.main_game .game_top .search input[type='search'] {
+  height: 44px;
+  width: 100%;
+  border: none;
+  background: none;
+  border-bottom: 1px solid #dde1e5;
+  padding: 0 40px 0 3px;
+}
+
+.main_game .game_top .search_btn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 44px;
+  height: 44px;
+  /* svg로 해야 적용가능 */
+  -webkit-mask: url(../images/search_FILL0_wght300_GRAD0_opsz24.svg) no-repeat
+    center center / 20px;
+  mask: url(../images/search_FILL0_wght300_GRAD0_opsz24.svg) no-repeat center
+    center 20px;
+  background: var(--txt-color-600);
+  border: none;
+}
+
+.main_game .game_top .search_btn:hover {
+  background: var(--point-color1);
+}
