@@ -1,0 +1,269 @@
+/* 컬러 변수 */
+:root {
+  --point-color1: #5dc591;
+  --point-color2: #907354;
+  --txt-color-400: #969696;
+  --txt-color-500: #565656;
+  --txt-color-600: #191919;
+}
+
+#wrap {
+  height: 2000px;
+}
+
+
+#header {
+  position: fixed;
+  left:0;
+  top:0;
+  z-index: 9999;
+  width:100%;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+}
+#header::before {
+  content: '';
+  position: absolute;
+  left:0;
+  bottom: 0;
+  z-index: 20;
+  width:100%;
+  height: 1px;
+  background: #ededed;
+  display: none;
+}
+#header .logo {
+  width:119px;
+  position: absolute;
+  left:56px;
+  top:50%;
+  transform: translateY(-50%);
+}
+#header .logo a {
+  display: block;
+  height: 36px;
+  background: url(../images/img_logo_white.svg) no-repeat left top / 100%;
+}
+
+#header .gnb {
+  display: flex;
+}
+#header .gnb>li {
+  position: relative;
+}
+#header .gnb>li>a {
+  color:#fff;
+  display: block;
+  line-height: 80px;
+  padding:0 40px;
+  font-size: 20px;
+  font-family: 'Outfit',sans-serif;
+  position: relative;
+}
+#header .gnb>li>a::after {
+  content: '';
+  position: absolute;
+  left:40px;
+  right:40px;
+  bottom: 0px;
+  height: 1px;
+  background: #000;
+  z-index: 20;
+  /* 가운데 기준으로 늘리기 */
+  transform: scaleX(0);
+}
+#header .gnb>li:hover>a::after {
+  /* hover에 transition걸면 hover할 때만 애니메이션 걸림 */
+  transition: all 0.5s;
+  transform: scaleX(1);
+}
+
+#header .gnb .depth2 {
+  position: absolute;
+  left:40px;
+  top:80px;
+  z-index: 10;
+  /* 호버가 유지되야하므로 빈공간이 아니어야함 */
+  padding-top:30px;
+  /* 페이드효과 */
+  transition: all 0.2s;
+  opacity: 0;
+  visibility: hidden;
+}
+#header .gnb .depth2 li + li {
+  margin-top:15px;
+}
+#header .gnb .depth2 a {
+  font-size: 16px;
+  transition: all 0.2s;
+}
+#header .gnb .depth2 a:hover {
+  color:var(--point-color1);
+}
+
+#header::after {
+  content: '';
+  position: absolute;
+  left:0;
+  top:80px;
+  width:100%;
+  height: 200px;
+  height: 0;
+  background: #fcfcfc;
+}
+
+
+#header .login_wrap {
+  position: absolute;
+  right:56px;
+  top:50%;
+  transform: translateY(-50%);
+  display: flex;
+}
+#header .login_wrap .login {
+  width:24px;
+  height: 24px;
+  background: url(../images/ico_login_white.svg) no-repeat left top / 100%;
+}
+
+#header .open_btn {
+  display: none;
+}
+
+
+
+
+.main_video {
+  height: 100vh;
+  position: relative;
+}
+.main_video video {
+  width:100%;
+  height: 100%;
+  object-fit: cover;
+}
+.main_video::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(25, 25, 25, 0.6);
+}
+.main_video .tit_wrap {
+  position: absolute;
+  left:0;
+  top:50%;
+  transform: translateY(-50%);
+  width:100%;
+  z-index: 10;
+  text-align: center;
+  color:#fff;
+  padding:0 32px;
+  word-break: keep-all;
+  word-wrap: break-word;
+}
+.main_video .tit_wrap h2 {
+  font-size: 64px;
+  font-family: 'Outfit',sans-serif;
+  font-weight: 700;
+}
+.main_video .tit_wrap p {
+  font-size: 32px;
+  font-weight: 500;
+  margin-top:28px;
+}
+
+
+
+
+
+
+@media (max-width:1200px) {
+  #header {
+    height: 65px;
+  }
+  #header .logo {
+    left:32px;
+    width:86px;
+  }
+  #header .logo a {
+    height: 26px;
+  }
+  #header .gnb_wrap {
+    display: none;
+  }
+  #header .login_wrap {
+    right:32px;
+    gap:0 15px;
+  }
+  #header .open_btn {
+    width:26px;
+    background: none;
+    border:none;
+    display: flex;
+    flex-direction: column;
+    gap:5px 0;
+    align-items: center;
+    justify-content: center;
+  }
+  #header .open_btn i {
+    width:20px;
+    height: 2px;
+    background: #fff;
+    transition: all 0.5s;
+  }
+  #header .open_btn:hover i:nth-of-type(1) {
+    transform: rotateZ(135deg) translate(5px,-5px);
+  }
+  #header .open_btn:hover i:nth-of-type(2) {
+    transform: scaleX(0);
+    opacity: 0;
+  }
+  #header .open_btn:hover i:nth-of-type(3) {
+    transform: rotateZ(-135deg) translate(5px,5px);
+  }
+
+  /* vw공식 - 768 : 42 = 100: x x=5.46vw
+  x = calc(100vw * 요소크기 / 768) */
+  .main_video .tit_wrap h2 {
+    font-size:calc(100vw * 42 / 768);
+  }
+  .main_video .tit_wrap p {
+    font-size:calc(100vw * 21 / 768);
+    margin-top:calc(100vw * 18 / 768);
+  }
+}
+
+
+
+
+
+
+@media (max-width:767px) {
+  #header {
+    height: 52px;
+  }
+  #header .logo {
+    left:20px;
+  }
+  #header .login_wrap {
+    right:20px;
+  }
+  
+  .main_video {
+    height: 50vh;
+  }
+  .main_video .tit_wrap {
+    padding:0 20px;
+  }
+  .main_video .tit_wrap h2 {
+    font-size: calc(100vw * 24 / 360);
+  }
+  .main_video .tit_wrap p {
+    font-size: calc(100vw * 13 / 360);
+    margin-top:calc(100vw * 7 / 360);
+  }
+}
