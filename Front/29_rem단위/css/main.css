@@ -1,0 +1,429 @@
+/* 컬러 변수 */
+:root {
+  --point-color1: #00A5E5;
+  --point-color2: #907354;
+  --txt-color-400: #9e9e9e;
+  --txt-color-500: #666;
+  --txt-color-600: #000;
+}
+
+
+.main_newsroom {
+  padding-top:70px;
+}
+.main_newsroom .inner {
+  max-width:1250px;
+  padding:0 25px 100px;
+  margin:0 auto;
+  position: relative;
+}
+.main_newsroom .inner::after {
+  content: '';
+  position: absolute;
+  left:25px;
+  right:25px;
+  bottom: 0;
+  height: 1px;
+  background: #e7e7e7;
+}
+
+/* 메인 제목 */
+.main_tit {
+  font-size: 4.8rem;
+  color:#101010;
+  font-weight: 700;
+}
+
+.main_newsroom .newsroom {
+  display: flex;
+  gap:0 30px;
+  margin-top:85px;
+}
+.main_newsroom .newsroom li {
+  width:calc(100% / 3);
+}
+
+/* 부모인 li의 가로기준 16:9 = 100:x x=56.25% */
+.main_newsroom .newsroom .img_wrap {
+  padding-top: 56.25%;
+  position: relative;
+}
+.main_newsroom .newsroom .img_wrap img,
+.main_newsroom .newsroom .img_wrap iframe {
+  width:100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  left:0;
+  top:0;
+}
+
+/* aspect-ratio로 16:9높이 만들기 */
+/* iOS 사파리 15이상에서만 가능하므로 아직은 사용할 수 없음 */
+/* .main_newsroom .newsroom .img_wrap {
+  border:2px solid red;
+  aspect-ratio: 4 / 3;
+} */
+/* 인라인블럭 하단에 간격발생시 기준선을 위로 맞춤 */
+/* .main_newsroom .newsroom .img_wrap img,
+.main_newsroom .newsroom .img_wrap iframe {
+  width:100%;
+  height: 100%;
+  object-fit: cover;
+  vertical-align: top;
+} */
+
+
+
+
+
+.main_newsroom .newsroom .txt_wrap {
+  padding-top:23px;
+}
+.main_newsroom .newsroom .category span {
+  color:var(--txt-color-400);
+  font-size:1.4rem;
+}
+.main_newsroom .newsroom .category span + span {
+  margin-left:6px;
+  padding-left:10px;
+  position: relative;
+}
+.main_newsroom .newsroom .category span + span::before {
+  content: '';
+  position: absolute;
+  left:0;
+  top:5px;
+  width:1px;
+  height: 12px;
+  background: #eee;
+}
+.main_newsroom .newsroom .tit {
+  color:var(--txt-color-600);
+  font-size: 2.2rem;
+  line-height: 1.4;
+  /* 말줄임기호 */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  margin-top:10px;
+  transition: all 0.25s;
+}
+.main_newsroom .newsroom .tit:hover {
+  color:var(--point-color1);
+}
+
+/* 더보기버튼은 위에 있더라도 탭키이동순서에 따라 마지막에 넣어줌 */
+.main_newsroom .more_btn {
+  position:absolute;
+  right:25px;
+  top:40px;
+  color:var(--txt-color-600);
+  font-size: 2rem;
+}
+.main_newsroom .more_btn::after {
+  content: '';
+  display: inline-block;
+  width:14px;
+  height: 14px;
+  background: url(../images/icon-plus-blue.svg) no-repeat left top / 100%;
+  margin-left:15px;
+}
+
+.main_etc {
+  padding:100px 0 200px;
+}
+.main_etc .inner {
+  max-width:1250px;
+  padding:0 25px;
+  margin:0 auto;
+  height: 400px;
+  background: #ddd;
+}
+
+/* 푸터 */
+#footer .footer_top {
+  border-top:1px solid rgba(165, 168, 168, 0.3);
+  border-bottom:1px solid rgba(165, 168, 168, 0.3);
+  position: relative;
+}
+#footer .footer_top .inner {
+  max-width: 1250px;
+  padding:0 25px;
+  margin:0 auto;
+  height: 170px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+#footer .footer_top .footer_link {
+  margin-left:35px;
+  display: flex;
+  gap:0 20px;
+}
+#footer .footer_top .footer_link a {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+#footer .footer_top .footer_link a:hover {
+  color:var(--point-color1);
+}
+
+#footer .footer_top .sns_wrap {
+  position: absolute;
+  left:50%;
+  top:50%;
+  margin-left:37px;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  gap:0 30px;
+}
+#footer .footer_top .sns_wrap h3 {
+  font-size: 1.5rem;
+  color:var(--point-color1);
+}
+#footer .footer_top .sns_wrap .sns {
+  display: flex;
+  gap:0 24px;
+}
+#footer .footer_top .sns_wrap .sns a {
+  width:64px;
+  height: 64px;
+  -webkit-mask: url(../images/icon-youtube.svg) no-repeat left top / 100%;
+  mask: url(../images/icon-youtube.svg) no-repeat left top / 100%;
+  background: #4b5151;
+}
+#footer .footer_top .sns_wrap .sns a:nth-child(2) {
+  -webkit-mask: url(../images/icon-instagram.svg) no-repeat left top / 100%;
+  mask: url(../images/icon-instagram.svg) no-repeat left top / 100%;
+  background: #4b5151;
+}
+#footer .footer_top .sns_wrap .sns a:hover {
+  background: #de0808;
+}
+#footer .footer_top .sns_wrap .sns a:nth-child(2):hover {
+  background: linear-gradient(0,#fb7333,#ec158e);
+}
+
+#footer .footer_top .the_sharp {
+  position: absolute;
+  /* 포지션요소는 left, right으로 가로길이 지정가능, 기준에 높이가 없어도 height:100%가능 */
+  right:0;
+  left:calc(50% + 383px);
+  top:0;
+  height: 100%;
+  background: #001241 url(../images/thesharp-logo_footer.svg) no-repeat center center;
+}
+
+#footer .footer_bottom .inner {
+  max-width: 1250px;
+  padding:55px 25px;
+  margin:0 auto;
+  position: relative;
+}
+
+#footer .footer_bottom .footer_menu {
+  display: flex;
+}
+#footer .footer_bottom .footer_menu li + li {
+  margin-left:12px;
+  padding-left:12px;
+  position: relative;
+}
+#footer .footer_bottom .footer_menu li + li::before {
+  content: '';
+  position: absolute;
+  left:0;
+  top:11px;
+  width:1px;
+  height: 12px;
+  background: #A5A8A8;
+}
+#footer .footer_bottom .footer_menu a {
+  font-size: 1.4rem;
+  color:#a5a8a8;
+}
+#footer .footer_bottom .footer_menu strong {
+  color: var(--txt-color-600);
+}
+#footer .footer_bottom .address {
+  color:#a5a8a8;
+  font-size: 1.2rem;
+  margin-top:10px;
+}
+#footer .footer_bottom .address span {
+  display: inline-block;
+  width:1px;
+  height: 12px;
+  background: #a5a8a8;
+  margin:0 10px;
+  vertical-align: -1px;
+}
+#footer .footer_bottom .copyright {
+  color:#a5a8a8;
+  font-size: 1.2rem;
+}
+#footer .footer_bottom .copyright strong {
+  color:var(--point-color1);
+}
+
+
+#footer .footer_bottom .award {
+  position: absolute;
+  right:25px;
+  top:50%;
+  transform: translateY(-50%);
+}
+
+#footer .top_wrap {
+  position: fixed;
+  right:30px;
+  bottom: 30px;
+  width:64px;
+}
+#footer .top_wrap a {
+  display: flex;
+  height: 64px;
+  align-items: center;
+  justify-content: center;
+  /* 정원은 가로길이의 절반인 50%주면되며 더 큰값을 적어도 적용안됨 */
+  border-radius: 50%;
+}
+#footer .top_wrap a + a {
+  margin-top:10px;
+  background: var(--point-color1);
+}
+#footer .top_wrap a + a img {
+  height:30px;
+}
+
+
+
+
+
+/* 테블릿분기점 */
+@media (max-width:1200px) {
+  .main_tit {
+    font-size: 3rem;
+  }
+  .main_newsroom .newsroom {
+    margin-top:20px;
+    gap:0 15px;
+  }
+  .main_newsroom .more_btn {
+    font-size: 1.8rem;
+    top:20px;
+  }
+  .main_newsroom .more_btn::after {
+    margin-left:10px;
+  }
+
+  #footer .footer_top .inner {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    height: 130px;
+    gap:30px 0;
+  }
+  #footer .footer_top .footer_link {
+    margin-left:0;
+  }
+  #footer .footer_top .footer_link a {
+    font-size: 1.4rem;
+  }
+
+  #footer .footer_top .sns_wrap {
+    top:25px;
+    transform: translateY(0);
+    /* left초기화해야 right으로 이동됨 */
+    left:auto;
+    right:25px;
+  }
+  #footer .footer_top .sns_wrap h3 {
+    display: none;
+  }
+  #footer .footer_top .sns_wrap .sns {
+    gap:0 10px;
+  }
+  #footer .footer_top .sns_wrap .sns a {
+    width:30px;
+    height: 30px;
+  }
+
+  #footer .footer_top .the_sharp {
+    /* 포지션 초기화 */
+    position: static;
+    display: block;
+    height: 90px;
+  }
+
+  #footer .footer_bottom .inner {
+    padding:25px 25px 45px;
+  }
+  #footer .footer_bottom .address span {
+    display: block;
+    width:0;
+    height: 0;
+  }
+
+  #footer .top_wrap {
+    width:44px;
+    right:15px;
+    bottom: 15px;
+  }
+  #footer .top_wrap a {
+    height: 44px;
+  }
+  #footer .top_wrap a + a {
+    margin-top:5px;
+  }
+  #footer .top_wrap a + a img {
+    height: 20px;
+  }
+}
+
+
+
+
+
+
+/* 모바일분기점 */
+@media (max-width:767px) {
+  .main_newsroom {
+    padding-top:48px;
+  }
+  .main_newsroom .inner {
+    padding-bottom:48px;
+  }
+  .main_newsroom .newsroom {
+    flex-wrap: wrap;
+    gap:32px 0;
+  }
+  .main_newsroom .newsroom li {
+    width:100%;
+  }
+
+  #footer .footer_bottom .footer_menu {
+    flex-direction: column;
+  }
+  #footer .footer_bottom .footer_menu li {
+    line-height: 1.3;
+  }
+  #footer .footer_bottom .footer_menu li + li {
+    margin-left:0;
+    padding-left:0;
+  }
+  #footer .footer_bottom .footer_menu li + li::before {
+    display: none;
+  }
+  #footer .footer_bottom .address {
+    line-height: 1.4;
+  }
+  #footer .footer_bottom .award {
+    top:25px;
+    transform: translateY(0);
+    width:150px;
+  }
+}
