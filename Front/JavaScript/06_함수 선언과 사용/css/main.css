@@ -1,0 +1,204 @@
+/* 컬러 변수 */
+:root {
+  --point-color1: #07f;
+  --point-color2: #2be283;
+  --txt-color-400: #9fa1a7;
+  --txt-color-500: #4a4e57;
+  --txt-color-600: #17191d;
+}
+#wrap {
+  min-width: 1004;
+  background: #f8f9fa;
+}
+
+.main_game {
+  padding-bottom: 300px;
+}
+
+.main_game .inner {
+  width: 1280px;
+  margin: 0 auto;
+}
+
+.main_game .game_top {
+  display: flex;
+  align-items: center;
+}
+
+.main_game .game_top h2 {
+  font-family: 'NEXONLv1Gothic', sans-serif;
+  font-size: 24px;
+  color: var(--txt-color-600);
+  margin-right: 15px;
+}
+
+.main_game .game_top .link_btn {
+  font-family: 'NEXONLv1Gothic', sans-serif;
+  color: #4a4e57;
+  display: flex;
+  align-items: center;
+}
+
+.main_game .game_top .link_btn:hover {
+  color: var(--point-color1);
+}
+
+.main_game .game_top .link_btn:hover i {
+  background-position-x: -50px;
+}
+
+.main_game .game_top .link_btn::after {
+  content: '';
+  width: 18px;
+  height: 18px;
+  background: url(../images/set_newpage.svg);
+  margin-left: 5px;
+}
+
+.main_game .game_top .link_btn:hover::after {
+  background-position-x: -50px;
+}
+
+.main_game .game_top .search {
+  /* flex아이템에 마진 auto 사용 시 반대방향 끝까지 밀림 */
+  margin-left: auto;
+  position: relative;
+}
+
+.main_game .game_top .search input[type='search'] {
+  height: 44px;
+  width: 100%;
+  border: none;
+  background: none;
+  border-bottom: 1px solid #dde1e5;
+  padding: 0 40px 0 3px;
+}
+
+.main_game .game_top .search_btn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 44px;
+  height: 44px;
+  /* svg로 해야 적용가능 */
+  -webkit-mask: url(../images/search_FILL0_wght300_GRAD0_opsz24.svg) no-repeat
+    center center / 20px;
+  mask: url(../images/search_FILL0_wght300_GRAD0_opsz24.svg) no-repeat center
+    center 20px;
+  background: var(--txt-color-600);
+  border: none;
+}
+
+.main_game .game_top .search_btn:hover {
+  background: var(--point-color1);
+}
+
+.main_game .filter {
+  margin-top: 20px;
+  background: #fff;
+  height: 100px;
+  padding: 0 30px;
+  display: flex;
+  /* 두 줄 가운데 정렬 */
+  align-content: center;
+  flex-wrap: wrap;
+  gap: 17px 16px;
+}
+
+.main_game .filter a {
+  padding: 0 10px;
+  line-height: 21px;
+  color: #9fa1a7;
+  transition: all 0.2s;
+}
+
+.main_game .filter a:hover {
+  color: var(--point-color1);
+}
+
+.main_game .filter a.active {
+  background: var(--txt-color-600);
+  color: #fff;
+  border-radius: 11px;
+}
+
+.main_game .game {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 60px 24px;
+  margin-top: 35px;
+}
+
+.main_game .game li {
+  /* flex-wrap으로 내려간 경우 간격의 총합 / 컬럼 수 만큼 빼야함 */
+  width: calc(25% - 72px / 4);
+  transition: box-shadow 0.5s;
+}
+
+.main_game .game .img_wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.main_game .game .img_wrap::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.1);
+  opacity: 1;
+  /* 페이드 효과에 cubic-bezier 사용하지 말 것 
+  페이드 효과에는 시각적으로 차이가 없음*/
+  transition: all 0.15s;
+}
+.main_game .game .img_wrap img {
+  transition: all 0.2s;
+}
+
+.main_game .game li:hover .img_wrap::after {
+  opacity: 0;
+}
+
+.main_game .game li:hover .img_wrap img {
+  transform: scale(1.1);
+}
+
+.main_game .game .txt_wrap {
+  height: 120px;
+  background: #fff;
+  padding: 24px 24px 0;
+}
+
+.main_game .game .txt_wrap strong {
+  font-size: 16px;
+  font-family: 'NEXONLv1Gothic', sans-serif;
+  color: var(--txt-color-600);
+  margin-bottom: 10px;
+  display: block;
+}
+
+.main_game .game .txt_wrap .type {
+  color: var(--txt-color-400);
+}
+
+.main_game .game .txt_wrap .event {
+  color: var(--point-color1);
+  font-weight: 700;
+}
+
+.main_game .game li:hover {
+  box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.16);
+}
+
+@media (max-width: 1412px) {
+  .main_game .inner {
+    width: 954px;
+  }
+
+  .main_game .game li {
+    /* 48px / 3 = 16px */
+    width: calc(100% / 3 - 16px);
+  }
+}
