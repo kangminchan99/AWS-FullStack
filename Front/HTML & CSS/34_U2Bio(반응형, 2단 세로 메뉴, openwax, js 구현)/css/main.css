@@ -1,0 +1,162 @@
+/* 컬러 변수 */
+:root {
+  --point-color1: #00a651;
+  --point-color2: #8bc63f;
+  --point-color3: #76ca9e;
+  --txt-color-400: #666;
+  --txt-color-500: #222;
+  --txt-color-600: #000;
+}
+
+#wrap {
+  height: 1500px;
+}
+
+#header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+}
+
+#header .inner {
+  max-width: 1400px;
+  height: 100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+#header .logo {
+  position: absolute;
+  left: 20px;
+  /* 위아래 정렬 */
+  top: 50%;
+  transform: translateY(-50%);
+  width: 115px;
+}
+
+#header .logo a {
+  display: block;
+  /* svg는 검사시 높이 측정 가능 */
+  height: 52px;
+  -webkit-mask: url(../images/logo.svg) no-repeat left top / 100%;
+  mask: url(../images/logo.svg) no-repeat left top / 100%;
+  background: #fff;
+}
+
+#header .gnb {
+  display: flex;
+}
+
+#header .gnb > li {
+  position: relative;
+}
+
+#header .gnb > li > a {
+  display: block;
+  /* 위아래 높이 설정 */
+  line-height: 100px;
+  padding: 0 50px;
+  color: #fff;
+  font-weight: 500;
+}
+
+/* 호버는 본인과 자기 자식까지 가능 */
+#header .gnb > li:hover .depth2 {
+  max-height: 240px;
+  padding: 20px 0;
+}
+
+#header .gnb .depth2 {
+  position: absolute;
+  left: 0;
+  top: 100px;
+  background: #50b779;
+  text-align: center;
+  /* 모서리 각각 다르게 설정 */
+  border-radius: 0 30px 30px 30px;
+  /* 앱솔 걸면 위드가 준다 */
+  width: 100%;
+  /* 애니메이션 적용 */
+  transition: all 1s;
+  /* 호버 전에 안보이게 적용 */
+  max-height: 0;
+  overflow: hidden;
+}
+
+#header .gnb .depth2 li + li {
+  /* li사이의 간격 마진 주기 */
+  margin-top: 15px;
+}
+
+#header .gnb .depth2 a {
+  display: block;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.main_slider {
+  /* 창 크기 만큼의 높이를 가지며 최대크기를 최초 창 크기로 제한 */
+  height: 980px;
+  text-align: center;
+  /* 이미지 옆에 그라데이션을 적용 이미지가 늘어나면 내부의 글씨가 깨지기 때문에 */
+  background: linear-gradient(90deg, #71aee8, #77e9ce);
+  position: relative;
+  overflow: hidden;
+}
+
+.main_slider .pc_img {
+  position: absolute;
+  /* 왼쪽에서 50%만큼 띄워서 배치 */
+  left: 50%;
+  /* top에서 0만큼 띄워서 배치 */
+  top: 0;
+  transform: translateX(-50%);
+  max-width: none;
+}
+
+/* 분기점을 오지 않았을 경우 이미지 안보이게 디스플레이 논 처리 */
+.main_slider .m_img {
+  display: none;
+}
+
+/* 메인 슬라이더 분기점 */
+@media (max-width: 1440px) {
+  .main_slider {
+    height: 700px;
+  }
+  .main_slider img {
+    height: 108%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .main_slider {
+    /* 16:9 = 100 : x */
+    padding-top: 56.25%;
+    height: 0;
+  }
+}
+
+/* 모바일 분기점 */
+@media (max-width: 767px) {
+  .main_slider {
+    /* 이미지 만큼의 크기를 갖게하기 위해서 vh를 빼준다. */
+    /* height: 100vh; */
+
+    /* 패딩 걸어둔거 빼기 */
+    padding-top: 0;
+    height: auto;
+  }
+  /* pc_img끄기 */
+  .main_slider .pc_img {
+    display: none;
+  }
+
+  .main_slider .m_img {
+    display: block;
+  }
+}
