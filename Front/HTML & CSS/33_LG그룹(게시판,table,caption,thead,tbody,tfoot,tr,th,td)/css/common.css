@@ -793,6 +793,28 @@ caption.nohead {
   border-bottom: 1px solid #000;
 }
 
+/* 게시판 번호 삭제 */
+@media (max-width: 1200px) {
+  .board_list tr th:first-child,
+  .board_list tr td:first-child {
+    display: none;
+  }
+  .board_list .col3 {
+    width: 25%;
+  }
+
+  .board_list th {
+    height: 50px;
+    font-size: 15px;
+  }
+  .board_list td {
+    font-size: 14px;
+  }
+  .board_list .td_left {
+    padding: 0 10px;
+  }
+}
+
 /* 게시판 페이징 */
 .board_pagination {
   margin-top: 20px;

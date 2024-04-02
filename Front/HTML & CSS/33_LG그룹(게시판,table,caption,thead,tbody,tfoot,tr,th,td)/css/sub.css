@@ -14,29 +14,30 @@
 
 .sub_visual {
   height: 265px;
-  background: url(../images/visual_investment_ir_cr.jpg) no-repeat center top / cover;
+  background: url(../images/visual_investment_ir_cr.jpg) no-repeat center top /
+    cover;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .sub_tit {
-  margin-top:-40px;
+  margin-top: -40px;
 }
 .sub_tit h2 {
   font-size: 46px;
   font-weight: 700;
-  color:#fff;
+  color: #fff;
 }
 
 .sub_tab {
-  max-width:1200px;
-  margin:0 auto;
+  max-width: 1200px;
+  margin: 0 auto;
   display: flex;
 }
 .sub_tab li {
-  width:100%;
-  border:1px solid #ddd;
-  border-right:none;
+  width: 100%;
+  border: 1px solid #ddd;
+  border-right: none;
 }
 .sub_tab li:last-child {
   border-right: 1px solid #ddd;
@@ -47,25 +48,66 @@
   text-align: center;
 }
 .sub_tab li.active {
-  border-color:var(--point-color1);
+  border-color: var(--point-color1);
 }
 .sub_tab li.active a {
   background: var(--point-color1);
-  color:#fff;
+  color: #fff;
 }
 
 .contents {
-  padding:60px 0 100px;
+  padding: 60px 0 100px;
 }
 .contents .inner {
-  max-width:1200px;
-  margin:0 auto;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 /* IR정보 페이지 */
 .annual .tit {
-  font-size:26px;
-  color:var(--txt-color-600);
+  font-size: 26px;
+  color: var(--txt-color-600);
   font-weight: 500;
-  margin-bottom:18px;
+  margin-bottom: 18px;
+}
+
+/* 태블릿 분기점 */
+
+@media (max-width: 1200px) {
+  .sub_container {
+    padding-top: 101px;
+  }
+  .sub_tab a {
+    line-height: 45px;
+    font-size: 15px;
+  }
+
+  .contents {
+    padding: 30px 0 40px;
+  }
+
+  .annual .tit {
+    padding: 0 15px;
+    font-size: 20px;
+  }
+}
+
+/* 모바일 분기점 */
+@media (max-width: 767px) {
+  .sub_visual {
+    height: 155px;
+  }
+
+  .sub_tit {
+    margin-top: 0;
+  }
+
+  .sub_tit h2 {
+    font-size: 26px;
+  }
+
+  .sub_tab a {
+    line-height: 45px;
+    font-size: 15px;
+  }
 }
