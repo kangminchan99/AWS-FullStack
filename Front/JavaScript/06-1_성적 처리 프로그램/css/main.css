@@ -1,0 +1,63 @@
+/* 컬러 변수 */
+:root {
+  --point-color1: #07f;
+  --point-color2: #2be283;
+  --txt-color-400: #9fa1a7;
+  --txt-color-500: #4a4e57;
+  --txt-color-600: #17191d;
+}
+
+.main_score {
+  padding: 100px 0;
+}
+.main_score .inner {
+  max-width: 1260px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.main_score h2 {
+  text-align: center;
+  font-size: 50px;
+  margin-bottom: 50px;
+  /* í•œê¸€ í•œë‹¨ì–´ì”© ë‚´ë ¤ê°€ê²Œ */
+  word-break: keep-all;
+  word-wrap: break-word;
+}
+
+.main_score .row + .row {
+  margin-top: 10px;
+}
+.main_score .row label {
+  margin-right: 30px;
+}
+
+.main_score .row input[type='text'] {
+  width: calc(100% - 100px);
+  height: 40px;
+  padding: 0 15px;
+  border: 1px solid #bdbdbd;
+}
+.main_score .row input[type='text']:focus {
+  border-color: #000;
+  outline: none;
+}
+
+.main_score .btn_wrap {
+  margin-top: 30px;
+}
+
+.main_score .result_btn {
+  border: none;
+  padding: 8px 20px;
+  background: #292929;
+  color: #fff;
+  margin-right: 6px;
+}
+
+.main_score .message {
+  height: 300px;
+  background: #d4d4d4;
+  margin-top: 20px;
+  font-size: 24px;
+}
