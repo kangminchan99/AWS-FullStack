@@ -1,0 +1,17 @@
+/* 컬러 변수 */
+:root {
+  --point-color1: #07f;
+  --point-color2: #2be283;
+  --txt-color-400: #9fa1a7;
+  --txt-color-500: #4a4e57;
+  --txt-color-600: #17191d;
+}
+
+.count {
+  /* 창 기준으로 중앙 배치 */
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 100px;
+}
