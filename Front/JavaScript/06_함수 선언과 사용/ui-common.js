@@ -61,3 +61,18 @@ function fn3(callback) {
 
 // fn3 펑션안에 있는 내용이 먼저 실행된 다음에 콜백함수 실행
 fn3(() => console.log('콜백함수 실행'));
+
+// 재귀함수 (함수 내부에서 자신을 다시 호출하는 함수)
+
+function factorial(num) {
+  if (num === 1) return 1;
+  return num * factorial(num - 1);
+}
+
+let result3 = factorial(5);
+console.log(result3);
+
+// 즉시 실행 함수 (IEFF): 익명 함수를 감아서 실행하는 형태
+(function () {
+  console.log('즉시 실행 함수 IEFF');
+})();
