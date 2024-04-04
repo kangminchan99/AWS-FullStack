@@ -34,5 +34,5 @@ window.addEventListener('DOMContentLoaded', function () {
   clock();
 
   // 일정 시간마다 정보 갱신
-  setInterval(clock, 1000);
+  setInterval(clock, 10);
 });
