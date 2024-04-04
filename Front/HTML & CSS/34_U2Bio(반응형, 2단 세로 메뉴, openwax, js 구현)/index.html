@@ -35,7 +35,7 @@
     <!--  -->
     <link rel="stylesheet" href="css/common.css?v=<?php echo time(); ?>" />
     <link rel="stylesheet" href="css/main.css?v=<?php echo time(); ?>" />
-    <script src="js/ui-common.js?v=<?php echo time(); ?"></script>
+    <script src="js/ui-common.js"></script>
   </head>
   <body>
     <div id="skip_navi">
@@ -67,12 +67,12 @@
                   </li>
                   <li>
                     <a href="/products/digitalHealthcare.do"
-                      >Digital Healthcare<br />Platform (IT)</a
+                      >Digital HealthcarePlatform (IT)</a
                     >
                   </li>
                   <li>
                     <a href="/products/biotechnology.do"
-                      >Bio-Technology<br />Platform (BT)</a
+                      >Bio-TechnologyPlatform (BT)</a
                     >
                   </li>
                 </ul>
@@ -130,74 +130,80 @@
               <i></i>
             </button>
           </div>
+
           <aside class="m_gnb_wrap">
-            <ul class="m_gnb">
-              <li>
-                <a href="/about/greeting.do">기업 소개</a>
-                <ul class="depth2">
-                  <li><a href="/about/greeting.do">인사말</a></li>
-                  <li><a href="/about/management.do">주요 경영진</a></li>
-                  <li><a href="/about/missionVision.do">미션과 비전</a></li>
-                  <li><a href="/about/history.do">연혁</a></li>
-                  <li><a href="/about/location.do">오시는 길</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="/products/sampleCheck.do">제품 및 서비스</a>
-                <ul class="depth2">
-                  <li>
-                    <a href="/products/sampleCheck.do">검체검사 서비스</a>
-                  </li>
-                  <li>
-                    <a href="/products/digitalHealthcare.do"
-                      >Digital Healthcare<br />Platform (IT)</a
-                    >
-                  </li>
-                  <li>
-                    <a href="/products/biotechnology.do"
-                      >Bio-Technology<br />Platform (BT)</a
-                    >
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a href="/investment/financial.do">투자정보</a>
-                <ul class="depth2">
-                  <li><a href="/investment/financial.do">재무 정보</a></li>
-                  <li>
-                    <a href="/investment/corporate.do" class="menuCorporate"
-                      >기업공시</a
-                    >
-                  </li>
-                  <li>
-                    <a href="/investment/inquiry.do">투자 문의</a>
-                  </li>
-                  <li><a href="#">주주공고</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="#">미디어센터</a>
-                <ul class="depth2">
-                  <li><a href="#">보도자료</a></li>
-                  <li><a href="#">E카달로그</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="/recruitment/organization.do">채용정보</a>
-                <ul class="depth2">
-                  <li><a href="/recruitment/organization.do">U2Bio 조직</a></li>
-                  <li><a href="/recruitment/idealTalent.do">U2인재상</a></li>
-                  <li>
-                    <a href="/recruitment/humanReliance.do"
-                      >U2 HR (Human Reliances)</a
-                    >
-                  </li>
-                  <li>
-                    <a href="/recruitment/recruitmentInquiry.do">채용 문의</a>
-                  </li>
-                </ul>
-              </li>
-            </ul>
+            <!-- 스크롤 처리 -->
+            <div class="scroll">
+              <ul class="m_gnb">
+                <li>
+                  <a href="#">기업 소개</a>
+                  <ul class="depth2">
+                    <li><a href="/about/greeting.do">인사말</a></li>
+                    <li><a href="/about/management.do">주요 경영진</a></li>
+                    <li><a href="/about/missionVision.do">미션과 비전</a></li>
+                    <li><a href="/about/history.do">연혁</a></li>
+                    <li><a href="/about/location.do">오시는 길</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">제품 및 서비스</a>
+                  <ul class="depth2">
+                    <li>
+                      <a href="/products/sampleCheck.do">검체검사 서비스</a>
+                    </li>
+                    <li>
+                      <a href="/products/digitalHealthcare.do"
+                        >Digital Healthcare>Platform (IT)</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/products/biotechnology.do"
+                        >Bio-TechnologyPlatform (BT)</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">투자정보</a>
+                  <ul class="depth2">
+                    <li><a href="/investment/financial.do">재무 정보</a></li>
+                    <li>
+                      <a href="/investment/corporate.do" class="menuCorporate"
+                        >기업공시</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/investment/inquiry.do">투자 문의</a>
+                    </li>
+                    <li><a href="#">주주공고</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">미디어센터</a>
+                  <ul class="depth2">
+                    <li><a href="#">보도자료</a></li>
+                    <li><a href="#">E카달로그</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">채용정보</a>
+                  <ul class="depth2">
+                    <li>
+                      <a href="/recruitment/organization.do">U2Bio 조직</a>
+                    </li>
+                    <li><a href="/recruitment/idealTalent.do">U2인재상</a></li>
+                    <li>
+                      <a href="/recruitment/humanReliance.do"
+                        >U2 HR (Human Reliances)</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/recruitment/recruitmentInquiry.do">채용 문의</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
           </aside>
         </div>
       </header>
@@ -207,6 +213,13 @@
           <!-- pc, mobile img 따로 -->
           <img class="pc_img" src="images/visual1.jpg" alt="" />
           <img class="m_img" src="images/m_visual1.jpg" alt="" />
+          <a href="#" class="scroll_down">
+            scroll down
+            <div class="arrow_wrap"></div>
+          </a>
+        </section>
+        <section class="main_business">
+          <h2>Business</h2>
         </section>
       </main>
     </div>

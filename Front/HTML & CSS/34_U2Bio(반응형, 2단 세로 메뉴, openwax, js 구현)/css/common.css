@@ -235,7 +235,9 @@ body {
 
 /*********************** 공통스타일 *************************/
 /* body에 높이가 없어도 hidden이 걸리면 스크롤바가 사라짐(데스크탑) */
-/* body.on {overflow: hidden;} */
+body.on {
+  overflow: hidden;
+}
 /* iOS 사파리는 페이지최상단에서만 hidden이 걸리므로 페이지 위로 올라오게함(모바일,반응형) */
 /* body.on { overflow: hidden; position: fixed; left:0; top:0; width:100%; } */
 
@@ -274,13 +276,15 @@ table {
 }
 
 /* 스크롤바 */
-/* ::-webkit-scrollbar {
-  width: 10px; 
-  background: #efefef;
-} */
-/* ::-webkit-scrollbar-thumb {
-  background: #999;
-} */
+::-webkit-scrollbar {
+  width: 10px;
+  background: #f5f5f5;
+}
+::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border: 2px solid #fff;
+  border-radius: 5px;
+}
 
 /* 스크롤바 안보이게 */
 /* IE */

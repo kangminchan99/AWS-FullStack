@@ -9,7 +9,7 @@
 }
 
 #wrap {
-  height: 1500px;
+  height: 2500px;
 }
 
 #header {
@@ -46,6 +46,10 @@
 }
 
 #header .open_btn {
+  display: none;
+}
+
+#header .m_gnb_wrap {
   display: none;
 }
 
@@ -221,6 +225,64 @@
   display: none;
 }
 
+.main_slider .scroll_down {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  font-size: 15px;
+  color: #fff;
+}
+
+.main_slider .scroll_down .arrow_wrap {
+  position: relative;
+  margin-top: 5px;
+}
+
+.main_slider .scroll_down .arrow_wrap::before {
+  content: '';
+  display: block;
+  width: 3px;
+  height: 80px;
+  background: rgba(255, 255, 255, 0.3);
+  margin: 0px auto;
+  border-radius: 2px 2px 0 0;
+}
+
+.main_slider .scroll_down .arrow_wrap::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 15px;
+  height: 30px;
+  transform: translateX(-50%);
+  background: url(../images/scroll_down.svg) no-repeat;
+  border-radius: 2px 2px 0 0;
+  animation: moveArrow 3s infinite;
+}
+
+.main_business {
+  padding: 160px 0;
+  background: #ddd;
+}
+
+.main_business h2 {
+  font-size: 44px;
+  font-weight: 700;
+  color: var(--txt-color-600);
+}
+
+/* 화살표 움직이기 */
+@keyframes moveArrow {
+  0% {
+    top: 0;
+  }
+  50% {
+    top: 50px;
+  }
+}
+
 /* 메인 슬라이더 분기점 */
 @media (max-width: 1440px) {
   .main_slider {
@@ -253,7 +315,6 @@
 
   #header .lang_wrap {
     z-index: 10;
-    border: 5px solid black;
   }
 
   #header .open_btn {
@@ -291,14 +352,38 @@
     transform: translate(0px, -5px) rotate(-135deg);
   }
 
+  #header.on .lang_wrap .lang_btn {
+    background: #f7f7f7;
+    color: #000;
+    border-color: #f7f7f7;
+  }
+
+  #header.on .lang_wrap .lang_btn::after {
+    background: #000;
+  }
+
   #header .m_gnb_wrap {
+    display: block;
     position: fixed;
     left: 0;
     top: 0;
     width: 100%;
-    /* background: #fff; */
+    background: #fff;
     height: 100%;
     padding-top: 70px;
+    transition: all 0.5s;
+    transform: translateX(100%);
+  }
+
+  #header .m_gnb_wrap.on {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  #header .scroll {
+    /* 스크롤바가 나오려면 반드시 높이가 있어야함 */
+    overflow: auto;
+    height: 100%;
   }
 
   #header .m_gnb > li > a {
@@ -308,11 +393,79 @@
     font-size: 20px;
     color: var(--txt-color-600);
     font-weight: 500;
+    position: relative;
+  }
+
+  /* 더하기 모양 만들기 */
+  #header .m_gnb > li > a::before {
+    content: '';
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    width: 14px;
+    height: 2px;
+    margin-top: -1px;
+    background: #000;
+  }
+
+  #header .m_gnb > li > a::after {
+    content: '';
+    position: absolute;
+    right: 21px;
+    top: 50%;
+    width: 2px;
+    height: 14px;
+    margin-top: -7px;
+    background: #000;
+    transition: all 0.2s;
+  }
+  /*  */
+
+  /* 클릭 시 변경 */
+  #header .m_gnb > li.on > a::after {
+    width: 14px;
+    height: 2px;
+    background: var(--point-color1);
+    right: 15px;
+    margin-top: -1px;
+  }
+
+  #header .m_gnb > li.on .depth2 {
+    max-height: 240px;
+    padding: 20px;
+  }
+
+  #header .m_gnb .depth2 {
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.5s;
+    background: #f8f8f8;
+  }
+
+  #header .m_gnb .depth2 a {
+    font-size: 14px;
+    color: #999;
+    display: block;
+    position: relative;
+    padding-left: 13px;
+    line-height: 40px;
+  }
+  #header .m_gnb .depth2 a::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 4px;
+    height: 4px;
+    margin-top: -2px;
+    background: #999;
+    border-radius: 50%;
   }
 
   .main_slider {
     /* 16:9 = 100 : x */
-    padding-top: 0;
+    padding-top: 56.25%;
     height: 0;
   }
 }
