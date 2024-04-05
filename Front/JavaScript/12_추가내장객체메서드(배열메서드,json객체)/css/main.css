@@ -1,0 +1,21 @@
+#wrap {
+  min-width: 1280px;
+}
+
+.section1 {
+  width: 1280px;
+  padding: 0 40px;
+  height: 400px;
+  border: 1px solid black;
+  margin: 0 auto;
+}
+
+.section1 .clock {
+  border: 1px solid red;
+  display: flex;
+  font-size: 80px;
+}
+
+.section1 .clock span {
+  margin: 6px 10px 0;
+}
