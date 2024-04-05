@@ -47,3 +47,41 @@ console.log(now);
 console.log(now.toLocaleString());
 // 현재 지역에 맞는 시간만 반환
 console.log(now.toLocaleTimeString());
+
+let num = 10.69;
+
+// 소수 버리고 정수변환
+console.log(Math.floor(num));
+
+// 반올림
+console.log(Math.round(num));
+
+// 올림
+console.log(Math.ceil(num));
+
+// 랜덤 수 만들기 (0 - 1미만의 랜덤한 소수)
+console.log(Math.random());
+
+// 0 - 9까지의 랜덤수 만들기
+
+// for (let i = 0; i < 10; i++) {
+//   console.log(Math.floor(Math.random() * 10));
+// }
+
+// 0 - 10까지의 랜덤수 만들기(11개 숫자)
+// for (let i = 0; i < 11; i++) {
+//   console.log(Math.floor(Math.random() * 11));
+// }
+
+// 11 - 50까지 랜덤수 만들기(40개의 수)
+// for (let i = 0; i < 40; i++) {
+//   console.log(Math.floor(Math.random() * 40 + 11));
+// }
+
+// 랜덤 정수 공식
+// Math.floor(Math.random * 만들 정수 갯수 + 초기값)
+
+// 100 - 110까지 랜덤수 만들기(11개)
+for (let i = 0; i < 11; i++) {
+  console.log(Math.floor(Math.random() * 11 + 100));
+}
