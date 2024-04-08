@@ -1,13 +1,3 @@
-/* @font-face {
-  font-family: 'NEXONLv1Gothic';
-  font-style: normal;
-  font-weight: 700;
-  src: url(../fonts/NEXONLv1GothicLowOTFBold.eot);
-  src: url(../fonts/NEXONLv1GothicLowOTFBold.eot?#iefix) format('embedded-opentype'),
-    url(../fonts/NEXONLv1GothicLowOTFBold.woff) format('woff'),
-    url(../fonts/NEXONLv1GothicLowOTFBold.ttf) format('truetype');
-} */
-
 @font-face {
   font-family: 'Pretendard';
   font-style: normal;
@@ -249,8 +239,7 @@ button,
 table {
   font-family: 'Pretendard', '맑은 고딕', 'malgun gothic', 'Apple SD Gothic Neo',
     sans-serif;
-  /* 기본 폰트 설정 */
-  font-size: 16px;
+  font-size: 18px;
   color: var(--txt-color-500);
   line-height: 1.5;
 }
@@ -570,32 +559,42 @@ textarea {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  height: 40px;
+  line-height: 40px;
   padding: 0 15px;
   background: none;
 }
-.point_btn1 {
-  height: 54px;
-  border: 2px solid #222;
-  border-radius: 27px;
-  padding: 0 28px;
+
+.point1_btn {
+  line-height: 60px;
+  border-radius: 30px;
+  width: 200px;
   font-weight: 700;
-  transition: all 0.5s;
-}
-.point_btn1:hover {
-  background: #222;
   color: #fff;
+  background: linear-gradient(-30deg, #2ad47d, #008a43);
+  border: none;
 }
-.point_btn1:hover::after {
-  background-image: url(../images/btn_arrow_up_white.svg);
-}
-.point_btn1::after {
+.point1_btn::after {
   content: '';
-  transition: all 0.5s;
-  width: 24px;
-  height: 24px;
-  background: url(../images/btn_arrow_up.svg) no-repeat 0 0 / 100%;
-  margin-left: 5px;
+  width: 17px;
+  height: 17px;
+  background: url(../images/icon_plus.svg) no-repeat left top / 100%;
+  margin-left: 10px;
+}
+
+.point2_btn {
+  line-height: 38px;
+  border-radius: 20px;
+  width: 130px;
+  font-weight: 500;
+  color: #fff;
+  border: 1px solid #fff;
+}
+.point2_btn::after {
+  content: '';
+  width: 20px;
+  height: 10px;
+  background: url(../images/arrow_more.svg) no-repeat left top / 100%;
+  margin-left: 20px;
 }
 
 /* 라벨 버튼 */
@@ -837,7 +836,6 @@ caption.nohead {
   .board_list .col3 {
     width: 25%;
   }
-
   .board_list th {
     height: 50px;
     font-size: 15px;
@@ -859,7 +857,6 @@ caption.nohead {
 .board_pagination .page_btn {
   width: 22px;
   height: 40px;
-  border: 1px solid red;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -869,7 +866,6 @@ caption.nohead {
   width: 14px;
   height: 14px;
   background: url(../images/sprite_pc.png) no-repeat;
-  border: 1px solid black;
 }
 .board_pagination .first::before {
   background-position: -397px -310px;

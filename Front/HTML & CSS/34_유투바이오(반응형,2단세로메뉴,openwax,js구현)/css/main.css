@@ -9,7 +9,7 @@
 }
 
 #wrap {
-  height: 2500px;
+  height: 5000px;
 }
 
 #header {
@@ -20,59 +20,44 @@
   z-index: 9999;
   transition: all 0.2s;
 }
-
 #header.fixed {
   background: #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-
-/* 스크롤 시 색상 변경 */
 #header.fixed .logo a {
   background: url(../images/logo.svg) no-repeat left top / 100%;
 }
 
+/* gnb의 li의 바로 자식들 */
 #header.fixed .gnb > li > a {
   color: var(--txt-color-600);
 }
-
 #header.fixed .lang_wrap .lang_btn {
   background: #f7f7f7;
   color: #000;
   border-color: #f7f7f7;
 }
-
 #header.fixed .lang_wrap .lang_btn::after {
   background: #000;
 }
 
-#header .open_btn {
-  display: none;
-}
-
-#header .m_gnb_wrap {
-  display: none;
-}
-
 #header .inner {
-  max-width: 1400px;
+  max-width: 1440px;
   height: 100px;
   margin: 0 auto;
   display: flex;
   justify-content: center;
+  position: relative;
 }
-
 #header .logo {
   position: absolute;
   left: 20px;
-  /* 위아래 정렬 */
   top: 50%;
   transform: translateY(-50%);
   width: 115px;
 }
-
 #header .logo a {
   display: block;
-  /* svg는 검사시 높이 측정 가능 */
   height: 52px;
   -webkit-mask: url(../images/logo.svg) no-repeat left top / 100%;
   mask: url(../images/logo.svg) no-repeat left top / 100%;
@@ -82,49 +67,37 @@
 #header .gnb {
   display: flex;
 }
-
 #header .gnb > li {
   position: relative;
 }
-
 #header .gnb > li > a {
   display: block;
-  /* 위아래 높이 설정 */
   line-height: 100px;
   padding: 0 50px;
   color: #fff;
   font-weight: 500;
 }
 
-/* 호버는 본인과 자기 자식까지 가능 */
-/* 드랍다운 동작은 max-height 사용 */
+/* 드롭다운 동작은 max-height사용 */
 #header .gnb > li:hover .depth2 {
   max-height: 240px;
   padding: 20px 0;
 }
-
 #header .gnb .depth2 {
   position: absolute;
   left: 0;
   top: 100px;
   background: #50b779;
   text-align: center;
-  /* 모서리 각각 다르게 설정 */
   border-radius: 0 30px 30px 30px;
-  /* 앱솔 걸면 위드가 준다 */
   width: 100%;
-  /* 애니메이션 적용 */
   transition: all 0.2s;
-  /* 호버 전에 안보이게 적용 */
   max-height: 0;
   overflow: hidden;
 }
-
 #header .gnb .depth2 li + li {
-  /* li사이의 간격 마진 주기 */
   margin-top: 15px;
 }
-
 #header .gnb .depth2 a {
   display: block;
   color: #fff;
@@ -138,7 +111,6 @@
   top: 50%;
   transform: translateY(-50%);
 }
-
 #header .lang_wrap .lang_btn {
   height: 34px;
   border: 1px solid #fff;
@@ -153,25 +125,22 @@
   gap: 0 7px;
   transition: all 0.2s;
 }
-
 #header .lang_wrap .lang_btn::after {
   content: '';
   display: inline-block;
   width: 7px;
   height: 6px;
-  -webkit-mask: url(../images/arrow_down.svg) no-repeat 50% 50%;
-  mask: url(../images/arrow_down.svg) no-repeat 50% 50%;
+  -webkit-mask: url(../images/arrow_down.svg) no-repeat;
+  mask: url(../images/arrow_down.svg) no-repeat;
   background: #fff;
   transition: all 0.2s;
 }
-
 #header .lang_wrap.on .lang_btn {
   background: #f7f7f7;
   color: var(--txt-color-600);
   border-radius: 17px 17px 0 0;
   border-color: #f7f7f7;
 }
-
 #header .lang_wrap.on .lang_btn::after {
   transform: rotate(180deg);
   background: #000;
@@ -185,42 +154,42 @@
   left: 0;
   top: 34px;
   background: #f7f7f7;
-  width: 100%;
+  width: 82px;
   border-radius: 0 0 17px 17px;
   max-height: 0;
   overflow: hidden;
+  transition: all 0.2s;
 }
-
 #header .lang_wrap .lang a {
   display: block;
   font-size: 16px;
   color: var(--txt-color-400);
   padding: 0 16px;
   line-height: 40px;
-  transition: all 0.5s;
+}
+
+#header .open_btn {
+  display: none;
+}
+
+#header .m_gnb_wrap {
+  display: none;
 }
 
 .main_slider {
-  /* 창 크기 만큼의 높이를 가지며 최대크기를 최초 창 크기로 제한 */
-  height: 980px;
+  height: 970px;
   text-align: center;
-  /* 이미지 옆에 그라데이션을 적용 이미지가 늘어나면 내부의 글씨가 깨지기 때문에 */
   background: linear-gradient(90deg, #71aee8, #77e9ce);
   position: relative;
   overflow: hidden;
 }
-
 .main_slider .pc_img {
   position: absolute;
-  /* 왼쪽에서 50%만큼 띄워서 배치 */
   left: 50%;
-  /* top에서 0만큼 띄워서 배치 */
   top: 0;
   transform: translateX(-50%);
   max-width: none;
 }
-
-/* 분기점을 오지 않았을 경우 이미지 안보이게 디스플레이 논 처리 */
 .main_slider .m_img {
   display: none;
 }
@@ -233,12 +202,10 @@
   font-size: 15px;
   color: #fff;
 }
-
 .main_slider .scroll_down .arrow_wrap {
   position: relative;
   margin-top: 5px;
 }
-
 .main_slider .scroll_down .arrow_wrap::before {
   content: '';
   display: block;
@@ -249,50 +216,207 @@
   border-radius: 2px 2px 0 0;
 }
 
+/* translateX가 처음에 있으므로 이동시 고정시켜야함 */
+@keyframes moveArrow {
+  50% {
+    transform: translate(-50%, 50px);
+  }
+}
 .main_slider .scroll_down .arrow_wrap::after {
   content: '';
   position: absolute;
   left: 50%;
   top: 0;
+  animation: moveArrow 3s infinite ease-in-out;
   width: 15px;
   height: 30px;
   transform: translateX(-50%);
-  background: url(../images/scroll_down.svg) no-repeat;
-  border-radius: 2px 2px 0 0;
-  animation: moveArrow 3s infinite;
+  background: url(../images/arrow_scroll.svg) no-repeat;
 }
 
 .main_business {
   padding: 160px 0;
-  background: #ddd;
+}
+.main_business .inner {
+  max-width: 1440px;
+  padding: 0 20px;
+  margin: 0 auto;
+  display: flex;
+  gap: 0 120px;
+}
+.main_business .col {
+  width: 50%;
 }
 
-.main_business h2 {
+.main_business .tit_wrap {
+  margin-bottom: 190px;
+}
+.main_business .tit_wrap h2 {
   font-size: 44px;
   font-weight: 700;
   color: var(--txt-color-600);
+  margin-bottom: 40px;
+}
+.main_business .tit_wrap p {
+  font-size: 20px;
 }
 
-/* 화살표 움직이기 */
-@keyframes moveArrow {
-  0% {
-    top: 0;
-  }
-  50% {
-    top: 50px;
-  }
+.main_business .business {
+  border-radius: 40px;
+  border: 1px solid #ddd;
+  background: linear-gradient(#f8f8f8ff, #f8f8f800);
+  text-align: center;
+}
+.main_business .business a {
+  height: 610px;
+  padding: 50px 20px 0;
+  display: block;
+}
+.main_business .business .txt_wrap {
+  text-align: left;
+  margin-top: 44px;
+}
+.main_business .business .txt_wrap h3 {
+  font-size: 32px;
+  color: var(--point-color1);
+  font-weight: 700;
+}
+.main_business .business .txt_wrap em {
+  font-size: 20px;
+  color: var(--point-color2);
+  font-weight: 500;
+  margin: 10px 0 20px;
+  display: block;
+}
+.main_business .col:nth-child(2) .business + .business {
+  margin-top: 80px;
+}
+.main_business .point1_btn {
+  margin-top: 100px;
 }
 
-/* 메인 슬라이더 분기점 */
+.main_business .m_more_btn {
+  display: none;
+}
+
+.main_info {
+  padding: 160px 0;
+  background: #f8f8f8;
+}
+.main_info .inner {
+  max-width: 1440px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+.main_info h2 {
+  font-size: 44px;
+  color: var(--txt-color-600);
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+.main_info .row {
+  display: flex;
+  gap: 0 80px;
+}
+
+.main_info .info_left {
+  width: calc(100% - 400px);
+  background: url(../images/bg_mc02_01.jpg) no-repeat 50% 50% / cover;
+  padding: 80px 100px 60px;
+  color: #fff;
+  border-radius: 40px;
+}
+
+.main_info .info_left .top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main_info .info_left .top h3 {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.main_info .info_left .top .num {
+  display: flex;
+  align-items: center;
+  gap: 0 70px;
+}
+
+.main_info .info_left .top .num strong {
+  font-size: 60px;
+  font-weight: 700;
+}
+
+.main_info .info_left .top .num span {
+  font-size: 20px;
+}
+
+.main_info .info_left .bottom {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+  align-items: center;
+}
+
+.main_info .info_left .bottom p {
+  font-size: 16px;
+}
+
+.main_info .info_right {
+  width: 320px;
+}
+
+.main_info .info_right a {
+  padding: 40px;
+  border-radius: 40px;
+  display: block;
+  /* fix */
+  height: 330px;
+  background: linear-gradient(45deg, #008a43, #64de9f);
+  position: relative;
+}
+
+.main_info .info_right a::after {
+  content: '';
+  width: 110px;
+  height: 120px;
+  position: absolute;
+  right: 40px;
+  bottom: 40px;
+  background: url(../images/bg_mc02_02.png) no-repeat 0 0 / 100%;
+}
+
+.main_info .info_right h3 {
+  color: #fff;
+  font-size: 28px;
+  font-weight: 700;
+  position: relative;
+  padding-bottom: 40px;
+}
+
+.main_info .info_right h3::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 40px;
+  height: 20px;
+  background: url(../images/arrow_more.svg) no-repeat 0 0 /100%;
+}
+
+/* 메인슬라이더 분기점 */
 @media (max-width: 1440px) {
   .main_slider {
     height: 700px;
   }
-  .main_slider img {
+  .main_slider .pc_img {
     height: 108%;
   }
 }
 
+/* 테블릿 분기점 */
 @media (max-width: 1200px) {
   #header .inner {
     height: 80px;
@@ -300,8 +424,7 @@
   #header .logo {
     width: 100px;
   }
-
-  #hader .logo a {
+  #header .logo a {
     height: 45px;
   }
   #header .gnb {
@@ -357,7 +480,6 @@
     color: #000;
     border-color: #f7f7f7;
   }
-
   #header.on .lang_wrap .lang_btn::after {
     background: #000;
   }
@@ -373,13 +495,12 @@
     padding-top: 70px;
     transition: all 0.5s;
     transform: translateX(100%);
+    opacity: 0;
   }
-
   #header .m_gnb_wrap.on {
     transform: translateX(0);
     opacity: 1;
   }
-
   #header .scroll {
     /* 스크롤바가 나오려면 반드시 높이가 있어야함 */
     overflow: auto;
@@ -395,8 +516,6 @@
     font-weight: 500;
     position: relative;
   }
-
-  /* 더하기 모양 만들기 */
   #header .m_gnb > li > a::before {
     content: '';
     position: absolute;
@@ -407,7 +526,6 @@
     margin-top: -1px;
     background: #000;
   }
-
   #header .m_gnb > li > a::after {
     content: '';
     position: absolute;
@@ -419,9 +537,6 @@
     background: #000;
     transition: all 0.2s;
   }
-  /*  */
-
-  /* 클릭 시 변경 */
   #header .m_gnb > li.on > a::after {
     width: 14px;
     height: 2px;
@@ -434,7 +549,6 @@
     max-height: 240px;
     padding: 20px;
   }
-
   #header .m_gnb .depth2 {
     padding: 0 20px;
     max-height: 0;
@@ -442,7 +556,6 @@
     transition: all 0.5s;
     background: #f8f8f8;
   }
-
   #header .m_gnb .depth2 a {
     font-size: 14px;
     color: #999;
@@ -464,9 +577,54 @@
   }
 
   .main_slider {
-    /* 16:9 = 100 : x */
     padding-top: 56.25%;
     height: 0;
+  }
+  .main_slider .scroll_down {
+    display: none;
+  }
+
+  .main_business {
+    padding: 100px 0;
+  }
+  .main_business .inner {
+    gap: 0 30px;
+  }
+  .main_business .tit_wrap {
+    margin-bottom: 130px;
+  }
+  .main_business .tit_wrap h2 {
+    font-size: 38px;
+    margin-bottom: 30px;
+  }
+  .main_business .tit_wrap p {
+    font-size: 17px;
+  }
+  .main_business .tit_wrap p br {
+    display: none;
+  }
+
+  .main_business .business a {
+    height: auto;
+    padding-bottom: 40px;
+  }
+  .main_business .business .txt_wrap {
+    margin-top: 35px;
+  }
+  .main_business .business .txt_wrap h3 {
+    font-size: 28px;
+  }
+  .main_business .business .txt_wrap em {
+    font-size: 18px;
+    margin: 10px 0 15px;
+  }
+  .main_business .business .txt_wrap p {
+    font-size: 16px;
+  }
+
+  .main_business .point1_btn {
+    margin-top: 70px;
+    font-size: 16px;
   }
 }
 
@@ -475,12 +633,10 @@
   #header .inner {
     height: 50px;
   }
-
   #header .logo {
     left: 15px;
     width: 60px;
   }
-
   #header .logo a {
     height: 28px;
   }
@@ -488,24 +644,20 @@
   #header .lang_wrap {
     right: 15px;
   }
-
   #header .lang_wrap .lang_btn {
     height: 24px;
     font-size: 13px;
     width: 61px;
     padding: 0 10px;
   }
-
   #header .lang_wrap.on .lang_btn {
     border-radius: 10px 10px 0 0;
   }
-
   #header .lang_wrap .lang {
     width: 61px;
     top: 24px;
     border-radius: 0 0 10px 10px;
   }
-
   #header .lang_wrap .lang a {
     padding: 0 10px;
     font-size: 13px;
@@ -518,19 +670,65 @@
   }
 
   .main_slider {
-    /* 이미지 만큼의 크기를 갖게하기 위해서 vh를 빼준다. */
-    /* height: 100vh; */
-
-    /* 패딩 걸어둔거 빼기 */
     padding-top: 0;
     height: auto;
   }
-  /* pc_img끄기 */
   .main_slider .pc_img {
     display: none;
   }
-
   .main_slider .m_img {
     display: block;
+  }
+
+  .main_business {
+    padding: 80px 0;
+  }
+  .main_business .inner {
+    position: relative;
+    padding: 0 15px 120px;
+    flex-wrap: wrap;
+  }
+  .main_business .col {
+    width: 100%;
+  }
+
+  .main_business .tit_wrap {
+    margin-bottom: 30px;
+  }
+  .main_business .tit_wrap h2 {
+    font-size: 33px;
+  }
+  .main_business .tit_wrap p {
+    font-size: 15px;
+  }
+
+  .main_business .business_wrap {
+    margin-bottom: 30px;
+  }
+
+  .main_business .business .txt_wrap h3 {
+    font-size: 20px;
+  }
+  .main_business .business .txt_wrap em {
+    font-size: 13px;
+    margin: 0 0 15px;
+  }
+  .main_business .business .txt_wrap p {
+    font-size: 14px;
+  }
+
+  .main_business .col:nth-child(2) .business + .business {
+    margin-top: 30px;
+  }
+
+  .main_business .point1_btn {
+    line-height: 50px;
+    font-size: 15px;
+  }
+  .main_business .pc_more_btn {
+    display: none;
+  }
+  .main_business .m_more_btn {
+    display: inline-flex;
   }
 }
