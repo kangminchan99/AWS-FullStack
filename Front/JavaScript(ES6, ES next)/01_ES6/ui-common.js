@@ -181,3 +181,88 @@ console.log(fn4(...arr2));
 const newArr2 = [...arr2];
 newArr2.push(4);
 console.log(newArr2, arr2);
+
+console.clear();
+
+// Promise객체: 데이터 fetch성공, 실패 여부에 따라 로직을 처리하게 해주는 객체
+// 비동기 로직(데이터 가져오기)이 성공하면 resolve()실행되어 then안쪽 함수가 실행
+// 실패하면 reject() 반환되어 catch안쪽 함수가 실행됨
+function promise(param) {
+  return new Promise((resolve, reject) => {
+    if (param) {
+      resolve('fetched');
+    } else {
+      reject(new Error('error occur'));
+    }
+  });
+}
+
+promise(false)
+  .then((result) => console.log(result))
+  .catch((e) => console.log(e.message));
+
+// 프라미스 체이닝: promise.then의 리턴값이 프라미스 객체이므로 .then으로 연결하여 순차 실행 가능
+// 데이터를 가져온 후 .then으로 순차적으로 코드를 실행할 수 있음
+// new Promise((resolve, reject) => {
+//   setTimeout(() => resolve(1), 1000);
+// })
+//   .then((result) => {
+//     alert(result);
+//     return result * 2;
+//   })
+//   .then((result) => {
+//     alert(result);
+//     return result * 2;
+//   })
+//   .then((result) => {
+//     alert(result);
+//     return result * 2;
+//   });
+
+// fetch메서드로 데이터 가져와서 화면에 보여주기
+// window.addEventListener('DOMContentLoaded', function () {
+//   const tit = document.querySelector('.tit');
+//   const txt = document.querySelector('.txt');
+
+//   // 데이터를 get방식으로 가져오기
+//   fetch('https://jsonplaceholder.typicode.com/posts/1')
+//     .then((response) =>
+//       // json객체로 변환
+//       response.json()
+//     )
+//     .then((result) => {
+//       tit.innerHTML = result.title;
+//       txt.innerHTML = result.body;
+//     });
+// });
+
+// async, await 키워드로 비동기 로직을 동기적(순차적)으로 실행하기
+async function fn5() {
+  const promise = new Promise((resolve, reject) => {
+    setTimeout(() => resolve('완료'), 1000);
+  });
+  // async키워드는 async 함수 안에서 사용가능, 프라미스 완료 시 까지 기다림
+  let result = await promise;
+  alert(result);
+}
+
+fn5();
+
+// fetch메서드에서 async, await 사용하기
+
+window.addEventListener('DOMContentLoaded', function () {
+  const tit = document.querySelector('.tit');
+  const txt = document.querySelector('.txt');
+
+  async function getData() {
+    const response = await fetch(
+      'https://jsonplaceholder.typicode.com/posts/1'
+    );
+    const post = await response.json();
+
+    tit.innerHTML = post.title;
+    txt.innerHTML = post.body;
+  }
+
+  getData();
+});
