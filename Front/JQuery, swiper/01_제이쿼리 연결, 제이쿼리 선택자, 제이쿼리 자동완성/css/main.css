@@ -1,0 +1,43 @@
+/* 컬러 변수 */
+:root {
+  --point-color1: #00a651;
+  --point-color2: #8bc63f;
+  --point-color3: #76ca9e;
+  --txt-color-400: #666;
+  --txt-color-500: #222;
+  --txt-color-600: #000;
+}
+
+#wrap {
+  height: 2000px;
+}
+
+#header {
+  background: #ddd;
+}
+
+#header .inner {
+  max-width: 1200px;
+  height: 100px;
+  border: 1px solid black;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+#header .gnb_wrap {
+  margin-left: 100px;
+}
+
+#header .gnb {
+  display: flex;
+}
+
+#header .gnb > li {
+  padding: 0 30px;
+}
+
+#header .gnb > li > a {
+  display: block;
+  line-height: 100px;
+}
