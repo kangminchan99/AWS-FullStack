@@ -90,44 +90,39 @@ window.addEventListener('DOMContentLoaded', function () {
   });
 
   // 주식정보 숫자 카운팅
-  function countNum(final, count, amount) {
-    let check = false;
+  function countNum(cnt, final, amount) {
+    let isScroll = false;
+
     window.addEventListener('scroll', function () {
-      // 요소가 페이지 상단까지 스크롤됨
+      // 요소가 페이지 상단까지 스크롤
       // let posY = document.querySelector('.main_info .info_left').offsetTop;
 
       // 요소가 창아래에서 위로 스크롤
       let posY =
         document.querySelector('.main_info .info_left').offsetTop -
         this.outerHeight;
-      console.log(posY);
 
-      if (this.scrollY >= posY && check === false) {
-        // true로 변경하여 한번만 동작하게
-        check = true;
+      if (this.scrollY >= posY && isScroll === false) {
+        const numEl = document.querySelector('.main_info .num strong');
 
         const interval = setInterval(() => {
-          if (count < final) {
-            count += amount;
+          cnt += amount;
+          numEl.textContent = cnt;
 
-            // 숫자 카운팅
-            document.querySelector('.main_info .num strong').textContent =
-              count;
-          }
-
-          // cnt가 최종숫자보다 크면 최종숫자를 넣어주고 타이머 중지
-          if (count >= final) {
-            document.querySelector('.main_info .num strong').textContent =
-              final;
+          // cnt가 최종숫자 - 증가량보다 크면 최종숫자를 넣어주고 타이머중지
+          if (cnt >= final - amount) {
+            numEl.textContent = final;
             clearInterval(interval);
           }
         }, 10);
+
+        // isScroll을 true로 변경하여 다음 스크롤이벤트에서 실행되지않도록함
+        isScroll = true;
       }
     });
 
-    // js 이벤트 강제 발생
+    // js 이벤트 강제발생
     window.dispatchEvent(new Event('scroll'));
   }
-
-  countNum(4185, 0, 17);
+  countNum(0, 4185, 17);
 });

@@ -24,14 +24,12 @@
     <link rel="icon" href="images/common/favicon.ico" />
     <link rel="apple-touch-icon-precomposed" href="images/common/favicon.jpg" />
     <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet"> -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet"> -->
     <!-- 라이브러리 먼저 연결 -->
     <link rel="stylesheet" href="css/aos.css" />
     <link rel="stylesheet" href="css/common.css?v=<?php echo time(); ?>" />
-    <!-- <link rel="stylesheet" href="css/test.css?v=<?php echo time(); ?>" /> -->
     <link rel="stylesheet" href="css/main.css?v=<?php echo time(); ?>" />
-
     <script src="js/aos.js"></script>
     <script src="js/ui-common.js?v=<?php echo time(); ?>"></script>
   </head>
@@ -117,14 +115,14 @@
               <li><a href="#">ENG</a></li>
             </ul>
             <button type="button" class="open_btn">
-              <span class="blind">메뉴열기</span>
+              <span class="blind">메뉴 열기</span>
+              <!-- css로 삼선 모양을 만들어주기 위해 사용하지 않은 i 태그 이용 -->
               <i></i>
               <i></i>
               <i></i>
             </button>
           </div>
           <aside class="m_gnb_wrap">
-            <!-- 부분 스크롤 처리 -->
             <div class="scroll">
               <ul class="m_gnb">
                 <li>
@@ -145,12 +143,12 @@
                     </li>
                     <li>
                       <a href="/products/digitalHealthcare.do"
-                        >Digital Healthcare Platform (IT)</a
+                        >Digital HealthcarePlatform (IT)</a
                       >
                     </li>
                     <li>
                       <a href="/products/biotechnology.do"
-                        >Bio-Technology Platform (BT)</a
+                        >Bio-TechnologyPlatform (BT)</a
                       >
                     </li>
                   </ul>
@@ -239,7 +237,7 @@
                   <img src="images/img_mc01_02.svg" alt="IT Service" />
                   <div class="txt_wrap">
                     <h3>검체검사 서비스</h3>
-                    <em>In Vitro Service</em>
+                    <em>Digital Healthcare Platform</em>
                     <p>
                       랩투진은 U2Bio의 진단검사 서비스 대표 브랜드로,
                       유투바이오의 강점인 IT기술을 활용하여 타사 대비 편리하고
@@ -281,17 +279,19 @@
                     </div>
                   </div>
                   <div class="bottom">
-                    <p>KRX 2024.04.07 기준</p>
+                    <p>KRW 2024.04.07 기준</p>
                     <a href="#" class="btn point2_btn">더보기</a>
                   </div>
                 </div>
-                <div class="info_right">
-                  <a href="#"> <h3>기업공시확인하기</h3> </a>
+                <div class="info_right" data-aos="fade-up">
+                  <a href="#">
+                    <h3>기업 공시 확인하기</h3>
+                  </a>
                 </div>
               </div>
             </div>
             <div class="news_wrap">
-              <h2>News <a href=""></a></h2>
+              <h2>News</h2>
               <ul class="news">
                 <li>
                   <a href="#">
@@ -346,6 +346,42 @@
                 ><span class="blind">뉴스 더보기</span></a
               >
             </div>
+          </div>
+        </section>
+        <section class="main_recruit">
+          <div class="inner">
+            <div class="recruit_left">
+              <em data-aos="fade-up">Recruitment</em>
+              <h2 data-aos="fade-up">인재채용</h2>
+              <p data-aos="fade-up">
+                U2Bio는 더 나은 세상을 만들어갈 도전적이고 열정적인 인재를<br />
+                기다립니다. Vision과 진정한 기업가의 정신을 함께할 주인공은<br />
+                바로 당신입니다.
+              </p>
+              <a href="#" class="point1_btn btn" data-aos="fade-up">더보기</a>
+            </div>
+            <div class="recruit_right" data-aos="fade-up">
+              <img class="img1" src="images/img_mc03_01.png" alt="" />
+              <img class="img2" src="images/img_mc03_02.png" alt="" />
+              <img class="img4" src="images/img_mc03_04.png" alt="" />
+              <img class="img5" src="images/img_mc03_05.png" alt="" />
+              <img class="img3" src="images/img_mc03_03.png" alt="" />
+            </div>
+          </div>
+        </section>
+        <section class="main_partner">
+          <div class="inner">
+            <h2>Partner</h2>
+            <ul class="partner">
+              <li><img src="images/partner1.jpeg" alt="" /></li>
+              <li><img src="images/partner1.jpeg" alt="" /></li>
+              <li><img src="images/partner1.jpeg" alt="" /></li>
+              <li><img src="images/partner1.jpeg" alt="" /></li>
+              <li><img src="images/partner1.jpeg" alt="" /></li>
+              <li class="row2"><img src="images/partner1.jpeg" alt="" /></li>
+              <li class="row2"><img src="images/partner1.jpeg" alt="" /></li>
+              <li class="row2"><img src="images/partner1.jpeg" alt="" /></li>
+            </ul>
           </div>
         </section>
       </main>
