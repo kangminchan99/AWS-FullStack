@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <meta name="viewport" content="width=1004"> -->
+    <meta name="format-detection" content="telephone=no" />
+    <meta
+      name="description"
+      content="일상 속에 스며든 데이터기반 맞춤형 헬스케어 파트너. 우리는 맞춤형 헬스케어로 모두의 건강한 삶을 당연하게 만듭니다."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://ossamuiux.com/test/" />
+    <meta property="og:title" content="U2Bio" />
+    <meta
+      property="og:description"
+      content="일상 속에 스며든 데이터기반 맞춤형 헬스케어 파트너. 우리는 맞춤형 헬스케어로 모두의 건강한 삶을 당연하게 만듭니다."
+    />
+    <meta
+      property="og:image"
+      content="http://ossamuiux.com/test/images/common/20230315195155CAKTKJ.jpg"
+    />
+    <title>U2Bio</title>
+    <link rel="icon" href="images/common/favicon.ico" />
+    <link rel="apple-touch-icon-precomposed" href="images/common/favicon.jpg" />
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet"> -->
+    <!-- 라이브러리 먼저 연결 -->
+    <link rel="stylesheet" href="css/jquery-ui.min.css" />
+    <link rel="stylesheet" href="css/aos.css" />
+    <link rel="stylesheet" href="css/common.css?v=<?php echo time(); ?>" />
+    <link rel="stylesheet" href="css/main.css?v=<?php echo time(); ?>" />
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/ui-common.js?v=<?php echo time(); ?>"></script>
+  </head>
+  <body>
+    <div id="skip_navi">
+      <a href="#container">본문바로가기</a>
+    </div>
+    <div id="wrap">
+      <header id="header">
+        <div class="inner">
+          <h1 class="logo">
+            <a href="index.html">
+              <span class="blind">유투바이오</span>
+            </a>
+          </h1>
+          <nav class="gnb_wrap">
+            <ul class="gnb">
+              <li>
+                <a href="/about/greeting.do">기업 소개</a>
+                <ul class="depth2">
+                  <li><a href="/about/greeting.do">인사말</a></li>
+                  <li><a href="/about/management.do">주요 경영진</a></li>
+                  <li><a href="/about/missionVision.do">미션과 비전</a></li>
+                  <li><a href="/about/history.do">연혁</a></li>
+                  <li><a href="/about/location.do">오시는 길</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="/products/sampleCheck.do">제품 및 서비스</a>
+                <ul class="depth2">
+                  <li>
+                    <a href="/products/sampleCheck.do">검체검사 서비스</a>
+                  </li>
+                  <li>
+                    <a href="/products/digitalHealthcare.do"
+                      >Digital Healthcare<br />Platform (IT)</a
+                    >
+                  </li>
+                  <li>
+                    <a href="/products/biotechnology.do"
+                      >Bio-Technology<br />Platform (BT)</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="/investment/financial.do">투자정보</a>
+                <ul class="depth2">
+                  <li><a href="/investment/financial.do">재무 정보</a></li>
+                  <li><a href="/investment/corporate.do">기업공시</a></li>
+                  <li><a href="/investment/inquiry.do">투자 문의</a></li>
+                  <li><a href="#">주주공고</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">미디어센터</a>
+                <ul class="depth2">
+                  <li><a href="#">보도자료</a></li>
+                  <li><a href="#">E카달로그</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="/recruitment/organization.do">채용정보</a>
+                <ul class="depth2">
+                  <li><a href="/recruitment/organization.do">U2Bio 조직</a></li>
+                  <li><a href="/recruitment/idealTalent.do">U2인재상</a></li>
+                  <li>
+                    <a href="/recruitment/humanReliance.do"
+                      >U2 HR (Human Reliances)</a
+                    >
+                  </li>
+                  <li>
+                    <a href="/recruitment/recruitmentInquiry.do">채용 문의</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+          <div class="lang_wrap">
+            <button class="lang_btn" type="button">KOR</button>
+            <ul class="lang">
+              <li><a href="#">KOR</a></li>
+              <li><a href="#">ENG</a></li>
+            </ul>
+            <button type="button" class="open_btn">
+              <span class="blind">메뉴 열기</span>
+              <!-- css로 삼선 모양을 만들어주기 위해 사용하지 않은 i 태그 이용 -->
+              <i></i>
+              <i></i>
+              <i></i>
+            </button>
+          </div>
+          <aside class="m_gnb_wrap">
+            <div class="scroll">
+              <ul class="m_gnb">
+                <li>
+                  <a href="#">기업 소개</a>
+                  <ul class="depth2">
+                    <li><a href="/about/greeting.do">인사말</a></li>
+                    <li><a href="/about/management.do">주요 경영진</a></li>
+                    <li><a href="/about/missionVision.do">미션과 비전</a></li>
+                    <li><a href="/about/history.do">연혁</a></li>
+                    <li><a href="/about/location.do">오시는 길</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">제품 및 서비스</a>
+                  <ul class="depth2">
+                    <li>
+                      <a href="/products/sampleCheck.do">검체검사 서비스</a>
+                    </li>
+                    <li>
+                      <a href="/products/digitalHealthcare.do"
+                        >Digital HealthcarePlatform (IT)</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/products/biotechnology.do"
+                        >Bio-TechnologyPlatform (BT)</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">투자정보</a>
+                  <ul class="depth2">
+                    <li><a href="/investment/financial.do">재무 정보</a></li>
+                    <li><a href="/investment/corporate.do">기업공시</a></li>
+                    <li><a href="/investment/inquiry.do">투자 문의</a></li>
+                    <li><a href="#">주주공고</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">미디어센터</a>
+                  <ul class="depth2">
+                    <li><a href="#">보도자료</a></li>
+                    <li><a href="#">E카달로그</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">채용정보</a>
+                  <ul class="depth2">
+                    <li>
+                      <a href="/recruitment/organization.do">U2Bio 조직</a>
+                    </li>
+                    <li><a href="/recruitment/idealTalent.do">U2인재상</a></li>
+                    <li>
+                      <a href="/recruitment/humanReliance.do"
+                        >U2 HR (Human Reliances)</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/recruitment/recruitmentInquiry.do">채용 문의</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </aside>
+        </div>
+      </header>
+      <main id="container">
+        <section class="main_slider">
+          <h2 class="blind">메인 슬라이더</h2>
+          <img class="pc_img" src="images/visual1.jpg" alt="" />
+          <img class="m_img" src="images/m_visual1.jpg" alt="" />
+          <a href="#" class="scroll_down">
+            scroll down
+            <div class="arrow_wrap"></div>
+          </a>
+        </section>
+        <section class="main_business">
+          <div class="inner">
+            <div class="col">
+              <div class="tit_wrap" data-aos="fade-up">
+                <h2>Business</h2>
+                <p>
+                  우리는 맞춤형 헬스케어로 모두의 건강한 삶을 당연하게
+                  만듭니다.<br />
+                  We offer uniquely designed healthcare for each individual
+                </p>
+              </div>
+              <div class="business_wrap" data-aos="fade-up">
+                <div class="business">
+                  <a href="#">
+                    <img src="images/img_mc01_01.svg" alt="IT Service" />
+                    <div class="txt_wrap">
+                      <h3>IT Service</h3>
+                      <em>Digital Healthcare Platform</em>
+                      <p>
+                        U2Bio의 디지털 헬스케어 서비스는 일선 병·의원에서 필요로
+                        하는 다양한 니즈를 충족시키고자 합니다.
+                      </p>
+                    </div>
+                  </a>
+                </div>
+                <a href="#" class="point1_btn btn pc_more_btn"
+                  >사업분야 더보기</a
+                >
+              </div>
+            </div>
+            <div class="col">
+              <div class="business" data-aos="fade-up">
+                <a href="#">
+                  <img src="images/img_mc01_02.svg" alt="IT Service" />
+                  <div class="txt_wrap">
+                    <h3>검체검사 서비스</h3>
+                    <em>Digital Healthcare Platform</em>
+                    <p>
+                      랩투진은 U2Bio의 진단검사 서비스 대표 브랜드로,
+                      유투바이오의 강점인 IT기술을 활용하여 타사 대비 편리하고
+                      유용한 기능을 제공하여 차별화를 시도하고 있습니다.
+                    </p>
+                  </div>
+                </a>
+              </div>
+              <div class="business" data-aos="fade-up">
+                <a href="#">
+                  <img src="images/img_mc01_03.svg" alt="IT Service" />
+                  <div class="txt_wrap">
+                    <h3>BT Service</h3>
+                    <em>Digital Healthcare Platform</em>
+                    <p>
+                      U2Bio의 Bio-Technology 서비스 핵심 기술은 유전체 분석
+                      기술입니다.
+                    </p>
+                  </div>
+                </a>
+              </div>
+              <a href="#" class="point1_btn btn m_more_btn" data-aos="fade-up"
+                >사업분야 더보기</a
+              >
+            </div>
+          </div>
+        </section>
+        <section class="main_info">
+          <div class="inner">
+            <div class="info">
+              <h2>주식정보</h2>
+              <div class="row">
+                <div class="info_left">
+                  <div class="top">
+                    <h3>유투바이오</h3>
+                    <div class="num">
+                      <strong>0</strong>
+                      <span>50 (1.18%)</span>
+                    </div>
+                  </div>
+                  <div class="bottom">
+                    <p>KRW 2024.04.07 기준</p>
+                    <a href="#" class="btn point2_btn">더보기</a>
+                  </div>
+                </div>
+                <div class="info_right" data-aos="fade-up">
+                  <a href="#">
+                    <h3>기업 공시 확인하기</h3>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="news_wrap">
+              <h2>News</h2>
+              <ul class="news">
+                <li>
+                  <a href="#">
+                    <p class="txt">
+                      김진태 유투바이오 대표 “5년 내 연간 1000억 매출 달성할
+                      것”[상장 새내기 바이오⑤]김진태 유투바이오 대표 “5년 내
+                      연간 1000억 매출 달성할 것”[상장 새내기 바이오⑤]김진태
+                      유투바이오 대표 “5년 내 연간 1000억 매출 달성할 것”[상장
+                      새내기 바이오⑤]
+                    </p>
+                    <span class="date">2024.12.12</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <p class="txt">
+                      김진태 유투바이오 대표 “5년 내 연간 1000억 매출 달성할
+                      것”[상장 새내기 바이오⑤]김진태 유투바이오 대표 “5년 내
+                      연간 1000억 매출 달성할 것”[상장 새내기 바이오⑤]김진태
+                      유투바이오 대표 “5년 내 연간 1000억 매출 달성할 것”[상장
+                      새내기 바이오⑤]
+                    </p>
+                    <span class="date">2024.12.12</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <p class="txt">
+                      김진태 유투바이오 대표 “5년 내 연간 1000억 매출 달성할
+                      것”[상장 새내기 바이오⑤]김진태 유투바이오 대표 “5년 내
+                      연간 1000억 매출 달성할 것”[상장 새내기 바이오⑤]김진태
+                      유투바이오 대표 “5년 내 연간 1000억 매출 달성할 것”[상장
+                      새내기 바이오⑤]
+                    </p>
+                    <span class="date">2024.12.12</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <p class="txt">
+                      김진태 유투바이오 대표 “5년 내 연간 1000억 매출 달성할
+                      것”[상장 새내기 바이오⑤]김진태 유투바이오 대표 “5년 내
+                      연간 1000억 매출 달성할 것”[상장 새내기 바이오⑤]김진태
+                      유투바이오 대표 “5년 내 연간 1000억 매출 달성할 것”[상장
+                      새내기 바이오⑤]
+                    </p>
+                    <span class="date">2024.12.12</span>
+                  </a>
+                </li>
+              </ul>
+              <a class="more_btn" href="#"
+                ><span class="blind">뉴스 더보기</span></a
+              >
+            </div>
+          </div>
+        </section>
+        <section class="main_recruit">
+          <div class="inner">
+            <div class="recruit_left">
+              <em data-aos="fade-up">Recruitment</em>
+              <h2 data-aos="fade-up">인재채용</h2>
+              <p data-aos="fade-up">
+                U2Bio는 더 나은 세상을 만들어갈 도전적이고 열정적인 인재를<br />
+                기다립니다. Vision과 진정한 기업가의 정신을 함께할 주인공은<br />
+                바로 당신입니다.
+              </p>
+              <a href="#" class="point1_btn btn" data-aos="fade-up">더보기</a>
+            </div>
+            <div class="recruit_right" data-aos="fade-up">
+              <img class="img1" src="images/img_mc03_01.png" alt="" />
+              <img class="img2" src="images/img_mc03_02.png" alt="" />
+              <img class="img4" src="images/img_mc03_04.png" alt="" />
+              <img class="img5" src="images/img_mc03_05.png" alt="" />
+              <img class="img3" src="images/img_mc03_03.png" alt="" />
+            </div>
+          </div>
+        </section>
+        <section class="main_partner">
+          <div class="inner" data-aos="fade-up">
+            <h2>Partner</h2>
+            <ul class="partner">
+              <li><img src="images/partner1.jpeg" alt="" /></li>
+              <li><img src="images/partner1.jpeg" alt="" /></li>
+              <li><img src="images/partner1.jpeg" alt="" /></li>
+              <li><img src="images/partner1.jpeg" alt="" /></li>
+              <li><img src="images/partner1.jpeg" alt="" /></li>
+              <li class="row2"><img src="images/partner1.jpeg" alt="" /></li>
+              <li class="row2"><img src="images/partner1.jpeg" alt="" /></li>
+              <li class="row2"><img src="images/partner1.jpeg" alt="" /></li>
+            </ul>
+          </div>
+        </section>
+      </main>
+      <footer id="footer">
+        <div class="inner">
+          <div class="footer_top">
+            <ul class="footer_menu">
+              <li><a href="#">이메일 무단 수집 거부</a></li>
+              <li><a href="#">오시는 길</a></li>
+            </ul>
+          </div>
+          <div class="footer_bottom">
+            <h2 class="footer_logo"><span class="blind">유투바이오</span></h2>
+            <div class="txt_wrap">
+              <p class="address">
+                대표자 : 김진태<span class="line"></span> 대표전화 1577-1338
+                <span class="line"></span> 개인정보책임자 : 김지원
+              </p>
+              <p class="address">
+                IR문의 : 070-4492-2727 <span class="line"></span>주소 :
+                서울특별시 송파구 오금로 489<span class="line"></span>
+                사업자번호 : 113-86-26732
+              </p>
+              <p class="copyright">
+                COPYRIGHTS © U2Bio CO., LTD. ALL RIGHTS RESERVED
+              </p>
+            </div>
+            <div class="link_wrap">
+              <a href="#" class="inquiry_btn">채용문의</a>
+              <div class="family_wrap">
+                <button type="button" class="family_btn">Family Site</button>
+                <ul class="family">
+                  <li>
+                    <a href="#" target="_blank" title="새창열림">유투바이옴</a>
+                  </li>
+                  <li>
+                    <a href="#" target="_blank" title="새창열림"
+                      >유투바이오IT</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" target="_blank" title="새창열림">U2Labs</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <a class="top_btn" href="#"
+            ><span class="blind">페이지 상단 이동</span></a
+          >
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

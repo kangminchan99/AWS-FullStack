@@ -24,7 +24,7 @@
   z-index: 9999;
   border-top: 5px solid var(--point-color2);
 }
-#header::after {
+#header::before {
   content: '';
   position: absolute;
   left: 0;
@@ -82,6 +82,88 @@
 #header .header_top .login .eng a {
   width: 30px;
   background: url(../images/icon_utill_global.png) no-repeat;
+}
+
+#header .header_bottom {
+  display: flex;
+  justify-content: center;
+}
+
+#header .gnb {
+  display: flex;
+}
+
+#header .gnb > li {
+  position: relative;
+  /* 간격이 다른 경우 width로 지정 */
+  width: 165px;
+}
+
+#header .gnb > li > a {
+  display: block;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 67px;
+  color: var(--txt-color-600);
+}
+
+#header.on .gnb .depth2 {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+  /* 서브 메뉴 열릴 때는 조금 천천히 */
+  transition: all 0.5s;
+}
+
+#header .gnb .depth2 {
+  transition: all 0.2s;
+  position: absolute;
+  left: 0;
+  top: 67px;
+  width: 100%;
+  text-align: center;
+  z-index: 10;
+  padding-top: 20px;
+  transform: translateY(-20px);
+  opacity: 0;
+  visibility: hidden;
+  /* 메뉴 개수가 짧은 부분이 있을 수 있으므로 높이를 잡아 mouseleave가 안되도록 설정 */
+  height: 260px;
+}
+
+#header .gnb > li > a:hover {
+  color: var(--point-color2);
+}
+
+#header .gnb .depth2 li + li {
+  margin-top: 10px;
+}
+
+#header .gnb .depth2 a {
+  font-size: 15px;
+  letter-spacing: -0.05em;
+}
+
+#header .gnb .depth2 a:hover {
+  color: var(--point-color2);
+  text-decoration: underline;
+}
+
+#header.on::after {
+  height: 260px;
+}
+
+#header::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 165px;
+  width: 100%;
+  height: 0;
+  transition: all 0.3s;
+  background: #fff;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
 }
 
 #container {
