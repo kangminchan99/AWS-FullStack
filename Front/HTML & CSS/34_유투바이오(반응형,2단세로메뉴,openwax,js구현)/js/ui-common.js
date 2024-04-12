@@ -125,4 +125,25 @@ window.addEventListener('DOMContentLoaded', function () {
     window.dispatchEvent(new Event('scroll'));
   }
   countNum(0, 4185, 17);
+
+  document
+    .querySelector('#footer .family_btn')
+    .addEventListener('click', function () {
+      // document.querySelector('#footer .family_wrap').classList.toggle('on');
+      this.parentElement.classList.toggle('on');
+    });
+
+  // 푸터 탑 버튼
+  document
+    .querySelector('#footer .top_btn')
+    .addEventListener('click', function (event) {
+      event.preventDefault();
+
+      let posY = document.getElementById('header').offsetTop;
+
+      window.scrollTo({
+        top: posY,
+        behavior: 'smooth',
+      });
+    });
 });
