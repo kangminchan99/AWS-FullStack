@@ -83,6 +83,7 @@ $(function () {
           isScroll = true;
         }
       })
+
       .trigger('scroll');
   }
   countNum(0, 4185, 17);

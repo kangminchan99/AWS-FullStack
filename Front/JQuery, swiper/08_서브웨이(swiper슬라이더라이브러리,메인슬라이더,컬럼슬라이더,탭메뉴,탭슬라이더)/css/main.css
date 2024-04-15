@@ -1,0 +1,374 @@
+/* 컬러 변수 */
+:root {
+  --point-color1: #ffce32;
+  --point-color2: #009223;
+  --point-color3: #76CA9E;
+  --txt-color-400: #999;
+  --txt-color-500: #666;
+  --txt-color-600: #292929;
+}
+
+#wrap {
+  min-width: 1280px;
+  height: 2000px;
+  position: relative;
+}
+
+#header {
+  position: absolute;
+  left:0;
+  top:0;
+  width:100%;
+  background: #fff;
+  z-index: 9999;
+  border-top:5px solid var(--point-color2);
+}
+#header::before {
+  content: '';
+  position: absolute;
+  left:0;
+  bottom: 0;
+  width:100%;
+  height: 1px;
+  background: #e5e5e5;
+}
+#header .header_top {
+  width:1170px;
+  height: 98px;
+  margin:0 auto;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  padding-top:35px;
+}
+#header .header_top .login {
+  position: absolute;
+  right:25px;
+  top:40px;
+  display: flex;
+}
+#header .header_top .login li + li {
+  margin-left:15px;
+  padding-left:15px;
+  position: relative;
+}
+#header .header_top .login li + li::before {
+  content: '';
+  position: absolute;
+  left:0;
+  top:50%;
+  width: 3px;
+  height: 3px;
+  margin-left:-1px;
+  margin-top:-1px;
+  border-radius: 50%;
+  background: #ddd;
+}
+#header .header_top .login a {
+  font-size: 13px;
+  display: block;
+  /* 글자가 있는 경우와 없는 경우이므로 */
+  height: 30px;
+  line-height: 30px;
+}
+
+#header .header_top .login .eng {
+  padding-left:0;
+}
+#header .header_top .login .eng::before {
+  display: none;
+}
+#header .header_top .login .eng a {
+  width:30px;
+  background: url(../images/icon_utill_global.png) no-repeat;
+}
+
+
+#header .header_bottom {
+  display: flex;
+  justify-content: center;
+}
+#header .gnb {
+  display: flex;
+}
+#header .gnb>li {
+  position: relative;
+  /* 간격이 다른 경우 width로 지정 */
+  width:165px;
+}
+#header .gnb>li>a {
+  display: block;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 67px;
+  color:var(--txt-color-600);
+}
+
+#header.on .gnb .depth2 {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+  /* 서브메뉴 열릴때는 조금 천천히 */
+  transition: all 0.5s;
+}
+#header .gnb .depth2 {
+  /* 닫힐때는 빨리 */
+  transition: all 0.2s;
+  position: absolute;
+  left:0;
+  top:67px;
+  width:100%;
+  z-index: 10;
+  text-align: center;
+  padding-top:20px;
+  transform: translateY(-20px);
+  opacity: 0;
+  visibility: hidden;
+  /* 메뉴갯수가 짧은 부분이 있으므로 높이를 잡아 mouseleave안되도록 */
+  height: 260px;
+}
+#header .gnb .depth2 li + li {
+  margin-top:10px;
+}
+#header .gnb .depth2 a {
+  font-size: 15px;
+  letter-spacing: -0.05em;
+}
+#header .gnb .depth2 a:hover {
+  color:var(--point-color2);
+  text-decoration: underline;
+}
+
+#header.on::after {
+  height: 260px;
+}
+#header::after {
+  content: '';
+  position: absolute;
+  left:0;
+  top:165px;
+  width:100%;
+  height: 0;
+  transition: all 0.3s;
+  background: #fff;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+
+
+#container {
+  padding-top:170px;
+}
+
+/* 안쪽요소에 height:100%가 있으므로 밖에서 높이지정 */
+.main_slider .swiper {
+  height: 440px;
+}
+
+/* 기준에서 hidden으로 큰이미지를 가려줌 */
+.main_slider .swiper-slide {
+  overflow: hidden;
+}
+.main_slider a {
+  position: absolute;
+  left:50%;
+  top:0;
+  transform: translateX(-50%);
+}
+.main_slider img {
+  max-width: none;
+}
+
+/* 메인슬라이더 네비게이션 */
+.main_slider .arrow_btn {
+  width:40px;
+  height: 60px;
+  margin-top:-30px;
+  left:50px;
+  background: url(../images/arrow_left.svg) no-repeat 10px 50% / 40px;
+}
+.main_slider .arrow_btn::after {
+  display: none;
+}
+
+/* 포지션요소에 left, right 동시에 사용하면 이동되지않음 */
+.main_slider .swiper-button-next {
+  left: auto;
+  right:50px;
+  transform: rotate(180deg);
+}
+
+.main_slider .swiper-pagination {
+  width:1170px;
+  left:50%;
+  bottom:47px;
+  transform: translateX(-50%);
+  text-align: right;
+}
+.main_slider .swiper-pagination span {
+  width:10px;
+  height: 10px;
+  background: #fff;
+  opacity: 1;
+  transition: all 0.3s;
+}
+.main_slider .swiper-pagination .swiper-pagination-bullet-active {
+  background: var(--point-color1);
+  width:30px;
+  border-radius: 5px;
+}
+
+/* 메인슬라이더 자동재생 토글 */
+.main_slider .autoplay_btn {
+  position: absolute;
+  left:50%;
+  bottom: 40px;
+  width:37px;
+  height: 37px;
+  border:2px solid #333;
+  border-radius: 50%;
+  z-index: 10;
+  margin-left:460px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main_slider .autoplay_btn::after {
+  content: '';
+  width:7px;
+  height: 10px;
+  background: url(../images/visual_sprite.png) no-repeat 0 -127px;
+}
+.main_slider .autoplay_btn.on::after {
+  width:9px;
+  background-position: 0 -167px;
+}
+
+.main_menu {
+  padding:100px 0 130px;
+}
+.main_menu .inner {
+  width:1170px;
+  margin:0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.main_tit {
+  color: var(--txt-color-600);
+  font-size: 40px;
+  font-weight: 700;
+  font-family: 'sw', sans-serif;
+  padding-left:25px;
+  background: url(../images/bul_tit.png) no-repeat 0 0;
+  height: 60px;
+  line-height: 60px;
+}
+
+.main_menu .menu_tab {
+  display: flex;
+  margin-top:30px;
+}
+.main_menu .menu_tab li + li {
+  margin-left:15px;
+  padding-left:15px;
+  position: relative;
+}
+.main_menu .menu_tab li + li::before {
+  content: '';
+  position: absolute;
+  left:0;
+  top:5px;
+  width:1px;
+  height: 15px;
+  background: #ddd;
+}
+.main_menu .menu_tab a {
+  font-weight: 500;
+}
+.main_menu .menu_tab li.active a {
+  color:var(--point-color2);
+  font-weight: 700;
+}
+
+.main_menu .menu_slider_wrap {
+  margin-top:33px;
+  /* 창 줄어들때 좌우 화살표 가리기 */
+  overflow: hidden;
+}
+.main_menu .menu_slider {
+  width:1170px;
+  margin:0 auto;
+  /* 밖으로 뺀 좌우화살표의 기준 */
+  position: relative;
+  height: 0;
+  overflow: hidden;
+}
+.main_menu .menu_slider.active {
+  height: auto;
+  overflow: visible;
+}
+
+/* overflow를 변경할 수 없으므로 좌우버튼의 기준이 아니게함 */
+.main_menu .menu_slider .swiper {
+  position: static;
+}
+.main_menu .menu_slider .swiper-slide {
+  padding:0 5px;
+}
+.main_menu .menu_slider .swiper-slide a {
+  display: block;
+}
+.main_menu .menu_slider .img_wrap {
+  height: 181px;
+}
+.main_menu .menu_slider .img_wrap img {
+  width:100%;
+  height: 100%;
+  object-fit: cover;
+}
+.main_menu .menu_slider .tit_wrap strong {
+  font-size: 18px;
+  color: var(--txt-color-600);
+  display: block;
+  text-align: center;
+  font-weight: 700;
+  margin:3px 0 10px;
+}
+.main_menu .menu_slider .tit_wrap p {
+  font-size: 13px;
+  color:var(--txt-color-400);
+  text-align: center;
+}
+
+
+.main_menu .menu_slider .arrow_btn {
+  left:-150px;
+  width:50px;
+  height: 50px;
+  margin-top:-25px;
+  background: url(../images/icon_event_slider_arr.png) no-repeat;
+}
+.main_menu .menu_slider .arrow_btn:hover {
+  background-position-y:-50px;
+}
+.main_menu .menu_slider .arrow_btn::after {
+  display: none;
+}
+
+/* loop 슬라이더 아닐때 버튼 비활성화 제거 */
+.main_menu .menu_slider .swiper-button-lock {
+  display: block;
+}
+.main_menu .menu_slider .swiper-button-disabled {
+  opacity: 1;
+  pointer-events: all;
+  cursor: pointer;
+}
+.main_menu .menu_slider .swiper-button-next {
+  left:auto;
+  right:-150px;
+  transform: rotate(180deg);
+}
