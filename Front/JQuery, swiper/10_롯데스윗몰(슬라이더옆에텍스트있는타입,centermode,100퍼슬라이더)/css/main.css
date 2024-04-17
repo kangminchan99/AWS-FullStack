@@ -1,0 +1,100 @@
+/* 컬러 변수 */
+:root {
+  --point-color1: #ff3d44;
+  --point-color2: #009223;
+  --txt-color-400: #9a9a9a;
+  --txt-color-500: #3a3a3a;
+  --txt-color-600: #1a1a1a;
+}
+
+#wrap {
+  height: 2000px;
+  /* 반응형 아닐 때 사용 */
+  min-width: 1340px;
+}
+
+.main_new {
+  padding-top: 80px;
+}
+.main_new .inner {
+  width: 1280px;
+  height: 300px;
+  border: 1px solid red;
+  margin: 0 auto;
+  position: relative;
+}
+
+.main_tit h2 {
+  font-size: 40px;
+  color: var(--txt-color-600);
+  font-weight: 700;
+}
+
+.main_tit h2::after {
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: var(--point-color1);
+  border-radius: 50%;
+  vertical-align: -3px;
+  margin-left: 3px;
+}
+
+.main_tit p {
+  color: var(--txt-color-400);
+  font-size: 15px;
+  margin: 23px 0 32px;
+}
+
+.main_tit .more_btn {
+  font-size: 17px;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+.main_tit .more_btn::after {
+  content: '';
+  display: inline-block;
+  width: 21px;
+  height: 21px;
+  background: url(../images/icon_main_title.png) no-repeat;
+  margin-left: 8px;
+  vertical-align: -3px;
+  transition: all 0.3s;
+}
+
+.main_tit .more_btn:hover {
+  color: var(--point-color1);
+}
+
+.main_tit .more_btn:hover::after {
+  background-image: url(../images/icon_main_title_c.png);
+  transform: translateX(-5px);
+}
+
+.main_new .main_tit {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 320px;
+  height: 100%;
+  background: yellowgreen;
+}
+
+.main_new .swiper-slide {
+  position: relative;
+}
+
+.main_new .bg {
+  background: var(--txt-color-400);
+  position: absolute;
+}
+
+.main_new .swiper {
+  width: 960px;
+  height: 100%;
+  margin-left: 320px;
+  border: 2px solid pink;
+  position: relative;
+}

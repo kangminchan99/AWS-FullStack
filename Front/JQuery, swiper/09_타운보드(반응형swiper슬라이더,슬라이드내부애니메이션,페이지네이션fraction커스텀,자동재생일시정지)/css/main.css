@@ -1,0 +1,228 @@
+/* 컬러 변수 */
+:root {
+  --point-color1: #e40f18;
+  --point-color2: #009223;
+  --txt-color-400: #999;
+  --txt-color-500: #666;
+  --txt-color-600: #222;
+}
+
+#wrap {
+  height: 2000px;
+}
+
+.main_slider .swiper {
+  height: 930px;
+}
+.main_slider .swiper-slide {
+  background: url(../images/main_visual1.jpg) no-repeat 50% 50% / cover;
+}
+.main_slider .slide2 {
+  background-image: url(../images/main_visual2.jpg);
+}
+.main_slider .slide3 {
+  background-image: url(../images/main_visual3.jpg);
+}
+.main_slider a {
+  display: block;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main_slider .txt_wrap {
+  max-width:1264px;
+  padding:0 32px;
+  width:100%;
+}
+.main_slider .txt_wrap p {
+  color:#fff;
+  font-size: 26px;
+  margin-bottom: 25px;
+  transform: translateY(-30px);
+  filter: blur(10px);
+  opacity: 0;
+}
+.main_slider .txt_wrap h2 {
+  color:#fff;
+  font-size: 59px;
+  font-weight: 700;
+  transform: translateY(30px);
+  filter: blur(10px);
+  opacity: 0;
+}
+.main_slider .txt_wrap h2 em {
+  color:var(--point-color1);
+  margin-left:10px;
+}
+.main_slider .swiper-slide-active .txt_wrap p {
+  transform: translateY(0);
+  filter: blur(0);
+  opacity: 1;
+  transition: transform 1.5s, filter 1.5s, opacity 1.5s;
+}
+.main_slider .swiper-slide-active .txt_wrap h2 {
+  transform: translateY(0);
+  filter: blur(0);
+  opacity: 1;
+  transition: transform 1.5s, filter 1.5s, opacity 1.5s;
+}
+
+.main_slider .btn_wrap {
+  position: absolute;
+  left:0;
+  bottom: 90px;
+  z-index: 10;
+  width:295px;
+  height: 89px;
+  background: url(../images/main_label.png) no-repeat 0 0 / 100%;
+  padding-top:20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap:0 15px;
+}
+.main_slider .btn_wrap .swiper-pagination {
+  position: static;
+  width:auto;
+  color:#fff;
+  font-size: 24px;
+  font-weight: 700;
+}
+.main_slider .btn_wrap .swiper-pagination span + span {
+  margin-left:15px;
+  padding-left:15px;
+  position: relative;
+}
+.main_slider .btn_wrap .swiper-pagination span + span::before {
+  content: '';
+  position: absolute;
+  left:0;
+  top:7px;
+  width:1px;
+  height: 17px;
+  background: #ddd;
+}
+
+.main_slider .btn_wrap .arrow_btn {
+  position: static;
+  margin-top:0;
+  width:24px;
+  height: 34px;
+  color:#E37886;
+  font-size: 24px;
+  transition:all 0.3s;
+}
+.main_slider .btn_wrap .arrow_btn:hover {
+  color:#fff;
+}
+.main_slider .btn_wrap .arrow_btn::after {
+  display: none;
+}
+.main_slider .btn_wrap .autoplay_btn {
+  position: absolute;
+  left:58px;
+  top:120px;
+  font-size: 15px;
+  background: none;
+  border:none;
+  color:#aaa;
+  font-weight: 700;
+}
+.main_slider .btn_wrap .autoplay_btn i {
+  margin-left:5px;
+}
+
+
+
+
+
+
+
+
+@media (max-width:1200px) {
+  .main_slider .swiper {
+    height: 744px;
+  }
+  .main_slider .swiper-slide {
+    background-position: 85% 50%;
+  }
+  .main_slider .txt_wrap p {
+    font-size: 21px;
+  }
+  .main_slider .txt_wrap h2 {
+    font-size: 47px;
+  }
+
+  .main_slider .btn_wrap {
+    width:236px;
+    height: 71px;
+    padding-top:16px;
+    bottom: 80px;
+  }
+  .main_slider .btn_wrap .arrow_btn {
+    width:19px;
+    height: 19px;
+    font-size: 19px;
+  }
+  .main_slider .btn_wrap .swiper-pagination {
+    font-size: 19px;
+  }
+  .main_slider .btn_wrap .swiper-pagination span + span::before {
+    height: 14px;
+    top:6px;
+  }
+  .main_slider .btn_wrap .autoplay_btn {
+    left:50px;
+    top:90px;
+  }
+}
+
+
+
+
+
+
+
+@media (max-width:767px) {
+  .main_slider .swiper {
+    height: 650px;
+  }
+  .main_slider .swiper-slide {
+    background: url(../images/m_main_visual1.jpg) no-repeat 50% 50% / cover;
+  }
+  .main_slider .slide2 {
+    background-image: url(../images/m_main_visual2.jpg);
+  }
+  .main_slider .slide3 {
+    background-image: url(../images/m_main_visual3.jpg);
+  }
+  .main_slider .txt_wrap {
+    padding: 14px;
+    margin-top:-250px;
+  }
+  .main_slider .txt_wrap p {
+    font-size: 18px;
+  }
+  .main_slider .txt_wrap h2 {
+    font-size: 28px;
+  }
+
+  .main_slider .btn_wrap {
+    width:166px;
+    height: 50px;
+    padding-top:11px;
+    bottom: 70px;
+  }
+  .main_slider .btn_wrap .swiper-pagination {
+    font-size: 17px;
+  }
+  .main_slider .btn_wrap .swiper-pagination span + span::before {
+    height: 12px;
+    top:5px;
+  }
+  .main_slider .btn_wrap .autoplay_btn {
+    top:70px;
+    left:20px;
+  }
+}
