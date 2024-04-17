@@ -6,30 +6,10 @@
   src: url(../fonts/SUIT-Regular.eot?#iefix) format('embedded-opentype'),
     url(../fonts/SUIT-Regular.woff) format('woff'),
     url(../fonts/SUIT-Regular.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'SUIT';
-  font-style: normal;
-  font-weight: 500;
-  src: url(../fonts/SUIT-Medium.eot);
-  src: url(../fonts/SUIT-Medium.eot?#iefix) format('embedded-opentype'),
-    url(../fonts/SUIT-Medium.woff) format('woff'),
-    url(../fonts/SUIT-Medium.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'SUIT';
-  font-style: normal;
-  font-weight: 700;
-  src: url(../fonts/SUIT-Bold.eot);
-  src: url(../fonts/SUIT-Bold.eot?#iefix) format('embedded-opentype'),
-    url(../fonts/SUIT-Bold.woff) format('woff'),
-    url(../fonts/SUIT-Bold.ttf) format('truetype');
 } */
 
 /* 반응형, 모바일에서 모든요소의 패딩,선을 크기안에 포함시킴 */
-*,
-::before,
-::after {
+*, ::before, ::after {
   box-sizing: border-box;
 }
 
@@ -49,84 +29,10 @@
 } */
 
 /* body에 들어갈수있는 모든태그의 여백빼기 */
-html,
-body,
-div,
-span,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-address,
-code,
-em,
-img,
-strong,
-sub,
-sup,
-b,
-u,
-i,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section,
-main,
-audio,
-video {
-  margin: 0;
-  padding: 0;
-}
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, address, code, em, img, strong, sub, sup, b, u, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figure, figcaption, footer, header, hgroup, menu, nav, section, main, audio, video { margin: 0; padding: 0; }
 
 /* html5추가 시멘틱엘리먼트를 익스하위버전에서 블럭으로 인식되도록함 */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section,
-main {
-  display: block;
-}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, main { display: block; }
 
 /* button태그에 손모양 커서 */
 button {
@@ -183,12 +89,7 @@ table {
 }
 
 /* 굵기 빼고 폰트크기를 body 폰트크기와 일치시킴 */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
   font-size: 100%;
 }
@@ -196,10 +97,7 @@ h6 {
 /* 폼요소 높이 다를때 요소끼리 세로정렬시킴 */
 /* border-radius:0 -> iOS 테두리 둥글게 제거 */
 /* -webkit-appearance: none -> iOS 폼요소 기본모양 제거 */
-input,
-select,
-textarea,
-button {
+input, select, textarea, button {
   vertical-align: middle;
   margin: 0;
   padding: 0;
@@ -224,22 +122,13 @@ body {
 
 /*********************** 공통스타일 *************************/
 /* body에 높이가 없어도 hidden이 걸리면 스크롤바가 사라짐(데스크탑) */
-body.on {
-  overflow: hidden;
-}
+body.on {overflow: hidden;}
 /* iOS 사파리는 페이지최상단에서만 hidden이 걸리므로 페이지 위로 올라오게함(모바일,반응형) */
 /* body.on { overflow: hidden; position: fixed; left:0; top:0; width:100%; } */
 
-body,
-input,
-select,
-textarea,
-button,
-table {
-  font-family: 'Noto Sans KR', '맑은 고딕', 'malgun gothic',
-    'Apple SD Gothic Neo', sans-serif;
+body, input, select, textarea, button, table {
+  font-family: 'Noto Sans KR','맑은 고딕', 'malgun gothic', 'Apple SD Gothic Neo', sans-serif;
   font-size: 16px;
-  letter-spacing: -0.06em;
   color: var(--txt-color-500);
 }
 
@@ -274,6 +163,8 @@ table {
   border-radius: 5px;
 } */
 
+
+
 /* 스크롤바 안보이게 */
 /* IE */
 /* * {
@@ -296,9 +187,7 @@ table {
 /* 선도 가려줌 */
 /* 원래위치로 이동 */
 /* 0이면 스크린리더에서 글자 읽지않으므로 */
-legend,
-caption,
-.blind {
+legend, caption, .blind {
   position: absolute;
   overflow: hidden;
   clip: rect(0 0 0 0);
@@ -387,7 +276,7 @@ input[type='checkbox']:checked + label::after {
   position: absolute;
   left: 1px;
   top: 4px;
-  width: 24px;
+  width:24px;
   height: 24px;
   background: url(../images/common/check.svg) no-repeat 0 0 / 18px;
 }
@@ -551,50 +440,55 @@ textarea {
 
 /* 버튼 */
 .btn {
-  border: 1px solid #666;
-  color: var(--txt-color-600);
+  border:1px solid #666;
+  color:var(--txt-color-600);
   /* 버튼디자인에 아이콘이 포함된 경우
   글자와 아이콘의 높이가 다르면 inline-flex이용하여 버튼을 좌우배치하고 align-items로 수직정렬해줌 */
   display: inline-flex;
   align-items: center;
   justify-content: center;
   line-height: 40px;
-  padding: 0 15px;
+  padding:0 15px;
   background: none;
 }
 
 .point1_btn {
   line-height: 60px;
   border-radius: 30px;
-  width: 200px;
+  width:200px;
   font-weight: 700;
-  color: #fff;
-  background: linear-gradient(-30deg, #2ad47d, #008a43);
-  border: none;
+  color:#fff;
+  background: linear-gradient(-30deg, #2AD47D, #008A43);
+  border:none;
 }
 .point1_btn::after {
   content: '';
-  width: 17px;
+  width:17px;
   height: 17px;
   background: url(../images/icon_plus.svg) no-repeat left top / 100%;
-  margin-left: 10px;
+  margin-left:10px;
 }
 
 .point2_btn {
   line-height: 38px;
   border-radius: 20px;
-  width: 130px;
+  width:130px;
   font-weight: 500;
-  color: #fff;
-  border: 1px solid #fff;
+  color:#fff;
+  border:1px solid #fff;
 }
 .point2_btn::after {
   content: '';
-  width: 20px;
+  width:20px;
   height: 10px;
   background: url(../images/arrow_more.svg) no-repeat left top / 100%;
-  margin-left: 20px;
+  margin-left:20px;
 }
+
+
+
+
+
 
 /* 라벨 버튼 */
 [class*='label_btn'] {
@@ -602,7 +496,7 @@ textarea {
   justify-content: center;
   align-items: center;
   height: 40px;
-  border: 1px solid #333;
+  border:1px solid #333;
 }
 [class*='label_btn']:before {
   content: '';
@@ -649,29 +543,35 @@ textarea {
 }
 
 /* 파일아이콘 */
-[class*='file_icon'] {
+[class*=file_icon] {
   display: inline-block;
-  width: 20px;
+  width:20px;
   height: 20px;
   background: url(../images/sprite_pc_new.png) no-repeat;
   /* 하단간격 없애기 */
   vertical-align: top;
 }
 .txt_file_icon {
-  background-position-x: -25px;
+  background-position-x:-25px;
 }
 .ppt_file_icon {
-  background-position-x: -50px;
+  background-position-x:-50px;
 }
 .doc_file_icon {
-  background-position-x: -75px;
+  background-position-x:-75px;
 }
 .xls_file_icon {
-  background-position-x: -100px;
+  background-position-x:-100px;
 }
 .pdf_file_icon {
-  background-position-x: -125px;
+  background-position-x:-125px;
 }
+
+
+
+
+
+
 
 /* 등록하기 아이콘 */
 .reg_icon:after {
@@ -721,43 +621,46 @@ textarea {
 }
 
 /* 플랫폼 아이콘 */
-[class*='os_icon'] {
+[class*=os_icon] {
   display: inline-block;
-  width: 24px;
+  width:24px;
   height: 24px;
   background: url(../images/set_os.svg) no-repeat;
   /* 인라인블럭 하단에 간격 생길경우 사용(vertical-align:baseline이 기본값) */
   vertical-align: top;
 }
-[class*='os_icon']:hover {
-  background-position-x: -50px;
+[class*=os_icon]:hover {
+  background-position-x:-50px;
 }
 .mobile_os_icon {
-  background-position-y: -50px;
+  background-position-y:-50px;
 }
 .console_os_icon {
-  background-position-y: -100px;
+  background-position-y:-100px;
 }
 
+
 /* sns 아이콘 */
-[class*='sns_icon'] {
+[class*=sns_icon] {
   display: inline-block;
-  width: 20px;
+  width:20px;
   height: 20px;
   background: url(../images/set_community.svg) no-repeat;
 }
-[class*='sns_icon']:hover {
-  background-position-x: -50px;
+[class*=sns_icon]:hover {
+  background-position-x:-50px;
 }
 .youtube_sns_icon {
-  background-position-y: -50px;
+  background-position-y:-50px;
 }
 .facebook_sns_icon {
-  background-position-y: -100px;
+  background-position-y:-100px;
 }
 .community_sns_icon {
-  background-position-y: -250px;
+  background-position-y:-250px;
 }
+
+
 
 /* 테이블 캡션 버그 대응 */
 caption.nohead {
@@ -767,14 +670,14 @@ caption.nohead {
 /* board_list(게시물리스트), board_view(게시물보기), board_write(게시물쓰기), board_modify(게시물수정) */
 /* 게시판 리스트 */
 .board_list {
-  border-top: 1px solid #000;
+  border-top:1px solid #000;
 }
 /* 칸에서 수직정렬이 기본값이며 vertical-align:top등으로 수직정렬 변경가능 */
 .board_list th {
   height: 60px;
   /* vertical-align: top; */
   font-weight: 500;
-  color: var(--txt-color-600);
+  color:var(--txt-color-600);
   background: #f5f5f5;
   border-bottom: 1px solid #eee;
 }
@@ -792,10 +695,10 @@ caption.nohead {
 
 /* 칸길이는 3칸일경우 나머지는 자동으로 잡힘 */
 .board_list .col1 {
-  width: 9%;
+  width:9%;
 }
 .board_list .col3 {
-  width: 13%;
+  width:13%;
 }
 
 /* display: -webkit-box는 가로가 100%이므로 빈공간도 클릭됨 */
@@ -811,29 +714,29 @@ caption.nohead {
   display: inline-block;
   white-space: nowrap;
   /* 내용만큼의 크기를 갖게함 */
-  max-width: 100%;
+  max-width:100%;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
 /* a태그에 줄간격, 폰트관련 기본값이 상속되며 최소크기가 지정되어 줄어들지않으면 크기를 직접지정 */
 .board_list .download_btn {
-  padding: 7px 3px;
+  padding:7px 3px;
   display: inline-block;
   height: 34px;
 }
 .board_list .download_btn:hover {
-  border-bottom: 1px solid #000;
+  border-bottom:1px solid #000;
 }
 
 /* 게시판 번호 삭제 */
-@media (max-width: 1200px) {
+@media (max-width:1200px) {
   .board_list tr th:first-child,
   .board_list tr td:first-child {
     display: none;
   }
   .board_list .col3 {
-    width: 25%;
+    width:25%;
   }
   .board_list th {
     height: 50px;
@@ -843,18 +746,20 @@ caption.nohead {
     font-size: 14px;
   }
   .board_list .td_left {
-    padding: 0 10px;
+    padding:0 10px;
   }
 }
 
+
+
 /* 게시판 페이징 */
 .board_pagination {
-  margin-top: 20px;
+  margin-top:20px;
   display: flex;
   justify-content: center;
 }
 .board_pagination .page_btn {
-  width: 22px;
+  width:22px;
   height: 40px;
   display: flex;
   justify-content: center;
@@ -862,7 +767,7 @@ caption.nohead {
 }
 .board_pagination .page_btn::before {
   content: '';
-  width: 14px;
+  width:14px;
   height: 14px;
   background: url(../images/sprite_pc.png) no-repeat;
 }
@@ -870,37 +775,40 @@ caption.nohead {
   background-position: -397px -310px;
 }
 .board_pagination .prev::before {
-  width: 8px;
+  width:8px;
   background-position: -369px -182px;
 }
 .board_pagination .next::before {
-  width: 8px;
+  width:8px;
   background-position: -30px -431px;
 }
 .board_pagination .last::before {
-  background-position: -443px -388px;
+  background-position:  -443px -388px;
 }
 
 .board_pagination .prev {
-  margin-right: 13px;
+  margin-right:13px;
 }
 .board_pagination .next {
-  margin-left: 13px;
+  margin-left:13px;
 }
 .board_pagination .num {
-  width: 40px;
+  width:40px;
   line-height: 38px;
   text-align: center;
-  border: 1px solid #eee;
+  border:1px solid #eee;
 }
 .board_pagination .num + .num {
-  margin-left: 10px;
+  margin-left:10px;
 }
 .board_pagination .num.active {
   background: var(--point-color1);
-  color: #fff;
-  border-color: var(--point-color1);
+  color:#fff;
+  border-color:var(--point-color1);
 }
+
+
+
 
 /* 게시판 쓰기 */
 .board_write_wrap .note {
