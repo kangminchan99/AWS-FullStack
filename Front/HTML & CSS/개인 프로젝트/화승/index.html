@@ -26,9 +26,16 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet"> -->
     <!-- 라이브러리 먼저 연결 -->
+    <link
+      rel="stylesheet"
+      href="css/jquery-ui.min.css?v=<?php echo time(); ?>"
+    />
     <link rel="stylesheet" href="css/aos.css" />
     <link rel="stylesheet" href="css/common.css?v=<?php echo time(); ?>" />
     <link rel="stylesheet" href="css/main.css?v=<?php echo time(); ?>" />
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <!-- 특수 ease값, datepicker 달력 위젯은 jquery ui 라이브러리 연경해야함 -->
+    <script src="js/jquery-ui.min.js"></script>
     <script src="js/aos.js"></script>
     <script src="js/ui-common.js?v=<?php echo time(); ?>"></script>
   </head>
@@ -48,36 +55,61 @@
             <ul class="gnb">
               <li>
                 <a href="/kor/sub01/sub01.php" class="topmenu1">화승</a>
+              </li>
+              <li>
+                <a href="/kor/sub02/sub01.php" class="topmenu2">사업분야</a>
+              </li>
+              <li>
+                <a href="/waybbs/way_bbs.php?bo_table=press" class="topmenu3"
+                  >PR ROOM</a
+                >
+              </li>
+              <li>
+                <a href="/kor/sub04/sub04.php" class="topmenu4">지속가능경영</a>
+              </li>
+            </ul>
+            <div class="header_icon_wrap">
+              <button class="lang_btn" type="button"></button>
+              <button class="menu_btn" type="button">
+                <span class="blind"> 메뉴 열기 </span>
+                <i></i>
+                <i></i>
+                <i></i>
+              </button>
+            </div>
+          </nav>
+        </div>
+        <div class="inner_bottom">
+          <nav class="gnb_wrap">
+            <ul class="gnb">
+              <li>
+                <a href="/kor/sub01/sub01.php" class="topmenu1">화승</a>
+
                 <ul class="depth2">
                   <li><a href="#">화승</a></li>
                   <li><a href="#">그룹개요</a></li>
                   <li><a href="#">가치체계</a></li>
                   <li><a href="#">CI</a></li>
                   <li><a href="#">계열사 위치</a></li>
-                  <ul class="depth2">
-                    <li><a href="#">화승</a></li>
-                    <li><a href="#">그룹개요</a></li>
-                    <li><a href="#">가치체계</a></li>
-                    <li><a href="#">CI</a></li>
-                    <li><a href="#">계열사 위치</a></li>
-                  </ul>
                 </ul>
               </li>
               <li>
                 <a href="/kor/sub02/sub01.php" class="topmenu2">사업분야</a>
-                <ul class="depth2">
-                  <li><a href="#">사업분야</a></li>
-                  <li><a href="#">자동차 부품</a></li>
-                  <li><a href="#">종합무역</a></li>
-                  <li><a href="#">소재</a></li>
-                  <li><a href="#">화학</a></li>
-                  <li><a href="#">스포츠패션ODM</a></li>
-                </ul>
               </li>
+              <ul class="depth2">
+                <li><a href="#">사업분야</a></li>
+                <li><a href="#">자동차 부품</a></li>
+                <li><a href="#">종합무역</a></li>
+                <li><a href="#">소재</a></li>
+                <li><a href="#">화학</a></li>
+                <li><a href="#">스포츠패션ODM</a></li>
+              </ul>
+
               <li>
                 <a href="/waybbs/way_bbs.php?bo_table=press" class="topmenu3"
                   >PR ROOM</a
                 >
+
                 <ul class="depth2">
                   <li><a href="#">PR ROOM</a></li>
                   <li><a href="#">보도자료</a></li>
@@ -96,10 +128,12 @@
                 </ul>
               </li>
             </ul>
-            <div class="header_icon_wrap">
-              <button class="lang_btn" type="button"></button>
-              <button class="menu_btn" type="button"></button>
-            </div>
+            <a href="">
+              <img
+                src="./images/header_slide_img01.png"
+                alt="서브메뉴 이미지"
+              />
+            </a>
           </nav>
         </div>
       </header>
@@ -108,15 +142,14 @@
           <h2 class="blind">main slider</h2>
           <div class="img_wrap">
             <iframe
-              width="775"
-              height="436"
-              src="https://www.youtube.com/embed/dKgtAX1G_tE?autoplay=1&mute=1"
+              src="https://www.youtube.com/embed/dKgtAX1G_tE?autoplay=1&mute=1&controls=0&loop=1&playlist=dKgtAX1G_tE"
               title="화승 행사 송출 최종본 자막 없는 버전"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               referrerpolicy="strict-origin-when-cross-origin"
               allowfullscreen
             ></iframe>
+            <div class="youtube_cover"></div>
           </div>
         </section>
       </main>

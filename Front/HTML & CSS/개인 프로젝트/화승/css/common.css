@@ -240,8 +240,8 @@ table {
   font-family: 'Pretendard', '맑은 고딕', 'malgun gothic', 'Apple SD Gothic Neo',
     sans-serif;
   font-size: 18px;
-  color: var(--txt-color-500);
   letter-spacing: -0.25px;
+  color: var(--txt-color-500);
 }
 
 /* 스킵 네비 */
