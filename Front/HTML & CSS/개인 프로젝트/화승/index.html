@@ -31,12 +31,14 @@
       href="css/jquery-ui.min.css?v=<?php echo time(); ?>"
     />
     <link rel="stylesheet" href="css/aos.css" />
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/common.css?v=<?php echo time(); ?>" />
     <link rel="stylesheet" href="css/main.css?v=<?php echo time(); ?>" />
     <script src="js/jquery-3.7.1.min.js"></script>
     <!-- 특수 ease값, datepicker 달력 위젯은 jquery ui 라이브러리 연경해야함 -->
     <script src="js/jquery-ui.min.js"></script>
     <script src="js/aos.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
     <script src="js/ui-common.js?v=<?php echo time(); ?>"></script>
   </head>
   <body>
@@ -77,74 +79,75 @@
             </div>
             <aside class="m_gnb_wrap">
               <div class="scroll">
+                <div class="m_title_wrap">
+                  <div class="m_title_left">
+                    <a href="index.html">
+                      <img
+                        src="./images/icon_navi_home_black.svg"
+                        alt="home_nav"
+                      />
+                    </a>
+                    <div class="m_lang_btn">
+                      <button class="active">
+                        <span>KR</span>
+                      </button>
+                      <button>
+                        <span>EN</span>
+                      </button>
+                    </div>
+                  </div>
+                  <button class="close_btn"></button>
+                </div>
                 <ul class="m_gnb">
                   <li>
-                    <a href="#">기업 소개</a>
+                    <a href="#">화승</a>
                     <ul class="depth2">
-                      <li><a href="/about/greeting.do">인사말</a></li>
-                      <li><a href="/about/management.do">주요 경영진</a></li>
-                      <li><a href="/about/missionVision.do">미션과 비전</a></li>
-                      <li><a href="/about/history.do">연혁</a></li>
-                      <li><a href="/about/location.do">오시는 길</a></li>
+                      <li><a href="#">그룹개요</a></li>
+                      <li><a href="#">가치체계</a></li>
+                      <li><a href="#">CI</a></li>
+                      <li><a href="#">계열사 위치</a></li>
                     </ul>
                   </li>
                   <li>
-                    <a href="#">제품 및 서비스</a>
+                    <a href="#">사업분야</a>
                     <ul class="depth2">
                       <li>
-                        <a href="/products/sampleCheck.do">검체검사 서비스</a>
+                        <a href="#">자동차 부품</a>
                       </li>
                       <li>
-                        <a href="/products/digitalHealthcare.do"
-                          >Digital HealthcarePlatform (IT)</a
-                        >
+                        <a href="#">종합무역</a>
                       </li>
                       <li>
-                        <a href="/products/biotechnology.do"
-                          >Bio-TechnologyPlatform (BT)</a
-                        >
+                        <a href="#">소재</a>
+                      </li>
+                      <li>
+                        <a href="#">화학</a>
+                      </li>
+                      <li>
+                        <a href="#">스포츠패션ODM</a>
                       </li>
                     </ul>
                   </li>
                   <li>
-                    <a href="#">투자정보</a>
-                    <ul class="depth2">
-                      <li><a href="/investment/financial.do">재무 정보</a></li>
-                      <li><a href="/investment/corporate.do">기업공시</a></li>
-                      <li><a href="/investment/inquiry.do">투자 문의</a></li>
-                      <li><a href="#">주주공고</a></li>
-                    </ul>
-                  </li>
-                  <li>
-                    <a href="#">미디어센터</a>
+                    <a href="#">PR ROOM</a>
                     <ul class="depth2">
                       <li><a href="#">보도자료</a></li>
-                      <li><a href="#">E카달로그</a></li>
+                      <li><a href="#">홍보영상</a></li>
+                      <li><a href="#">사보</a></li>
                     </ul>
                   </li>
                   <li>
-                    <a href="#">채용정보</a>
+                    <a href="#">지속가능경영</a>
                     <ul class="depth2">
-                      <li>
-                        <a href="/recruitment/organization.do">U2Bio 조직</a>
-                      </li>
-                      <li>
-                        <a href="/recruitment/idealTalent.do">U2인재상</a>
-                      </li>
-                      <li>
-                        <a href="/recruitment/humanReliance.do"
-                          >U2 HR (Human Reliances)</a
-                        >
-                      </li>
-                      <li>
-                        <a href="/recruitment/recruitmentInquiry.do"
-                          >채용 문의</a
-                        >
-                      </li>
+                      <li><a href="#">나눔경영</a></li>
+                      <li><a href="#">환경경영</a></li>
+                      <li><a href="#">사회경영</a></li>
+                      <li><a href="#">투명경영</a></li>
                     </ul>
                   </li>
                 </ul>
               </div>
+              <img src="./images/header_slide_img01.png" alt="img" />
             </aside>
           </nav>
         </div>
@@ -192,20 +195,16 @@
                 </ul>
               </li>
             </ul>
-            <a href="">
-              <img
-                src="./images/header_slide_img01.png"
-                alt="서브메뉴 이미지"
-              />
-            </a>
+            <img src="./images/header_slide_img01.png" alt="header_img" />
           </nav>
         </div>
       </header>
       <main id="container">
         <section class="main_slider">
           <h2 class="blind">main slider</h2>
-          <div class="img_wrap">
+          <div class="youtube_wrap">
             <iframe
+              style="width: 2436px; height: 1370px"
               src="https://www.youtube.com/embed/dKgtAX1G_tE?autoplay=1&mute=1&controls=0&loop=1&playlist=dKgtAX1G_tE"
               title="화승 행사 송출 최종본 자막 없는 버전"
               frameborder="0"

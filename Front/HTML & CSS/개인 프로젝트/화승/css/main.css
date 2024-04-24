@@ -8,9 +8,9 @@
   --txt-color-600: #000;
 }
 
-#wrap {
-  /* height: 5000px; */
-}
+/* #wrap {
+  height: 5000px;
+} */
 
 #header {
   /* 헤더 고정 */
@@ -168,7 +168,7 @@
   overflow: hidden;
 }
 
-#container .main_slider .img_wrap .txt_wrap p:nth-of-type(3):after {
+#container .main_slider .youtube_wrap .txt_wrap p:nth-of-type(3):after {
   content: '';
   position: absolute;
   top: 242px;
@@ -181,9 +181,10 @@
 
 #header .inner_bottom .gnb_wrap {
   display: flex;
-  width: 1479px;
+  width: 77%;
   height: 237px;
-  margin-left: 300px;
+  margin: 0 auto;
+  justify-content: space-between;
 }
 
 #header .inner_bottom .gnb {
@@ -205,8 +206,8 @@
   display: block;
 }
 
-#header .inner_bottom .gnb_wrap img {
-  margin-left: 200px;
+#header .inner_bottom img {
+  /* margin-left: 10%; */
 }
 
 #header .inner_bottom .gnb_wrap .gnb > li > a {
@@ -254,34 +255,23 @@
   color: var(--point-color1);
 }
 
-#container .main_slider .img_wrap {
-  /* width: 100%; */
-  height: 0;
-  padding-top: 56.25%; /* 가장 중요 */
+#header .m_gnb_wrap {
+  display: none;
+}
+
+.main_slider .youtube_wrap {
   position: relative;
+  height: 1080px;
 }
 
-/* 유튜브 이미지 위에 덮어씌워서 클릭 방지 */
-#container .main_slider .img_wrap .youtube_cover {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  margin-top: -99px;
-  top: 0;
-  left: 0;
-  opacity: 0;
-}
-
-#container .main_slider .img_wrap iframe {
-  width: 100%;
-  height: 100%;
+.main_slider .youtube_wrap iframe {
   position: absolute;
   top: 0;
-  left: 0;
-  margin-top: -99px;
+  left: 50%;
+  transform: translateX(-50%) translateY(-150px);
 }
 
-#container .main_slider .img_wrap .txt_wrap {
+#container .main_slider .youtube_wrap .txt_wrap {
   position: absolute;
   top: 448px;
   left: 50%;
@@ -289,7 +279,7 @@
   margin-left: -700px;
 }
 
-#container .main_slider .img_wrap .txt_wrap p {
+#container .main_slider .youtube_wrap .txt_wrap p {
   display: block;
   color: #fff;
   font-size: 70px;
@@ -298,7 +288,7 @@
   font-weight: 700;
 }
 
-#container .main_slider .img_wrap .txt_wrap .introduction_btn {
+#container .main_slider .youtube_wrap .txt_wrap .introduction_btn {
   display: block;
   position: absolute;
   bottom: 17px;
@@ -308,7 +298,7 @@
   border: none;
 }
 
-#container .main_slider .img_wrap .txt_wrap .introduction_btn > a {
+.main_slider .youtube_wrap .txt_wrap .introduction_btn > a {
   color: #fff;
   font-size: 18px;
   line-height: 28px;
@@ -316,20 +306,20 @@
   align-content: space-around;
 }
 
-#container .main_slider .img_wrap .txt_wrap .introduction_btn > a > img {
+.main_slider .youtube_wrap .txt_wrap .introduction_btn > a > img {
   margin: 9px 0 0 12px;
 }
 
 #footer {
   width: 100%;
   height: 655px;
-  background: url(../images/footer_bg_.png) no-repeat;
+  background: url(../images/footer_bg_.png) no-repeat center bottom / cover;
   padding-top: 116px;
 }
 
 #footer .inner {
-  margin: 0 100px;
-  /* width: 100%; */
+  margin: 0 auto;
+  max-width: 1600px;
   height: 262px;
   display: flex;
   justify-content: space-between;
@@ -473,10 +463,7 @@
   #header .inner .gnb > li > a {
     display: none;
   }
-}
 
-/* 모바일 분기점 */
-@media (max-width: 767px) {
   #header .inner_bottom.on {
     display: none;
   }
@@ -484,12 +471,104 @@
   #header .m_gnb_wrap.on {
     display: block;
     position: fixed;
-    left: 0;
+    right: 0;
     top: 0;
-    width: 100%;
+    width: 76%;
     background: #fff;
     height: 100%;
-    padding-top: 70px;
+    padding: 30px 11.3%;
     opacity: 1;
   }
+
+  #header .m_gnb_wrap.on .m_title_left img {
+    width: 28px;
+    height: 28px;
+  }
+
+  #header .m_gnb_wrap.on .m_title_wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+  }
+
+  #header .m_gnb_wrap.on .m_title_left {
+    display: flex;
+    align-items: center;
+  }
+
+  #header .m_gnb_wrap.on .m_title_left .m_lang_btn button {
+    padding: 0px 4px;
+    margin: 0 0 0 8px;
+    border: none;
+    background: none;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 18px;
+  }
+
+  #header .m_gnb_wrap.on .close_btn {
+    width: 28px;
+    height: 28px;
+    display: block;
+    border: none;
+    background: url(../images/btn_close_black02.svg) no-repeat center center;
+  }
+
+  #header .m_gnb_wrap.on .m_gnb {
+    margin-top: 70px;
+  }
+
+  #header .m_gnb_wrap.on .m_gnb > li > a {
+    font-size: 21px;
+    font-weight: 700;
+    display: block;
+    line-height: 126%;
+    margin-bottom: 30px;
+    position: relative;
+  }
+
+  #header .m_gnb_wrap.on .m_gnb > li > a::after {
+    content: '';
+    position: absolute;
+    display: block;
+    right: 16px;
+    top: 50%;
+    width: 12px;
+    height: 7px;
+    transform: translateY(-50%);
+    background: url(../images/arrow_down_black_01.svg) center center no-repeat;
+    background-size: contain;
+    transition: all 0.5s;
+  }
+
+  #header .m_gnb_wrap.on .m_gnb > li.on > a::after {
+    transition: all 0.5s;
+    transform: rotate(180deg);
+  }
+
+  #header .m_gnb_wrap.on .m_gnb .depth2 {
+    margin: 30px 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.5s;
+  }
+
+  #header .m_gnb_wrap.on .m_gnb > li.on .depth2 {
+    max-height: 240px;
+    display: block;
+  }
+
+  #header .m_gnb_wrap.on .m_gnb .depth2 > li > a {
+    display: block;
+    padding: 4px 0 18px 20px;
+  }
+
+  #header .m_gnb_wrap.on img {
+    width: 100%;
+  }
+}
+
+/* 모바일 분기점 */
+@media (max-width: 767px) {
 }
