@@ -43,4 +43,38 @@ $(function () {
     // 현재 클릭된 li 요소의 형제 요소에서 'on' 클래스 제거
     $li.siblings().removeClass('on');
   });
+
+  // aos 초기화
+  AOS.init({
+    duration: 500,
+    // 한번만 실행
+    // once: true,
+  });
+
+  // 활성화된 li를 제외한 나머지 li 항목들의 스타일 조절 함수
+  function adjustOtherItems() {
+    const activeIndex = $('.horizontal_slider > li').index(
+      $('.horizontal_slider > li.on')
+    );
+
+    $('.horizontal_slider > li').each(function (index, li) {
+      if (index !== activeIndex) {
+        $(li).addClass('default'); // 활성화된 li를 제외한 나머지 li에 default 클래스 추가
+      } else {
+        $(li).removeClass('default'); // 활성화된 li에는 default 클래스 제거
+      }
+    });
+  }
+
+  $('.horizontal_slider > li')
+    .on('mouseenter', function () {
+      if (window.innerWidth >= 768) {
+        $(this).addClass('on');
+        adjustOtherItems(); // 다른 li의 스타일 조절 함수 호출
+      }
+    })
+    .on('mouseleave', function () {
+      $(this).removeClass('on');
+      $('.horizontal_slider > li').removeClass('default'); // 모든 li에서 default 클래스 제
+    });
 });

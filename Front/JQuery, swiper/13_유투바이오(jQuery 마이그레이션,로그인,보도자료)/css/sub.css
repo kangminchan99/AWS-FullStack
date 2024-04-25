@@ -33,11 +33,14 @@
   padding-top: 100px;
 }
 
+.contents {
+  padding: 120px 0 160px;
+}
+
 .contents .inner {
   max-width: 1440px;
   padding: 0 20px;
   margin: 0 auto;
-  height: 800px;
 }
 
 .login_page .contents {
@@ -229,6 +232,23 @@
   .sub_visual .sub_tab li.active a {
     padding: 0 30px;
   }
+
+  .contents {
+    padding: 80px 0 120px;
+  }
+
+  /* 보도자료  release*/
+  .release .board_search select {
+    font-size: 16px;
+  }
+
+  .release .board_search {
+    padding: 40px;
+  }
+
+  .release .board_search input[type='search'] {
+    font-size: 16px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -325,5 +345,33 @@
     color: #999;
     font-weight: 500;
   }
-  /* .sub_visual .sub_tab2 .tab_list a */
+
+  .contents {
+    padding: 40px 0 100px;
+  }
+
+  .contents .inner {
+    padding: 0 15px;
+  }
+
+  /* 보도자료 */
+  .release .board_search {
+    padding: 15px;
+  }
+
+  .release .board_search select {
+    font-size: 13px;
+    height: 38px;
+  }
+
+  .release .board_search input[type='search'] {
+    font-size: 13px;
+    height: 38px;
+    width: calc(100% - 40px);
+  }
+
+  .release .board_search .search_btn {
+    height: 38px;
+    width: 40px;
+  }
 }
