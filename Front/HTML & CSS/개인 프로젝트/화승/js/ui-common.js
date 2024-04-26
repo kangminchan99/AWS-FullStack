@@ -77,4 +77,30 @@ $(function () {
       $(this).removeClass('on');
       $('.horizontal_slider > li').removeClass('default'); // 모든 li에서 default 클래스 제
     });
+
+  // 지속가능 경영
+  let mainManage = new Swiper('.main_manage .swiper', {
+    slidesPerView: 'auto',
+    spaceBetween: 50,
+    centeredSlides: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: '.swiper-pagination',
+    },
+    breakpoints: {
+      // // 테블릿
+      // 768: {
+      //   slidesPerView: 2,
+      //   spaceBetween: 30,
+      // },
+      // // 데스크탑
+      // 1201: {
+      //   slidesPerView: 3,
+      //   spaceBetween: 40,
+      // },
+    },
+  });
 });

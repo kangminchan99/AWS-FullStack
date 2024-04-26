@@ -1,0 +1,7 @@
+게시물 보기 테이블 하단 칸 길이 따로 조절 불가
+- table-layout:fixed를 auto로 풀면 tfoot td의 길이조절 가능
+- 하지만 url이 길게 한단어로 들어올 경우 테이블 길이가 줄어들지않으므로
+table-layout:fixed를 유지하고 word-wrap:break-word 사용하여 줄바꿈되게 해야함
+- table-layout:fixed면 첫줄 제목셀의 길이에 따라 아래줄 셀의 길이가 결정되므로
+아래줄 셀의 가로길이 조절 불가
+- 그러므로 tfoot td를 한칸으로 구성하고 태그를 따로 넣어서 처리해야함

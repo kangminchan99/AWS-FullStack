@@ -1122,6 +1122,10 @@
     line-height: 30px;
   }
 
+  #header .lang_wrap .login {
+    font-size: 13px;
+  }
+
   #header .open_btn {
     width:24px;
     height: 24px;

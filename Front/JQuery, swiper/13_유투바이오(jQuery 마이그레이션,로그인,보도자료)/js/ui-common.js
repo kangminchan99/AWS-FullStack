@@ -29,7 +29,9 @@ $(function () {
   });
 
   // 모바일 아코디언 메뉴
-  $('.m_gnb>li>a').on('click', function () {
+  $('.m_gnb>li>a').on('click', function (e) {
+    e.preventDefault();
+
     $(this).parent().toggleClass('on');
     $(this).parent().siblings().removeClass('on');
   });
@@ -104,8 +106,8 @@ $(function () {
     $('html, body').animate({ scrollTop: 0 });
   });
 
-  // 서브 모바일 탭 메뉴.tab_btn
-  $('.sub_tab2 .tab_btn').on('click', function () {
+  // 서브 모바일 탭메뉴
+  $('.sub_tab2 .tab_btn ').on('click', function () {
     $(this).parent().toggleClass('on');
   });
 });

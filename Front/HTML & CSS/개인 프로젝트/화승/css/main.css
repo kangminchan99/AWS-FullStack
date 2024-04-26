@@ -542,6 +542,101 @@
   z-index: 80;
 }
 
+/*  */
+
+/* 지속 가능 경영 */
+
+.main_manage {
+  background: #f3f3f3;
+}
+
+.main_manage .inner .tit_wrap {
+  max-width: 1400px;
+  padding-top: 80px;
+  margin: 0 auto;
+  padding: 80px 20px 20px 20px;
+}
+
+.main_manage .inner .tit_wrap h2 {
+  position: relative;
+  font-size: 24px;
+  color: var(--txt-color-600);
+  font-weight: 700;
+}
+
+.main_manage .inner .tit_wrap h2::after {
+  content: '';
+  display: block;
+  width: 130px;
+  height: 1px;
+  position: absolute;
+  bottom: 5px;
+  left: 120px;
+  background-color: var(--point-color3);
+}
+
+.main_manage .inner .tit_wrap p {
+  margin-top: 45px;
+  font-size: 48px;
+  line-height: 65px;
+  display: block;
+  font-weight: 700;
+}
+
+.main_manage .swiper {
+  /* a태그가 위로 이동하므로 공간 확보 */
+  padding: 160px 0 30px;
+}
+
+.main_manage .swiper-slide {
+  width: 600px;
+}
+
+.main_manage .swiper-slide a {
+  display: block;
+  width: 100%;
+  height: 368px;
+  margin: 0 auto;
+  transition: all 0.1s;
+}
+
+.main_manage .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.main_manage .swiper-slide-active a {
+  transform: translateY(-120px);
+}
+
+.main_manage .swiper-pagination {
+  margin-left: 180px;
+}
+
+.main_manage .swiper-pagination .swiper-pagination-bullet {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  background-color: #545454;
+  position: relative;
+  transform: translateY(-100px);
+  margin-right: 32px;
+}
+
+.main_manage .swiper-pagination .swiper-pagination-bullet-active:before {
+  content: '';
+  width: 30px;
+  height: 30px;
+  border: 2px solid #545454;
+  border-radius: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 #footer {
   width: 100%;
   height: 655px;
@@ -803,7 +898,30 @@
 
 /* 모바일 분기점 */
 @media (max-width: 767px) {
+  .main_business {
+    padding-top: 86px;
+    padding-bottom: 500px;
+  }
+
+  .main_business .inner .tit_wrap h2 {
+    font-size: 12px;
+    line-height: 156%;
+  }
+
+  .main_business .inner .tit_wrap p {
+    font-size: 22px;
+  }
+  .horizontal_slider {
+    position: relative;
+  }
   .horizontal_slider li {
     width: calc(100% / 2);
+    height: 300px;
+    flex-wrap: wrap;
+  }
+
+  .horizontal_slider li:hover {
+    filter: brightness(0.7);
+    transition: filter 0.3s;
   }
 }
