@@ -1,4 +1,18 @@
 $(function () {
+  // 헤더 색깔 변경
+  window.addEventListener('scroll', function () {
+    const header = document.querySelector('#header');
+    let posY = document.querySelector('#container .main_slider').offsetHeight;
+
+    // 스크롤 위치가 특정 클래스의 높이보다 크면 헤더의 색상 변경
+    if (window.scrollY > posY) {
+      header.classList.add('fixed');
+    } else {
+      header.classList.remove('fixed');
+    }
+  });
+
+  //
   $('#header .gnb>li>a').on('mouseenter', function () {
     $('#header .inner_bottom').addClass('on');
 
@@ -13,11 +27,18 @@ $(function () {
   $('#header .header_icon_wrap .menu_btn').on('click', function () {
     $('#header .inner_bottom').addClass('on');
     $('#header .m_gnb_wrap').toggleClass('on');
+    $('#header').addClass('on');
   });
 
   $('#header .m_gnb_wrap .close_btn').on('click', function () {
     $('#header .m_gnb_wrap').toggleClass('on');
   });
+
+  // lang_BTN 동작
+  $('#header .lang_btn').on('click', function () {
+    $('#header .lang_box').toggleClass('on');
+  });
+  // lang_BTN 동작
 
   $('#footer .family_btn').on('click', function (event) {
     event.preventDefault();
@@ -82,13 +103,17 @@ $(function () {
   let mainManage = new Swiper('.main_manage .swiper', {
     slidesPerView: 'auto',
     spaceBetween: 50,
+    loop: false,
     centeredSlides: true,
-    autoplay: {
-      delay: 3000,
-      disableOnInteraction: false,
-    },
+    // autoplay: {
+    //   delay: 3000,
+    //   disableOnInteraction: false,
+    // },
     pagination: {
       el: '.swiper-pagination',
+      clickable: true,
+      bulletClass: 'swiper-pagination-bullet',
+      bulletActiveClass: 'swiper-pagination-bullet-active',
     },
     breakpoints: {
       // // 테블릿

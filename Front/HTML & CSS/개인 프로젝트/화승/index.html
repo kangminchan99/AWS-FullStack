@@ -71,7 +71,11 @@
               </li>
             </ul>
             <div class="header_icon_wrap">
-              <button class="lang_btn" type="button"></button>
+              <button class="lang_btn" type="button">
+                <a class="lang_box" href="#">
+                  <p>ENGLISH</p>
+                </a>
+              </button>
               <button class="menu_btn" type="button">
                 <span class="blind"> 메뉴 열기 </span>
                 <i></i>
@@ -338,26 +342,89 @@
                 <div class="swiper-slide">
                   <a href="#">
                     <img src="./images/slide_01.jpg" alt="나눔경영" />
+
+                    <div class="managetag_wrap1">
+                      <span>
+                        <img
+                          src="./images/icon_arrow_side_01.png"
+                          alt="나눔경영 살펴보기"
+                        />
+                      </span>
+                      <p>나눔경영</p>
+                    </div>
                   </a>
                 </div>
                 <div class="swiper-slide">
                   <a href="#">
                     <img src="./images/slide_02.jpg" alt="환경경경" />
+                    <div class="managetag_wrap2">
+                      <span>
+                        <img
+                          src="./images/icon_arrow_side_01.png"
+                          alt="환경경영 살펴보기"
+                        />
+                      </span>
+                      <p>환경경영</p>
+                    </div>
                   </a>
                 </div>
                 <div class="swiper-slide">
                   <a href="#">
                     <img src="./images/slide_03.jpg" alt="사회경영" />
+                    <div class="managetag_wrap3">
+                      <span>
+                        <img
+                          src="./images/icon_arrow_side_01.png"
+                          alt="사회경영 살펴보기"
+                        />
+                      </span>
+                      <p>사회경영</p>
+                    </div>
                   </a>
                 </div>
                 <div class="swiper-slide">
                   <a href="#">
                     <img src="./images/slide_04.jpg" alt="투명경영" />
+                    <div class="managetag_wrap4">
+                      <span>
+                        <img
+                          src="./images/icon_arrow_side_02.png"
+                          alt="투명경영 살펴보기"
+                        />
+                      </span>
+                      <p>투명경영</p>
+                    </div>
                   </a>
                 </div>
               </div>
               <div class="swiper-pagination"></div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+              <button class="pause_btn" type="button">
+                <span class="blind">일시정지</span>
+              </button>
             </div>
+          </div>
+        </section>
+        <section class="main_history">
+          <div class="inner">
+            <div class="col">
+              <div class="tit_wrap" data-aos="fade-up">
+                <h2>Heritage of Hwaseung</h2>
+                <p class="sub_txt">70년을 넘어 100년기업으로 향하는 화승</p>
+                <p class="content_txt">
+                  화승은 창립 이후 더 나은 내일을 위해, 더 크게 성장할 미래를
+                  위해 차근차근 달려왔습니다.<br />
+                  화승의 기록을 담은 역사 사진으로 또 다른 내일을 만납니다.
+                </p>
+              </div>
+            </div>
+            <button class="history_btn" type="button">
+              <a href="#"
+                >화승 70주년 기념 역사관 ‘HISTORY’ 보기
+                <img src="./images/icon_arrow_side_02.png" alt="History 보기" />
+              </a>
+            </button>
           </div>
         </section>
       </main>
@@ -406,52 +473,43 @@
             </ul>
           </div>
           <div class="family_wrap">
-            <button type="button" class="family_btn">
-              Family Site
-              <a href="#">
-                <img src="./images/arrow_down_white_01.png" alt="#" />
-              </a>
-            </button>
-            <ul class="family">
-              <li>
-                <a href="#" target="_blank" title="새창열림">Family Site</a>
-              </li>
-              <li>
-                <a href="#" target="_blank" title="새창열림"> ㈜화승네트웍스</a>
-              </li>
-              <li>
-                <a href="#" target="_blank" title="새창열림"> ㈜화승R&A</a>
-              </li>
-              <li>
-                <a href="#" target="_blank" title="새창열림"
-                  >㈜화승코퍼레이션</a
-                >
-              </li>
-              <li>
-                <a href="#" target="_blank" title="새창열림">㈜화승T&C</a>
-              </li>
-
-              <li>
-                <a href="#" target="_blank" title="새창열림"
-                  >㈜화승인더스트리</a
-                >
-              </li>
-              <li>
-                <a href="#" target="_blank" title="새창열림">㈜화승케미칼</a>
-              </li>
-              <li>
-                <a href="#" target="_blank" title="새창열림"
-                  >㈜화승엔터프라이즈</a
-                >
-              </li>
-            </ul>
+            <select
+              id="familysite01"
+              name=""
+              title="패밀리사이트를 선택하세요."
+              class="family_select"
+            >
+              <option value="" title="새창열림">Family Site</option>
+              <option value="http://www.hsnetw.co.kr" title="새창열림">
+                ㈜화승네트웍스
+              </option>
+              <option value="http://www.hsrna.com" title="새창열림">
+                ㈜화승R&amp;A
+              </option>
+              <option value="http://www.hscorp.com" title="새창열림">
+                ㈜화승코퍼레이션
+              </option>
+              <option value="http://www.hstnc.co.kr" title="새창열림">
+                ㈜화승T&amp;C
+              </option>
+              <option value="http://www.hsi.co.kr" title="새창열림">
+                ㈜화승인더스트리
+              </option>
+              <option value="http://www.hschm.co.kr" title="새창열림">
+                ㈜화승케미칼
+              </option>
+              <option value="http://www.hsenterprise.co.kr" title="새창열림">
+                ㈜화승엔터프라이즈
+              </option>
+            </select>
+            <button class="select_btn" type="button"></button>
             <div class="policy">
               <a href="#">개인정보처리방침</a>
               <a href="#">이용약관</a>
             </div>
             <div class="sns">
               <a href="#">
-                <img src="images/sns_instagram.png" alt="" />
+                <img src="images/sns_instagram.png" alt="sns" />
               </a>
             </div>
           </div>
