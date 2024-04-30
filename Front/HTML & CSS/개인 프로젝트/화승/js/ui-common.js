@@ -103,12 +103,16 @@ $(function () {
   let mainManage = new Swiper('.main_manage .swiper', {
     slidesPerView: 'auto',
     spaceBetween: 50,
-    loop: false,
+    loop: true,
     centeredSlides: true,
     // autoplay: {
     //   delay: 3000,
     //   disableOnInteraction: false,
     // },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
     pagination: {
       el: '.swiper-pagination',
       clickable: true,
