@@ -29,6 +29,13 @@
   transition: all 0.5s;
 }
 
+#header .header_icon_wrap .login {
+  display: block;
+  color: #fff;
+  margin-right: 13px;
+  margin-top: 2px;
+}
+
 #header.fixed .inner .logo {
   width: 170px;
   height: 24px;
