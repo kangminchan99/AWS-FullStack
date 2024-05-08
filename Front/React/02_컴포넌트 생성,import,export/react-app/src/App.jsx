@@ -1,13 +1,15 @@
-import './App.css';
-// import Header from './components/Header ';
-import Header from '@/components/Header';
+import Gallery from './components/Gallery';
+import Profile from './components/Profile';
+import logo from './assets/react.svg';
 
 export default function App() {
-  console.log('rendering done');
   return (
-    <div>
-      <Header />
-      App
-    </div>
+    <>
+      <Gallery />
+      <Profile />
+      <Profile />
+      <Profile />
+      <img src={logo} alt="logo" />
+    </>
   );
 }
