@@ -1,52 +1,87 @@
 import { useState } from 'react';
+import { useImmer } from 'use-immer';
 import './App.css';
 
 export default function Form() {
-  const [person, setPerson] = useState({
-    firstName: 'Minchan',
-    lastName: 'Hepworth',
-    email: 'bhepworth@sculpture.com',
+  const [person, setPerson] = useImmer({
+    name: 'Niki de Saint Phalle',
+    artwork: {
+      title: 'Blue Nana',
+      city: 'Hamburg',
+      image: 'https://i.imgur.com/Sd1AgUOm.jpg',
+    },
   });
 
-  function handleChange(event) {
-    setPerson({
-      ...person,
-      [event.target.id]: event.target.value,
+  function handleNameChange(event) {
+    setPerson((draft) => {
+      draft.name = event.target.value;
+    });
+  }
+
+  function handleTitleChange(event) {
+    setPerson((draft) => {
+      draft.artwork.title = event.target.value;
+    });
+  }
+
+  function handleCityChange(event) {
+    setPerson((draft) => {
+      draft.artwork.city = event.target.value;
+    });
+  }
+
+  function handleImageChange(event) {
+    setPerson((draft) => {
+      draft.artwork.image = event.target.value;
     });
   }
 
   return (
     <>
       <div>
-        <label htmlFor="first">First name:</label>
-        <input
-          type="text"
-          value={person.firstName}
-          onChange={handleChange}
-          id="firstName"
-        />
+        <label htmlFor="input1">
+          Name
+          <input type="text" value={person.name} onChange={handleNameChange} />
+        </label>
       </div>
       <div>
-        <label htmlFor="last">last name:</label>
-        <input
-          type="text"
-          value={person.lastName}
-          onChange={handleChange}
-          id="lastName"
-        />
+        <label htmlFor="input2">
+          Title
+          <input
+            type="text"
+            value={person.artwork.title}
+            onChange={handleTitleChange}
+          />
+        </label>
       </div>
       <div>
-        <label htmlFor="email">Email:</label>
-        <input
-          type="text"
-          value={person.email}
-          onChange={handleChange}
-          id="email"
-        />
+        <label htmlFor="input3">
+          City
+          <input
+            type="text"
+            value={person.artwork.city}
+            onChange={handleCityChange}
+          />
+        </label>
       </div>
-      <p>{person.firstName}</p>
-      <p>{person.lastName}</p>
-      <p>{person.email}</p>
+      <div>
+        <label htmlFor="input4">
+          Image
+          <input
+            type="text"
+            value={person.artwork.image}
+            onChange={handleImageChange}
+          />
+        </label>
+      </div>
+      <p>
+        <i>{person.artwork.title}</i>
+        {' by '}
+        {person.name}
+        <br />
+        (located in {person.artwork.city})
+      </p>
+      <img src={person.artwork.image} alt={person.artwork.title} />
     </>
   );
 }
