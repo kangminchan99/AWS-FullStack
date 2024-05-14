@@ -1,32 +1,14 @@
-.tab_menu {
-  display: flex;
-}
-.tab_menu li {
-  padding: 0 15px;
-}
-.tab_menu a {
-  font-size: 20px;
-}
-.tab_menu li.active a {
-  color: var(--point-color2);
-  background: #ddd;
+.dark_theme {
+  background-color: #333;
+  color: #fff;
 }
 
-.accordion {
-  padding: 30px;
+.light_theme {
+  background-color: #fff;
+  color: #333;
 }
-.accordion h2 {
-  font-size: 40px;
-  margin-bottom: 20px;
-}
-.accordion .panel {
-  padding: 20px;
-  border: 1px solid #333;
-  border-top: none;
-}
-.accordion .panel:nth-of-type(1) {
-  border-top: 1px solid #333;
-}
-.accordion .panel h3 {
-  font-size: 30px;
+
+.header.dark_theme button {
+  color: #fff;
+  background: #000;
 }
