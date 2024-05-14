@@ -1,0 +1,14 @@
+.dark_theme {
+  background-color: #333;
+  color: #fff;
+}
+
+.light_theme {
+  background-color: #fff;
+  color: #333;
+}
+
+.header.dark_theme button {
+  color: #fff;
+  background: #000;
+}
