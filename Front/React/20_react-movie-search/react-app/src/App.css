@@ -1,43 +1,7 @@
-.dark_theme {
-  background-color: #333;
-  color: #fff;
-}
-
-.light_theme {
-  background-color: #fff;
-  color: #333;
-}
-
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 70px;
-  padding: 0 20px;
-  border-bottom: 1px solid #ddd;
-}
-.header button {
-  font-size: 14px;
-}
-
-.header.dark_theme {
-  border-bottom-color: #000;
-}
-.header.dark_theme button {
-  color: #fff;
-  background: #000;
-}
-
-.container {
-  padding: 20px;
-  height: 300px;
-}
-
-.footer {
-  text-align: center;
+.app {
   padding: 20px;
 }
 
-.app label {
-  margin-right: 15px;
+.app h1 {
+  font-size: 40px;
 }

@@ -1,0 +1,8 @@
+.movie_tab {
+  border: 1px solid black;
+}
+
+.movie_tab button.active {
+  background: #333;
+  color: #fff;
+}
