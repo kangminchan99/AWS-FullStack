@@ -7,6 +7,7 @@ export default function MovieCard({ movie }) {
         <p>{movie.Year}</p>
         <div className={styles.img_wrap}>
           <img
+            onError={(e) => (e.target.src = 'https://placehold.co/400')}
             src={
               movie.Poster !== 'N/A' ? movie.Poster : 'https://placehold.co/400'
             }
