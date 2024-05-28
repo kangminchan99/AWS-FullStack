@@ -1,37 +1,29 @@
 # AWS-FullStack
 
-1.  html,css3 설정하기
+## Front
 
-2.  html 시멘틱 마크업 설정
+1. Figma
 
-3.  html 태그
+2. Github
 
-4.  css 적용하기
+3. HTML & CSS
 
-5.  css 선택자
+4. JavaScript
 
-6.  가상 클래스 & 요소 선택자
+5. JavaScript(ES6, ESNext)
 
-7.  폰트 설정
+6. JQuery, Swiper
 
-8.  텍스트
+7. Next.js
 
-9.  css초기화
+8. React
 
-10. margin,padding(마진병합,부모자식,형제요소 수직방향인접시)
+9. TypeScript
 
-11. CJ도너스캠프메인(음수마진,calc함수,min-width)퍼블리싱
+10. Vue
 
-12. display특성(block,inline,inline-block,none)
+---
 
-13. display_flex
+## Back
 
-14. 교원라이프(하단기타메뉴)
-
-15. overflow(마스크,스크롤바)
-
-16. 웹폰트연결(아웃백,본문구글폰트,일부영문,@font-face,woff,eot,ttf포맷변환후연결)
-
-17. 아이콘 폰트(구글 아이콘)
-
-17-1. 아이콘 폰트(awesome)
+1. Java
