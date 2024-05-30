@@ -13,7 +13,7 @@ public class E05MethodType04_2 {
 
     static int returnMaxNumber(int numberCnt) {
         Scanner scanner = new Scanner(System.in);
-        int maxVal= 0;
+        int maxVal = 10;
         for (int i = 1; i <= numberCnt; i ++) {
             System.out.println("input int");
             int inputNum = scanner.nextInt();
@@ -21,6 +21,7 @@ public class E05MethodType04_2 {
             if (i == 1) {
                 maxVal = inputNum;
             }
+            
             else {
                 if (maxVal < inputNum) {
                     maxVal = inputNum;
