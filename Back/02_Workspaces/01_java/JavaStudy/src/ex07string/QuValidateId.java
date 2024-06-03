@@ -11,7 +11,6 @@ public class QuValidateId {
 
         boolean valid = idValidate(inputId);
         System.out.println(valid ? "사용 가능" : "사용 불가");
-
     }
 
     static boolean idValidate(String inputId) {
