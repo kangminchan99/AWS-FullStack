@@ -16,12 +16,10 @@ class SingleTone {
         return single;
     }
 
-    void print() {
-        System.out.println(String.format("shareVar=%d", shareVar));
+    void print() {System.out.println(String.format("shareVar=%d", shareVar));
     }
 }
 public class E03SingleToneDesignPattern {
-
     public static void main(String[] args) {
         NoSingleTone nst1 = new NoSingleTone();
         nst1.instVar = 100;
@@ -32,7 +30,6 @@ public class E03SingleToneDesignPattern {
         System.out.println("nst2=" + nst2);
 
 //        SingleTone st1 = new SingleTone();
-
         SingleTone st2 = SingleTone.getInstance();
         st2.shareVar = 100;
         st2.print();
