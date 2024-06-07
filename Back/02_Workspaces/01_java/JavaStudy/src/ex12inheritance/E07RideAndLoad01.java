@@ -20,7 +20,7 @@ class A {
 }
 
 class B extends A {
-    // 오버라이딩의로 재정의 된 메서드.
+    // 오버라이딩으로 재정의 된 메서드.
     @Override
     public void rideMethod() {
         System.out.println("B의 rideMethod");
