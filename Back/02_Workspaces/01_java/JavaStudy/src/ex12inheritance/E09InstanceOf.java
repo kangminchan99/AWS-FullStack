@@ -19,7 +19,10 @@ class GoldPaperBox extends PaperBox {
     }
 }
 public class E09InstanceOf {
+
+    // wrapBox가 Box타입의 객체를 받는다
     static void wrapBox(Box b) {
+        // b가 GoldPaperBox이면 goldWrap 메서드 호출
         if(b instanceof GoldPaperBox) {
             ((GoldPaperBox) b).goldWrap();
         } else if (b instanceof PaperBox) {
