@@ -60,7 +60,7 @@ public class E11Polymorphism {
         child2.parentMethod(1);
 
         System.out.println("클래스의 끝판왕 오브젝트");
-        
+
         //Object 클래스는 Java의 모든 클래스의 최상위 클래스입니다.
         // 모든 클래스는 자동으로 Object 클래스를 상속받습니다.
         // 따라서 Java에서 모든 객체는 Object 클래스의 메서드를 사용할 수 있습니다.
