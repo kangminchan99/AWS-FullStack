@@ -1,4 +1,4 @@
-package ex16lambda;
+package ex18lambda;
 
 /*
 3. 람다식으로 구현하기
