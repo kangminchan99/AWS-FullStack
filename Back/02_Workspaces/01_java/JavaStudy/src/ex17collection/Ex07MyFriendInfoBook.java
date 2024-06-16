@@ -174,22 +174,24 @@ class FriendInfoHandler {
         String searchName = scanner.nextLine();
 
         // 이터레이터 인스턴스 생성
-        Iterator<Friend> iterator = lists.iterator();
-        while (iterator.hasNext()) {
-            Friend friend = iterator.next();
-            if(searchName.compareTo(friend.name) == 0) {
-                friend.showAllData();
-                System.out.println("정보를 찾았다!!");
-                isFind = true;
-            }
-        }
-//        for (int i = 0; i < lists.size(); i++) {
-//            if (searchName.compareTo(lists.get(i).name) == 0){
-//                lists.get(i).showAllData();
-//                System.out.println("귀하가 요청한 정보를 찾았습니다.");
+//        Iterator<Friend> iterator = lists.iterator();
+//        while (iterator.hasNext()) {
+//            Friend friend = iterator.next();
+//            if(searchName.compareTo(friend.name) == 0) {
+//                friend.showAllData();
+//                System.out.println("정보를 찾았다!!");
 //                isFind = true;
 //            }
 //        }
+
+        // 일반 for문을 통해 구현
+        for (int i = 0; i < lists.size(); i++) {
+            if (searchName.compareTo(lists.get(i).name) == 0){
+                lists.get(i).showAllData();
+                System.out.println("귀하가 요청한 정보를 찾았습니다.");
+                isFind = true;
+            }
+        }
 
         if (isFind == false){
             System.out.println("찾는 정보가 없습니다.");
@@ -204,13 +206,13 @@ class FriendInfoHandler {
         int deleteIndex = -1;
 
         // 확장 for문을 통해 반복하여 삭제할 이름을 검색한다.
-        for (Friend friend : lists) {
-            if (deleteName.compareTo(friend.name) == 0) {
-                lists.remove(friend);
-                deleteIndex = 1;
-                break;
-            }
-        }
+//        for (Friend friend : lists) {
+//            if (deleteName.compareTo(friend.name) == 0) {
+//                lists.remove(friend);
+//                deleteIndex = 1;
+//                break;
+//            }
+//        }
 
 //        for (int i = 0; i < lists.size(); i++) {
 //            if(deleteName.compareTo(lists.get(i).name) == 0){
@@ -220,6 +222,18 @@ class FriendInfoHandler {
 //                break;
 //            }
 //        }
+
+
+        // 이터레이터를 통해 구현
+        Iterator<Friend> iterator = lists.iterator();
+        while (iterator.hasNext()) {
+            Friend friend = iterator.next();
+            if(deleteName.compareTo(friend.name) == 0) {
+                iterator.remove();
+                System.out.println("삭제를 완료했습니다.");
+                deleteIndex = 1;
+            }
+        }
 
 
         if (deleteIndex == -1) {
